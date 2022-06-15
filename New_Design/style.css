@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body{
-    background: #81d8a4;
+    background: #fff;
     width: 100%;
 }
 .site-header{
@@ -41,7 +41,6 @@ nav ul {
 }
 
 .hero{
-    max-height: 500px;
     overflow: hidden;
 }
 .hero img{
@@ -68,6 +67,27 @@ nav ul {
   justify-content: space-between;
   align-items: center;
 }
+
+.ham-site-logo{
+    padding-top: 40px;
+    padding-left: 20px;
+    transition: .5s;
+}
+
+.ham-site-logo.transform{
+    padding-top: 20px;
+    padding-left: 20px;
+    transition: .5s;
+}
+
+.ham-site-logo img{
+    width: 86%;
+}
+
+.hero{
+    padding-top: 131px;
+}
+
 .copyright{
     color: #fff;
     font-size: 12px;
@@ -109,7 +129,13 @@ nav ul {
 
     @media (min-width: 800px) {
         /* 横幅が800px以上の場合に適用するスタイル */
-        .ham{ display: none; }
+        .ham{ 
+            display: none; 
+        }
+
+        .hero{
+            padding-top: 140px;
+        }
      }
      @media (max-width: 800px) {
         /* 横幅が800px以上の場合に適用するスタイル */
@@ -124,5 +150,9 @@ nav ul {
          .site-logo img{
             height: 45px;
             width: auto;
+        }
+        
+        .hero{
+            padding-top: 145px;
         }
      }
