@@ -7,9 +7,9 @@ body{
     width: 100%;
 }
 .site-header{
-	background: rgba(255,255,255,0.7);
+	background: rgba(255,255,255,0.5);
 	display: flex;
-	padding: 40px 20px;
+	padding: 30px 20px;
 	position: fixed;
 	justify-content: space-between;
 	transition: .5s;
@@ -55,7 +55,9 @@ nav ul {
     word-break: break-all;
 }
 .content p{
+    margin-top: 116px;
     margin-bottom: 40px;
+    padding: 10px;
 }
 .site-footer{
     background: #333;
@@ -84,15 +86,34 @@ nav ul {
     width: 86%;
 }
 
-.hero{
-    padding-top: 131px;
+.site-footer{
+    padding: 4em;
 }
 
-.copyright{
-    color: #fff;
-    font-size: 12px;
-    text-align: center;
-	}
+.footer__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer__menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+ul.footer__menu li{
+    display: inline;
+    margin-left: 15px;
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+    flex-wrap: wrap;
+    }
 
 
     h1,img{
@@ -133,12 +154,9 @@ nav ul {
             display: none; 
         }
 
-        .hero{
-            padding-top: 140px;
-        }
      }
      @media (max-width: 800px) {
-        /* 横幅が800px以上の場合に適用するスタイル */
+        /* 横幅が800px以下の場合に適用するスタイル */
         .gnav{ 
             display: none;
          }
@@ -151,8 +169,19 @@ nav ul {
             height: 45px;
             width: auto;
         }
-        
+
         .hero{
-            padding-top: 145px;
+            padding-top: 111px;
+        }
+
+        .footer__nav{
+            display: block;
+        }
+
+        .footer__menu{
+        margin-left: 0;
+        padding-top: 1em;
+        width: 100%;
+        flex-direction: column;
         }
      }
