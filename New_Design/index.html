@@ -1,88 +1,86 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-				<link rel="stylesheet" type="text/css" href="hm/details.css">
-				<link rel="stylesheet" type="text/css" href="hm/ham-style.css">
-				<link rel="stylesheet" type="text/css" href="style.css">
-				<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-				<link rel="shortcut icon" href="photo/icon/icon-256x256.png"/>
-				<title>NARI Home Page</title>
-	</head>
-	<body>
-		<div class="ham">
-			<input type="checkbox" id="ham-check" class="ham-hidden" ><!--表示・非表示コントロールチェックボックス-->
-			<label for="ham-check" class="ham-open"><span></span></label><!--ハンバーガーアイコン設定。forで上の"ham-check"との関連付け-->
-			<nav class="ham-content"><!--メニュー。自由に追加可能-->
-				<h1 class="ham-site-logo">
-					<img src="photo/tlogo.png" alt="NARI HP">
-				</h1>
-				<a href="jikosyokai/syoukai.html">About</a></li>
-						<a href="isbe/isbe.html">Impressive Shadow Shader</a>
-						<a href="1g/1g.html">ESBE-1G</a>
-						<a href="download/download.html">Download</a>
-						<a href="pixelart/index.html">PixelArt</a>
-						<a href="contact/contact.html">Contact</a>
-						<a href="">βページ</a></li>
-			</nav>
-		  </div>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="hm/details.css">
+    <link rel="stylesheet" type="text/css" href="hm/ham-style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="shortcut icon" href="photo/icon/icon-256x256.png" />
+    <title>NARI Home Page</title>
+</head>
 
-		  <header class="site-header">
-			<h1 class="site-logo">
-				<img src="photo/tlogo.png" alt="NARI HP">
-			</h1>
-    <nav class="gnav">
-        <ul class="gnav__menu">
-            <li class="gnav__menu__item"><a href="">About</a></li>
-            <li class="gnav__menu__item"><a href="">ISBE</a></li>
-            <li class="gnav__menu__item"><a href="">ESBE</a></li>
-			<li class="gnav__menu__item"><a href="">Download</a></li>
-            <li class="gnav__menu__item"><a href="">PixelArt</a></li>
-            <li class="gnav__menu__item"><a href="">Contact</a></li>
+<body>
+    <!--ハンバーガーメニュー始まり-->
+    <div class="ham">
+        <input type="checkbox" id="ham-check" class="ham-hidden">
+        <!--表示・非表示コントロールチェックボックス-->
+        <label for="ham-check" class="ham-open"><span></span></label>
+        <!--ハンバーガーアイコン設定。forで上の"ham-check"との関連付け-->
+        <nav class="ham-content">
+            <!--メニュー。自由に追加可能-->
+            <h1 class="ham-site-logo">
+                <img src="photo/tlogo.png" alt="NARI HP">
+            </h1>
+            <a href="">About</a></li>
+            <a href="">Impressive Shadow Shader</a>
+            <a href="">ESBE-1G</a>
+            <a href="">Download</a>
+            <a href="">PixelArt</a>
+            <a href="">Contact</a>
+            <a href="">βページ</a></li>
+        </nav>
+    </div>
+    <!--ハンバーガーメニュー終わり-->
+    <header class="site-header">
+        <h1 class="site-logo">
+            <a href=""><img src="photo/tlogo.png" alt="NARI HP"></a>
+        </h1>
+        <nav class="gnav">
+            <ul class="gnav__menu">
+                <li class="gnav__menu__item"><a href="">About</a></li>
+                <li class="gnav__menu__item"><a href="">ISBE</a></li>
+                <li class="gnav__menu__item"><a href="">ESBE</a></li>
+                <li class="gnav__menu__item"><a href="">Download</a></li>
+                <li class="gnav__menu__item"><a href="">PixelArt</a></li>
+                <li class="gnav__menu__item"><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero"><img src="photo/mainhead.png" alt="hero"></div>
+    <div class="content">
+        <p>※ランダム文字列 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
+        </p>
+    </div>
+    <footer class="site-footer">
+        <ul class="footer__nav">
+            <a id="now" href="index.html" style="text-decoration: underline;">NARI HomePage</a>
+            <ul class="footer__menu">
+                <li><a href="">About</a></li>
+                <li><a href="">Impressive Shadow Shader</a></li>
+                <li><a href="">ESBE-1G</a></li>
+                <li><a href="">Download</a></li>
+                <li><a href="">PixelArt</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="device/device.html" style="color: rgb(80, 80, 80);">ページ閲覧推奨端末</a></li>
+            </ul>
         </ul>
-    </nav>
-</header>
-<div class="hero"><img src="photo/mainhead.png" alt="hero"></div>
-<div class="content">
-	<p>※ランダム文字列
-		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</p>
-</div>
-<footer class="site-footer">
-	<ul class="footer__nav">
-		<a id="now" href="index.html" style="color: #fff;text-decoration: underline;">NARI HomePage</a>
-	<ul class="footer__menu">
-		<li><a href="">About</a></li>
-		<li><a href="isbe/isbe.html">Impressive Shadow Shader</a></li>
-		<li><a href="1g/1g.html">ESBE-1G</a></li>
-		<li><a href="download/download.html">Download</a></li>
-		<li><a href="pixelart/index.html">PixelArt</a></li>
-		<li><a href="contact/contact.html">Contact</a></li>
-		<li><a href="device/device.html" style="color: rgb(80, 80, 80);">ページ閲覧推奨端末</a></li>
-	</ul>
-	</ul>
-	<div class="contact"><a href="" style="color: rgb(80, 80, 80);text-decoration:none">Twitter</a><p style="color: rgb(100, 100, 100);">©︎2020〜 NARI0978</div>
-</footer>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<!--<script src="class.js"></script>-->
-<script src="js/style.js"></script>
-<script type="text/javascript" src="js/st.js"></script>
-	</body>
+        <div class="contact"><a href="" style="color: rgb(80, 80, 80);text-decoration:none">Twitter</a>
+            <p style="color: rgb(100, 100, 100);">©︎2020〜 NARI0978</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!--<script src="class.js"></script>-->
+    <script src="js/style.js"></script>
+    <script type="text/javascript" src="js/st.js"></script>
+</body>
+
 </html>

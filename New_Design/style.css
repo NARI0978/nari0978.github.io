@@ -1,194 +1,206 @@
-*{
-	margin: 0;
-	padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
-body{
-    font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+
+body {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
     background: #fff;
     width: 100%;
 }
-.site-header{
-	background: rgba(255,255,255,0.5);
-	display: flex;
-	padding: 30px 20px;
-	position: fixed;
-	justify-content: space-between;
-	transition: .5s;
-	width: 100%;
-	z-index: 99;
+
+.site-header {
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    padding: 30px 20px;
+    position: fixed;
+    justify-content: space-between;
+    transition: .5s;
+    width: 100%;
+    z-index: 99;
     box-sizing: border-box;
     align-items: center;
 }
-.site-header.transform{
-    background: rgba(255,255,255,0.9);
+
+.site-header.transform {
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
 }
-.site-logo img{
+
+.site-logo img {
     height: 50px;
     width: auto;
 }
-.gnav__menu{
+
+.gnav__menu {
     display: flex;
 }
-.gnav__menu__item{
+
+.gnav__menu__item {
     margin-left: 20px;
 }
-.gnav__menu__item a{
+
+.gnav__menu__item a {
     color: #333;
     text-decoration: none;
 }
+
 nav ul {
     list-style: none;
 }
 
-.hero{
+.hero {
     overflow: hidden;
 }
-.hero img{
+
+.hero img {
     height: auto;
     width: 100%;
-	background-size: cover;
+    background-size: cover;
     background-position: center;
 }
-.content{
+
+.content {
     line-height: 1.6;
     width: 100%;
     word-break: break-all;
 }
-.content p{
+
+.content p {
     margin-top: 116px;
     margin-bottom: 40px;
     padding: 10px;
 }
-.site-footer{
+
+.site-footer {
     background: #333;
     padding: 80px 0;
 }
 
 .site-header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.ham-site-logo{
+.ham-site-logo {
     padding-top: 40px;
     padding-left: 20px;
     transition: .5s;
 }
 
-.ham-site-logo.transform{
+.ham-site-logo.transform {
     padding-top: 20px;
     padding-left: 20px;
     transition: .5s;
 }
 
-.ham-site-logo img{
+.ham-site-logo img {
     width: 86%;
 }
 
-.site-footer{
+.site-footer {
     padding: 4em;
 }
 
-.footer__nav{
+.footer__nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.footer__menu{
+.footer__menu {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-ul.footer__menu li{
+ul.footer__menu li {
     display: inline;
     margin-left: 15px;
 }
 
-.contact{
+.contact {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 2em;
     flex-wrap: wrap;
-    }
+}
 
-
-    h1,img{
-        margin: 0;
+h1,
+img {
+    margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+}
+
+a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+a:active {
+    color: #191919;
+    text-decoration: none;
+}
+
+.ham a:link,
+.gnav a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.active {
+    border-bottom: 1px solid #ababab;
+}
+
+@media (min-width: 830px) {
+    /* 横幅が800px以上の場合に適用するスタイル */
+    .ham {
+        display: none;
     }
+}
 
-    a:link{
-		color: #ffffff;
-		text-decoration: none;
-		}
-	a:visited{
-		color: #ffffff;
-		text-decoration: none;
-		}
-	a:hover{
-		color: #b3b3b3;
-		text-decoration: none;
-		}
-	a:active{
-		color: #191919;
-		text-decoration: none;
-	}
-
-    .ham a:link,.gnav a{
-            color: #000000;
-            text-decoration: none;
+@media (max-width: 1045px) {
+    .footer__nav {
+        display: block;
     }
+}
 
-    .active{
-        border-bottom: 1px solid #ababab;
+@media (max-width: 830px) {
+    /* 横幅が800px以下の場合に適用するスタイル */
+    .gnav {
+        display: none;
     }
-
-    @media (min-width: 830px) {
-        /* 横幅が800px以上の場合に適用するスタイル */
-        .ham{ 
-            display: none; 
-        }
-
-     }
-
-     @media (max-width: 1045px) {
-        .footer__nav{
-            display: block;
-        }
-     }
-     @media (max-width: 830px) {
-        /* 横幅が800px以下の場合に適用するスタイル */
-        .gnav{ 
-            display: none;
-         }
-
-         .site-header{
-            justify-content: flex-start;
-         }
-
-         .site-logo img{
-            height: 45px;
-            width: auto;
-        }
-
-        .hero{
-            padding-top: 111px;
-        }
-
-        .footer__menu{
+    .site-header {
+        justify-content: flex-start;
+    }
+    .site-logo img {
+        height: 45px;
+        width: auto;
+    }
+    .hero {
+        padding-top: 111px;
+    }
+    .footer__menu {
         margin-left: 0;
         padding-top: 1em;
         width: 100%;
         flex-direction: column;
-        }
-     }
+    }
+}
