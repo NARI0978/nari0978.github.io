@@ -1,0 +1,1 @@
+document.getElementById("now").classList.add("active");
