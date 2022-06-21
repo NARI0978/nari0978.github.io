@@ -92,7 +92,7 @@
     background: #333;
     overflow-y: auto;
     margin-top: 110px;
-    transition: all 0.5s cubic-bezier(0.62, 0, 0.43, 1);
+    transition: 0.5s;
 }
 
 .ham-content.transform {
