@@ -89,16 +89,6 @@ nav ul {
     transition: .5s;
 }
 
-.ham-site-logo.transform {
-    padding-top: 20px;
-    padding-left: 20px;
-    transition: .5s;
-}
-
-.ham-site-logo img {
-    width: 86%;
-}
-
 .site-footer {
     padding: 4em;
 }

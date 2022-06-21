@@ -1,100 +1,128 @@
 /* チェックボックスは非表示に */
+
 .ham-hidden {
-  display: none;
+    display: none;
 }
+
 
 /* ハンバーガーアイコンの設置スペース */
+
 .ham-open {
-  display: flex;
-  height: 50px;
-  width: 50px;
-  right:8px;
-  top: 30px;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  z-index: 102; /*重なりを一番上*/
-  cursor: pointer;
-  transition: .5s;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    right: 8px;
+    top: 30px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 102;
+    /*重なりを一番上*/
+    cursor: pointer;
+    transition: .5s;
 }
 
-.ham-open.transform{
-  top: 20px;
-  transition: .5s;
+.ham-open.transform {
+    top: 20px;
+    transition: .5s;
 }
+
 
 /* ハンバーガーメニューのアイコン */
+
 .ham-open span,
 .ham-open span:before,
 .ham-open span:after {
-  content: '';
-  display: block;
-  height: 2px;
-  width: 30px;
-  border-radius: 3px;
-  background: #000; /*線の色*/
-  transition: .5s;
-  position: absolute;
+    content: '';
+    display: block;
+    height: 2px;
+    width: 30px;
+    border-radius: 3px;
+    background: #000;
+    /*線の色*/
+    transition: .5s;
+    position: absolute;
 }
+
 
 /* 一番上の棒の位置 */
+
 .ham-open span:before {
-  bottom: 8px;
+    bottom: 8px;
 }
+
 
 /* 一番下の棒の位置 */
+
 .ham-open span:after {
-  top: 8px;
+    top: 8px;
 }
+
 
 /* 真ん中線の透明処理 */
-#ham-check:checked ~ .ham-open span {
-  background: rgba(255, 255, 255, 0);
+
+#ham-check:checked~.ham-open span {
+    background: rgba(255, 255, 255, 0);
 }
+
 
 /* 上下の線を回転 */
-#ham-check:checked ~ .ham-open span::after {
-  top: 0;
-  transform: rotate(-45deg);
+
+#ham-check:checked~.ham-open span::after {
+    top: 0;
+    transform: rotate(-45deg);
 }
 
-#ham-check:checked ~ .ham-open span::before {
-  bottom: 0;
-  transform: rotate(45deg);
+#ham-check:checked~.ham-open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
 }
+
 
 /*　ハンバーガーメニューのデザイン　*/
+
 .ham-content {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 100%;
-  z-index: 101;
-  background: #e6edf2;
-  transition: .5s;
-  overflow-y: auto;
-}
-.ham-content ul{
-	list-style:none;
-}
-.ham-content ul li{
-	font-size: 25px;
-	padding: 10px;
-}
-.ham-content ul li a{
-	text-decoration: none;
-}
-.ham-list{
-	text-align: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    opacity: 0%;
+    z-index: 101;
+    background: #333;
+    overflow-y: auto;
+    margin-top: 110px;
+    transition: all 0.5s cubic-bezier(0.62, 0, 0.43, 1);
 }
 
-/* アイコンがクリックされたらメニューを表示  透明度変化*/
-#ham-check:checked ~ .ham-content {
-  left: 0;
-  opacity: 1;
+.ham-content.transform {
+    margin-top: 90px;
 }
+
+.ham-content ul {
+    list-style: none;
+}
+
+.ham-content ul li {
+    font-size: 25px;
+    padding: 10px;
+}
+
+.ham-content ul li a {
+    text-decoration: none;
+}
+
+.ham-list {
+    text-align: center;
+}
+
+
+/* アイコンがクリックされたらメニューを表示  透明度変化*/
+
+#ham-check:checked~.ham-content {
+    opacity: 1;
+}
+
 
 /*@media(prefers-color-scheme: dark) {
   .ham-open span,
