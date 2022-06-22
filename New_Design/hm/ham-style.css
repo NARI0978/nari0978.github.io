@@ -87,6 +87,7 @@
     position: fixed;
     top: 0;
     bottom: 0;
+    right: 100%;
     opacity: 0%;
     z-index: 101;
     background: #333;
@@ -116,12 +117,28 @@
     text-align: center;
 }
 
+.ham__menu {
+    padding: 15px;
+}
+
 
 /* アイコンがクリックされたらメニューを表示  透明度変化*/
 
 #ham-check:checked~.ham-content {
+    left: 0;
     opacity: 1;
 }
+
+
+/*.ham__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.ham-content {
+    padding: 4em;
+}*/
 
 
 /*@media(prefers-color-scheme: dark) {
