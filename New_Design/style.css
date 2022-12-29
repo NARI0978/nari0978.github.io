@@ -183,9 +183,7 @@ img {
         justify-content: center;
         max-height: 100vh;
     }
-    .hero img {
-        left: 100px;
-    }
+    .hero img {}
     .gnav {
         display: none;
     }
