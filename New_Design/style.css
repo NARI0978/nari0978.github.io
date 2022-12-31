@@ -60,6 +60,8 @@ nav ul {
     height: 100vh;
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
 }
 
 .content {
@@ -183,7 +185,6 @@ img {
         justify-content: center;
         max-height: 100vh;
     }
-    .hero img {}
     .gnav {
         display: none;
     }

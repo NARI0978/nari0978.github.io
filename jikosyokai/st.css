@@ -1,182 +1,198 @@
 /*light mode*/
-	*{
-		margin: 0;
-		padding: 0;
-	}
 
-	body{
-		font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
-		background-color: #e6edf2;
-	}
+* {
+    margin: 0;
+    padding: 0;
+}
 
-	.title{
-		text-shadow: 0px 0px 15px #66ff66;
-		text-align: center;
-		font-size: 45px;
-		padding: 45px;
-		font-family: Comic Sans MS;
-		background: url("../photo/syokai/mainhead.jpg");
-		background-size: cover;
-		background-position: center;
-	}
+body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', sans-serif;
+    background-color: #e6edf2;
+}
 
-	.blocktitle{
-		font-size: 28px;
-		padding: 5px;
-	}
+.title {
+    text-shadow: 0px 0px 15px #66ff66;
+    text-align: center;
+    font-size: 45px;
+    padding: 45px;
+    font-family: Comic Sans MS;
+    background: url("../photo/syokai/mainhead.jpg");
+    background-size: cover;
+    background-position: center;
+}
 
-	.block1{
-		text-shadow: 0px 2px 4px #7f7f7f;
-		padding: 15px;
-		font-size: 25px;
-		text-align: center;
-		color: #333;
-		background-color: #d4e2eb;
-		box-shadow: 0px 0px 5px #555555;
-	}
+.blocktitle {
+    font-size: 28px;
+    padding: 5px;
+}
 
-	.block2{
-		padding: 10px;
-		font-size: 18px;
-		text-align: center;
-		color: #333;
-	}
+.block1 {
+    text-shadow: 0px 2px 4px #7f7f7f;
+    padding: 15px;
+    font-size: 25px;
+    text-align: center;
+    color: #333;
+    background-color: #d4e2eb;
+    box-shadow: 0px 0px 5px #555555;
+}
 
-	:root {
-  --swiper-navigation-color: #ffffff;
-  --swiper-pagination-color: #ffffff;
-	}
+.block2 {
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
 
-	.swiper-container{
-		width:75%;
-		height:auto;
-	}
+:root {
+    --swiper-navigation-color: #ffffff;
+    --swiper-pagination-color: #ffffff;
+}
 
-	h2{
-		text-align: center;
-	}
+.swiper-container {
+    width: 75%;
+    height: auto;
+}
 
-	.block3{
-		padding: 10px;
-		font-size: 18px;
-		text-align: center;
-		color: #333;
-	}
+h2 {
+    text-align: center;
+}
 
-	.block4{
-		padding: 10px;
-		font-size: 20px;
-		text-align: center;
-		color: #333;
-	}
-	.block5{
-		padding: 10px;
-		font-size: 20px;
-		text-align: center;
-		color: #333;
-	}
+.block3 {
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}
 
-	.copyright{
-		padding: 15px;
-		font-size: 20px;
-		text-align: center;
-		color: #333333;
-		background-color: #d4e2eb;
-		box-shadow: 0px 0px 5px #555555;
-	}
-.exp{
+.block4 {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.block5 {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.copyright {
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    color: #333333;
+    background-color: #d4e2eb;
+    box-shadow: 0px 0px 5px #555555;
+}
+
+.exp {
     font-size: 17px;
     padding: 10px;
 }
-a:link{
-	color: #000000;
-	text-decoration: none;
-	}
-a:visited{
-	color: #000000;
-	text-decoration: none;
-	}
-a:hover{
-	color: ##333333;;
-	text-decoration: none;
-	}
-a:active{
-	color: #666666;
-	text-decoration: none;
+
+a:link {
+    color: #000000;
+    text-decoration: none;
 }
-	.btn{
-		display: inline-block;
-  padding: 6px 4px;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #FFF;
-  background-image: linear-gradient( 45deg, #6795fd, #5bdeff);
-  transition: .2s;
-	}
-	.btn:hover{
-		background-image: linear-gradient( 45deg, #6795fd, #51d3f9);
-	}
-	.btns{
-		display: inline-block;
-  padding: 1px 1px;
-  border-radius: 4px;
-  background-image: linear-gradient( 45deg, #fecc66, #fd8008);
-  transition: .2s;
-	}
-	.btns:hover{
-		background-image: linear-gradient( 45deg, #6795fd, #51d3f9);
-	}
 
-	@media(prefers-color-scheme: dark) {
-		body{
-			font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
-			background-color: #252525;
-		}
-		.block1{
-			color: #e6e6e6;
-			background-color: #333333;
-		}
-		.block2, .block3, .block4, .block5{
-			color: #e6e6e6;
-		}
-		.copyright{
-			color: #e6e6e6;
-			background-color: #333333;
-		}
-		a:link{
-			color: #ffffff;
-			text-decoration: none;
-			}
-		a:visited{
-			color: #ffffff;
-			text-decoration: none;
-			}
-		a:hover{
-			color: #b3b3b3;
-			text-decoration: none;
-			}
-		a:active{
-			color: #191919;
-			text-decoration: none;
-		}
-	}
+a:visited {
+    color: #000000;
+    text-decoration: none;
+}
 
-@media screen and (max-width: 485px) { /*ウィンドウ幅が最大485pxまでの場合に適用*/
-        .title{
-            font-size: 28px;
-            padding: 25px;
-        }
-        .block1{
-            font-size: 20px;
-        }
-        .swiper-container{
-		width:95%;
-        height:auto;
-	}
+a:hover {
+    color: #333333;
+    ;
+    text-decoration: none;
+}
+
+a:active {
+    color: #666666;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 4px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #FFF;
+    background-image: linear-gradient( 45deg, #6795fd, #5bdeff);
+    transition: .2s;
+}
+
+.btn:hover {
+    background-image: linear-gradient( 45deg, #6795fd, #51d3f9);
+}
+
+.btns {
+    display: inline-block;
+    padding: 1px 1px;
+    border-radius: 4px;
+    background-image: linear-gradient( 45deg, #fecc66, #fd8008);
+    transition: .2s;
+}
+
+.btns:hover {
+    background-image: linear-gradient( 45deg, #6795fd, #51d3f9);
+}
+
+@media(prefers-color-scheme: dark) {
+    body {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+        background-color: #252525;
+    }
+    .block1 {
+        color: #e6e6e6;
+        background-color: #333333;
+    }
+    .block2,
+    .block3,
+    .block4,
+    .block5 {
+        color: #e6e6e6;
+    }
+    .copyright {
+        color: #e6e6e6;
+        background-color: #333333;
+    }
+    a:link {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    a:visited {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #b3b3b3;
+        text-decoration: none;
+    }
+    a:active {
+        color: #191919;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    /*ウィンドウ幅が最大485pxまでの場合に適用*/
+    .title {
+        font-size: 28px;
+        padding: 25px;
+    }
+    .block1 {
+        font-size: 20px;
+    }
+    .swiper-container {
+        width: 95%;
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 768px) {
-	.swiper{
-		width:70%;
-	}
+    .swiper {
+        width: 70%;
+    }
 }
