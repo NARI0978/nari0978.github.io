@@ -74,7 +74,7 @@ nav ul {
 
 .site-footer {
     background: #333;
-    padding: 80px 0;
+    padding: 20px;
 }
 
 .site-header__wrapper {
@@ -94,32 +94,10 @@ nav ul {
     border-bottom: 1px solid rgb(140, 140, 140);
 }*/
 
-.site-footer {
-    padding: 4em;
-}
-
-.footer__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.footer__menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-ul.footer__menu li {
-    display: inline;
-    margin-left: 15px;
-}
-
 .contact {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 2em;
     flex-wrap: wrap;
 }
 
