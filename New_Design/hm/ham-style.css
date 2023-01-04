@@ -12,7 +12,7 @@
     height: 50px;
     width: 50px;
     right: 8px;
-    top: 30px;
+    top: 15px;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -23,7 +23,7 @@
 }
 
 .ham-open.transform {
-    top: 20px;
+    top: 10px;
     transition: .5s;
 }
 
@@ -92,7 +92,7 @@
     z-index: 101;
     background: #333;
     overflow-y: auto;
-    margin-top: 110px;
+    margin-top: 80px;
     transition: 0.5s;
 }
 
