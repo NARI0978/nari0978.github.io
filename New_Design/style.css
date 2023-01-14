@@ -49,14 +49,14 @@ nav ul {
     list-style: none;
 }
 
-.hero {
+.sw {
     overflow: hidden;
     display: flex;
     justify-content: center;
     max-height: 100vw;
 }
 
-.hero img {
+.sw img {
     height: 100vh;
 }
 
@@ -64,12 +64,8 @@ nav ul {
     line-height: 1.6;
     width: 100%;
     word-break: break-all;
-}
-
-.content p {
-    margin-top: 116px;
-    margin-bottom: 40px;
-    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .site-footer {
@@ -155,7 +151,7 @@ img {
 
 @media (max-width: 829px) {
     /* 横幅が800px以下の場合に適用するスタイル */
-    .hero {
+    .sw {
         display: flex;
         justify-content: center;
         max-height: 100vh;
@@ -170,7 +166,7 @@ img {
         height: 45px;
         width: auto;
     }
-    /*.hero {
+    /*.sw {
         padding-top: 111px;
     }*/
     .footer__menu {
