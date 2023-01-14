@@ -61,11 +61,26 @@ nav ul {
 }
 
 .content {
+    margin-top: 20px;
+    margin-bottom: 20px;
     line-height: 1.6;
     width: 100%;
     word-break: break-all;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.icon {
+    margin: 40px 80px;
+    border-radius: 3px;
+    box-shadow: 0 0 20px 0 #000;
+}
+
+.icon p {
+    text-align: center;
+    font-size: 15px;
 }
 
 .site-footer {
