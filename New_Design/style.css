@@ -73,14 +73,19 @@ nav ul {
 }
 
 .icon {
-    margin: 40px 80px;
-    border-radius: 3px;
-    box-shadow: 0 0 20px 0 #000;
+    margin: 40px 100px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 0 #505050;
 }
 
 .icon p {
     text-align: center;
     font-size: 15px;
+}
+
+.icon img {
+    width: 200px;
+    height: 200px;
 }
 
 .site-footer {
@@ -181,9 +186,13 @@ img {
         height: 45px;
         width: auto;
     }
-    /*.sw {
-        padding-top: 111px;
-    }*/
+    .icon {
+        margin: 10px 20px;
+    }
+    .icon img {
+        width: 150px;
+        height: 150px;
+    }
     .footer__menu {
         margin-left: 0;
         padding-top: 1em;
