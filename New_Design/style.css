@@ -80,7 +80,7 @@ nav ul {
 
 .icon p {
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .icon img {
@@ -193,6 +193,10 @@ img {
     .icon img {
         width: 150px;
         height: 150px;
+    }
+    .icon p {
+        text-align: center;
+        font-size: 10px;
     }
     .footer__menu {
         margin-left: 0;
