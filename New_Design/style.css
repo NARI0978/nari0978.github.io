@@ -23,7 +23,7 @@ body {
 }
 
 .site-header.transform {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     padding: 10px 15px;
 }
 
@@ -84,8 +84,8 @@ nav ul {
 }
 
 .icon img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
 }
 
 .site-footer {
@@ -188,6 +188,7 @@ img {
     }
     .icon {
         margin: 10px 20px;
+        border-radius: 20px;
     }
     .icon img {
         width: 150px;
