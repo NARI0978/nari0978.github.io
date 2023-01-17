@@ -66,8 +66,8 @@ nav ul {
 }
 
 .content {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     line-height: 1.6;
     width: 100%;
     word-break: break-all;
@@ -80,7 +80,7 @@ nav ul {
 .icon {
     margin: 40px 100px;
     border-radius: 50px;
-    box-shadow: 0 0 10px 0 #505050;
+    box-shadow: 0 0 5px 0 #000000;
     color: #000;
     text-align: center;
     font-size: 20px;
@@ -88,12 +88,55 @@ nav ul {
 }
 
 .icon:hover {
+    box-shadow: 0 0 10px 0 #303030;
     transform: scale(1.05);
 }
 
 .icon img {
     width: 250px;
     height: 250px;
+}
+
+.content2 {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.infomation,
+.infotitle,
+.info {
+    text-align: center;
+    color: #000;
+    font-size: 20px;
+}
+
+.infomation {
+    margin: 10px;
+    box-shadow: 0 0 5px 0 #000000;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.infotitle {
+    font-weight: bold;
+    box-shadow: 0 1px 0 0 #000000;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.info {
+    overflow: scroll;
+    height: 500px;
+}
+
+.sns {
+    margin: 10px;
+    width: 500px;
+    box-shadow: 0 0 5px 0 #000000;
+    border-radius: 10px;
 }
 
 .site-footer {
@@ -205,6 +248,9 @@ img {
     .icon p {
         text-align: center;
         font-size: 14px;
+    }
+    .info {
+        height: 7.5em;
     }
     .footer__menu {
         margin-left: 0;
