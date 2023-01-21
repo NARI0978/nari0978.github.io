@@ -100,6 +100,11 @@
         justify-content: center;
     }
     
+    .icon p {
+        display: inline-block;
+        vertical-align: sub;
+    }
+    
     .content2 {
         margin-bottom: 50px;
         display: flex;
@@ -249,8 +254,6 @@
             max-height: 135px;
         }
         .icon p {
-            display: inline-block;
-            vertical-align: middle;
             text-align: center;
             font-size: 14px;
         }
