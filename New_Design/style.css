@@ -96,6 +96,8 @@
     .icon img {
         width: 250px;
         height: 250px;
+        display: flex;
+        justify-content: center;
     }
     
     .content2 {
@@ -239,16 +241,16 @@
         .icon {
             margin: 10px;
             border-radius: 20px;
-            max-width: 150px;
+            max-width: 135px;
             width: 100%;
         }
         .icon img {
-            max-width: 140px;
-            max-height: 140px;
+            max-width: 135px;
+            max-height: 135px;
         }
         .icon p {
             text-align: center;
-            font-size: 15px;
+            font-size: 14px;
         }
         .info {
             height: 7.5em;
