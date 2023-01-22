@@ -142,7 +142,7 @@
     
     .sns {
         margin: 10px;
-        width: 369px;
+        width: 500px;
         box-shadow: 0 0 5px 0 #000000;
         border-radius: 10px;
     }
@@ -259,6 +259,9 @@
         }
         .info {
             height: 7.5em;
+        }
+        .sns {
+            width: 369px;
         }
         .footer__menu {
             margin-left: 0;
