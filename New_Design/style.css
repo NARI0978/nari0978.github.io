@@ -126,6 +126,7 @@
         box-shadow: 0 0 5px 0 #000000;
         border-radius: 10px;
         width: 500px;
+        height: 24em;
     }
     
     .infotitle {
@@ -137,12 +138,13 @@
     
     .info {
         overflow: scroll;
-        height: 500px;
+        height: 22.5em;
     }
     
     .sns {
         margin: 10px;
         width: 500px;
+        height: 480px;
         box-shadow: 0 0 5px 0 #000000;
         border-radius: 10px;
     }
