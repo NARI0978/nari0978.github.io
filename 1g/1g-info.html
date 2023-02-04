@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
-	<head>
-		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-				<link rel="stylesheet" type="text/css" href="../hm/ham-style.css">
-				<link rel="stylesheet" type="text/css" href="st.css">
-				<link rel="stylesheet" type="text/css" href="../hm/details.css">
-				<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-				<link rel="shortcut icon" href="../photo/icon/1g.jpg">
-				<title>ESBE-1G Info</title>
-	</head>
-	<body>
 
-		<div class="ham">
-			<input type="checkbox" id="ham-check" class="ham-hidden" ><!--表示・非表示コントロールチェックボックス-->
-			<label for="ham-check" class="ham-open"><span></span></label><!--ハンバーガーアイコン設定。forで上の"ham-check"との関連付け-->
-			<nav class="ham-content"><!--メニュー。自由に追加可能-->
-				<details>
-		 <summary>NARI Home Page</summary>
-				<ul class="ham-list">
-					<li class="ham-item"><a href="../jikosyokai/syoukai.html">自己紹介</a></li>
-					<li class="ham-item"><a href="../1g/1g.html">ESBE-1G</a>
-					<li class="ham-item"><a href="../download/download.html">ダウンロード</a>
-					<li class="ham-item"><a href="../pixelart/index.html">ドット絵管理所</a>
-					<li class="ham-item"><a href="../contact/contact.html">Contact</a>
-				</ul>
-				</details>
-				<details>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../hm/ham-style.css">
+    <link rel="stylesheet" type="text/css" href="st.css">
+    <link rel="stylesheet" type="text/css" href="../hm/details.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../photo/icon/1g.jpg">
+    <title>ESBE-1G Info</title>
+</head>
+
+<body>
+
+    <div class="ham">
+        <input type="checkbox" id="ham-check" class="ham-hidden">
+        <!--表示・非表示コントロールチェックボックス-->
+        <label for="ham-check" class="ham-open"><span></span></label>
+        <!--ハンバーガーアイコン設定。forで上の"ham-check"との関連付け-->
+        <nav class="ham-content">
+            <!--メニュー。自由に追加可能-->
+            <details>
+                <summary>NARI Home Page</summary>
+                <ul class="ham-list">
+                    <li class="ham-item"><a href="../jikosyokai/syoukai.html">自己紹介</a></li>
+                    <li class="ham-item"><a href="../1g/1g.html">ESBE-1G</a>
+                        <li class="ham-item"><a href="../download/download.html">ダウンロード</a>
+                            <!--<li class="ham-item"><a href="../pixelart/index.html">ドット絵管理所</a>-->
+                            <li class="ham-item"><a href="../contact/contact.html">Contact</a>
+                </ul>
+            </details>
+            <!--<details>
 		 <summary>ドット絵管理所</summary>
 				<ul class="ham-list">
 					<li class="ham-item"><a href="../pixelart/sword/sword.html">剣類</a>
@@ -38,73 +43,66 @@
 					<li class="ham-item"><a href="../pixelart/ore/ore.html">鉱石類</a></li>
 					<li class="ham-item"><a href="../pixelart/chara/chara.html">キャラクター類</a></li>
 				</ul>
-				</details>
-			</nav>
-		</div>
+				</details>-->
+        </nav>
+    </div>
 
-		<div class="title">
-			<a href="../index.html"><font color="#e0e0e0">ESBE-1G Info</font></a>
-		</div>
-		<div class="block1">
-			<p>
-				ESBE-1Gの説明ページ
-			</p>
-		</div>
-		<div class="block3">
-			<p>
-				ESBEutilファイルでは色調や特定の効果のON.OFF、効果の強さなど<br>
-				様々な設定を変更することでESBEを自分の好きなようにカスタマイズすることができます。<br>
-				なお、自分の変更したESBEutilファイルを共有したい場合、<br>
-				ESBEutilのみ抜き出して再配布することが可能です。<br>
-				mcpack化、subpacks化は出来ないようです<br>
-				このファイルを弄ったことによるトラブルは自己責任でお願いします。<br>
-				いざ動かなくなった時は再インポート(｀･ω･´)。
-			</p>
-			<h3>ESBEutilの場所</h3>
-			<p style="margin-left:10px;">
-				PEとWin10で使うファイルが異なるため2箇所にあります。<br>
-				PEのみもしくはWin10のみの描写を変えたい場合は、片方の変更だけで十分です。
-			</p>
-			<p>
-					BE<br>ESBE>shaders>glsl>ESBEutil.h<br>
-					Win10<br>
-					ESBE>shaders>hlsl>ESBEutil.fxh
-			</p>
-			<p style="margin-left:10px;">
-				なお、システムの都合上ESBEutil.fxhの一部の設定項目は<br>
-				terrain.fsh.hlslに移動しています。
-			</p>
-			<br>
-			<h3>ESBEutilの編集方法</h3>
-			<p style="margin-left:10px;">
-				ESBEutilを開くと<br>
-				#define EXAMPLE//例<br>
-				みたいなやつが沢山あります。<br>
-				後ろに付いている説明書きなどを手掛かりにすればどんなやつなのか分かるはず<br>
-				無効化したいときは手前に半角スラッシュを2個入れて<br>
-				//#define EXAMPLE//例<br>
-				こんな感じにしてください<br>
-				<br>
-				#define EXAMPLE 12.3//例<br>
-				の様に数字がついているものの場合、もともと小数点がついているものには<br>
-				必ず小数点をつけてください<br>
-				(ついていなかったら絶対につけないでください。(動かなくなります。<br>
-				<br>
-				#define EXAMPLE vec3(0.7,0.5,0.3)//例<br>
-				vec3やfloat3がついているものは大抵RGBの値です。小数点を忘れずに。<br>
-				<br>
-				ESBE.hやterrain.fsh.hlslには<br>
-				float blur = 0.05;<br>
-				の様に変数を宣言しているものがあります。これらは無効化できません。
-			</p>
-		</div>
-		<div class="copyright">
-			<p>
-				©︎2020〜&nbsp;<i class="fab fa-twitter fa-fw"></i><a href="https://twitter.com/channel_nari">@chanel_nari</a><br>
-				<i class="fab fa-youtube fa-fw"></i><a href="https://www.youtube.com/channel/UCr0-2qXUZqqx2xKezrgwdbw?view_as=subscriber">NARI Channel</a>
-			</p>
-		</div>
-		<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-		 <script type="text/javascript" src="../js/st.js"></script>
-	</body>
+    <div class="title">
+        <a href="../index.html">
+            <font color="#e0e0e0">ESBE-1G Info</font>
+        </a>
+    </div>
+    <div class="block1">
+        <p>
+            ESBE-1Gの説明ページ
+        </p>
+    </div>
+    <div class="block3">
+        <p>
+            ESBEutilファイルでは色調や特定の効果のON.OFF、効果の強さなど<br> 様々な設定を変更することでESBEを自分の好きなようにカスタマイズすることができます。
+            <br> なお、自分の変更したESBEutilファイルを共有したい場合、
+            <br> ESBEutilのみ抜き出して再配布することが可能です。
+            <br> mcpack化、subpacks化は出来ないようです
+            <br> このファイルを弄ったことによるトラブルは自己責任でお願いします。
+            <br> いざ動かなくなった時は再インポート(｀･ω･´)。
+        </p>
+        <h3>ESBEutilの場所</h3>
+        <p style="margin-left:10px;">
+            PEとWin10で使うファイルが異なるため2箇所にあります。<br> PEのみもしくはWin10のみの描写を変えたい場合は、片方の変更だけで十分です。
+        </p>
+        <p>
+            BE<br>ESBE>shaders>glsl>ESBEutil.h<br> Win10
+            <br> ESBE>shaders>hlsl>ESBEutil.fxh
+        </p>
+        <p style="margin-left:10px;">
+            なお、システムの都合上ESBEutil.fxhの一部の設定項目は<br> terrain.fsh.hlslに移動しています。
+        </p>
+        <br>
+        <h3>ESBEutilの編集方法</h3>
+        <p style="margin-left:10px;">
+            ESBEutilを開くと<br> #define EXAMPLE//例<br> みたいなやつが沢山あります。
+            <br> 後ろに付いている説明書きなどを手掛かりにすればどんなやつなのか分かるはず
+            <br> 無効化したいときは手前に半角スラッシュを2個入れて
+            <br> //#define EXAMPLE//例<br> こんな感じにしてください
+            <br>
+            <br> #define EXAMPLE 12.3//例<br> の様に数字がついているものの場合、もともと小数点がついているものには
+            <br> 必ず小数点をつけてください
+            <br> (ついていなかったら絶対につけないでください。(動かなくなります。
+            <br>
+            <br> #define EXAMPLE vec3(0.7,0.5,0.3)//例<br> vec3やfloat3がついているものは大抵RGBの値です。小数点を忘れずに。
+            <br>
+            <br> ESBE.hやterrain.fsh.hlslには
+            <br> float blur = 0.05;<br> の様に変数を宣言しているものがあります。これらは無効化できません。
+        </p>
+    </div>
+    <div class="copyright">
+        <p>
+            ©︎2020〜&nbsp;<i class="fab fa-twitter fa-fw"></i><a href="https://twitter.com/channel_nari">@chanel_nari</a><br>
+            <i class="fab fa-youtube fa-fw"></i><a href="https://www.youtube.com/channel/UCr0-2qXUZqqx2xKezrgwdbw?view_as=subscriber">NARI Channel</a>
+        </p>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/st.js"></script>
+</body>
+
 </html>
