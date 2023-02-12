@@ -3,6 +3,7 @@ var _window = $(window),
     _hamopen = $('.ham-open'),
     _logo = $('.ham-site-logo'),
     _content = $('.ham-content'),
+    _body = $('body'),
     heroBottom;
 
 _window.on('scroll', function() {
@@ -20,4 +21,10 @@ _window.on('scroll', function() {
     }
 });
 
-_window.trigger('scroll');
+function isChecked() {
+    if (document.getElementById('ham-check').checked) {
+        _body.addClass('dontmove');
+    } else {
+        _body.removeClass('dontmove');
+    }
+}

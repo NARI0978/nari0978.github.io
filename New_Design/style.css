@@ -54,6 +54,10 @@
         list-style: none;
     }
     
+    body.dontmove {
+        overflow: hidden;
+    }
+    
     .sw {
         overflow: hidden;
         display: flex;
