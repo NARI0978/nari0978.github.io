@@ -295,4 +295,13 @@
             width: 100%;
             flex-direction: column;
         }
+        @media (max-width: 829px) {
+            .site-logo img {
+                height: 35px;
+                width: auto;
+            }
+            .ham-open {
+                height: 35px;
+            }
+        }
     }
