@@ -245,7 +245,7 @@
         }
     }
     
-    @media (min-width:381px) and (max-width: 829px) {
+    @media (max-width: 829px) {
         /* 横幅が800px以下の場合に適用するスタイル */
         .sw {
             display: flex;
@@ -294,14 +294,5 @@
             padding-top: 1em;
             width: 100%;
             flex-direction: column;
-        }
-        @media (min-width:0px) and (max-width: 380px) {
-            .site-logo img {
-                height: 35px;
-                width: auto;
-            }
-            .ham-open {
-                height: 35px;
-            }
         }
     }
