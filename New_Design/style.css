@@ -62,11 +62,11 @@
         overflow: hidden;
         display: flex;
         justify-content: center;
-        max-height: 100vw;
+        max-height: 90vh;
     }
     
     .sw img {
-        height: 100vh;
+        height: 110vh;
     }
     
     .blur {
@@ -252,6 +252,9 @@
             justify-content: center;
             align-items: center;
             max-height: 70vh;
+        }
+        .sw img {
+            height: 70vh;
         }
         .gnav {
             display: none;
