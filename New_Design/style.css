@@ -41,7 +41,7 @@
     }
     
     .gnav__menu__item a {
-        color: #333;
+        color: #444;
         text-decoration: none;
         transition: 0.4s;
     }
@@ -98,8 +98,8 @@
         margin: 40px 100px;
         padding: 10px;
         border-radius: 50px;
-        box-shadow: 0 0 7px 0 #333;
-        color: #333;
+        box-shadow: 0 0 7px 0 #444;
+        color: #444;
         text-align: center;
         font-size: 20px;
         transition: all .3s ease 0s;
@@ -123,7 +123,7 @@
     }
     
     .content2 {
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -134,13 +134,13 @@
     .infotitle,
     .info {
         text-align: center;
-        color: #333;
+        color: #444;
         font-size: 20px;
     }
     
     .infomation {
         margin: 10px;
-        box-shadow: 0 0 7px 0 #333;
+        box-shadow: 0 0 7px 0 #444;
         border-radius: 10px;
         width: 500px;
         height: 24em;
@@ -148,7 +148,11 @@
     
     .infotitle {
         font-weight: bold;
-        box-shadow: 0 1px 0 0 #333;
+        background: #444;
+        color: #f0f0f0;
+        box-shadow: 0 1px 0 0 #444;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
@@ -162,12 +166,12 @@
         margin: 10px;
         width: 500px;
         height: 480px;
-        box-shadow: 0 0 7px 0 #333;
+        box-shadow: 0 0 7px 0 #444;
         border-radius: 10px;
     }
     
     .site-footer {
-        background: #333;
+        background: #444;
         padding: 20px;
     }
     
@@ -224,7 +228,7 @@
     
     .footer__nav a:active,
     .ham__menu a:active {
-        color: #333;
+        color: #444;
         text-decoration: none;
     }
     
@@ -285,9 +289,11 @@
         }
         .infomation {
             height: 9em;
+            margin: 15px;
         }
         .info {
             height: 7.5em;
+            padding: 0 5px;
         }
         .sns {
             width: 369px;
