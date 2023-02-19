@@ -208,14 +208,12 @@
         background: transparent;
     }
     
-    .footer__nav a:link,
-    .ham__menu a:link {
+    .footer__nav a:link {
         color: #f0f0f0;
         text-decoration: none;
     }
     
-    .footer__nav a:visited,
-    .ham__menu a:visited {
+    .footer__nav a:visited {
         color: #f0f0f0;
         text-decoration: none;
     }
