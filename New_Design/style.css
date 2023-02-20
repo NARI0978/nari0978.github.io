@@ -78,7 +78,8 @@
         top: 50%;
         width: 100%;
         text-align: center;
-        color: #f0f0f0;
+        color: #444;
+        background: #f0f0f075;
         font-size: 50px;
     }
     
