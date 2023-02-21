@@ -78,7 +78,8 @@
         top: 50%;
         width: 100%;
         text-align: center;
-        color: #f0f0f0;
+        color: #444;
+        background: #f0f0f075;
         font-size: 50px;
     }
     
@@ -208,14 +209,12 @@
         background: transparent;
     }
     
-    .footer__nav a:link,
-    .ham__menu a:link {
+    .footer__nav a:link {
         color: #f0f0f0;
         text-decoration: none;
     }
     
-    .footer__nav a:visited,
-    .ham__menu a:visited {
+    .footer__nav a:visited {
         color: #f0f0f0;
         text-decoration: none;
     }
