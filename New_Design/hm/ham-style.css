@@ -144,29 +144,3 @@
     border-left: solid 5px #ffab52;
     padding: 15px;
 }
-
-
-/*.ham__menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.ham-content {
-    padding: 4em;
-}*/
-
-
-/*@media(prefers-color-scheme: dark) {
-  .ham-open span,
-  .ham-open span:before,
-  .ham-open span:after {
-    background: rgb(0, 0, 0);
-  }
-  .ham-content{
-    background: #000;
-  }
-  .ham-content ul li{
-    border-top: 1px solid rgb(0, 0, 0);
-  }
-}

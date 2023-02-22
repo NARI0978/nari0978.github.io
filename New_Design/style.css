@@ -143,7 +143,7 @@
         margin: 10px;
         box-shadow: 0 0 7px 0 #444;
         border-radius: 10px;
-        width: 500px;
+        width: 600px;
         height: 24em;
     }
     
@@ -162,24 +162,17 @@
         overflow: scroll;
         height: 22.5em;
     }
-    
-    .sns {
+    /*.sns {
         margin: 10px;
         width: 500px;
         height: 480px;
         box-shadow: 0 0 7px 0 #444;
         border-radius: 10px;
-    }
+    }*/
     
     .site-footer {
         background: #444;
         padding: 20px;
-    }
-    
-    .site-header__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
     
     .ham-site-logo {
@@ -187,9 +180,6 @@
         padding-left: 20px;
         transition: .5s;
     }
-    /*.ham__menu li {
-    border-bottom: 1px solid rgb(140, 140, 140);
-}*/
     
     .contact {
         display: flex;
@@ -198,45 +188,8 @@
         flex-wrap: wrap;
     }
     
-    h1,
-    img {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        font-size: 100%;
-        vertical-align: baseline;
-        background: transparent;
-    }
-    
-    .footer__nav a:link {
-        color: #f0f0f0;
-        text-decoration: none;
-    }
-    
-    .footer__nav a:visited {
-        color: #f0f0f0;
-        text-decoration: none;
-    }
-    
-    .footer__nav a:hover,
-    .ham__menu a:hover {
-        color: #b3b3b3;
-        text-decoration: none;
-    }
-    
-    .footer__nav a:active,
-    .ham__menu a:active {
-        color: #444;
-        text-decoration: none;
-    }
-    
-    .active {
-        border-bottom: 1px solid #ababab;
-    }
-    
-    @media (min-width: 830px) {
-        /* 横幅が800px以上の場合に適用するスタイル */
+    @media (min-width: 860px) {
+        /* 横幅が830px以上の場合に適用するスタイル */
         .ham {
             display: none;
         }
@@ -245,14 +198,8 @@
         }
     }
     
-    @media (max-width: 1045px) {
-        .footer__nav {
-            display: block;
-        }
-    }
-    
-    @media (max-width: 829px) {
-        /* 横幅が800px以下の場合に適用するスタイル */
+    @media (max-width: 859px) {
+        /* 横幅が829px以下の場合に適用するスタイル */
         .sw {
             display: flex;
             justify-content: center;
