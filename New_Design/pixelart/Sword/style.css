@@ -58,7 +58,24 @@
         overflow: hidden;
     }
     
-    .content {}
+    .title {
+        text-align: center;
+        padding-top: 92px;
+    }
+    
+    .content {
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .pix {
+        width: 300px;
+        padding: 10px;
+        word-break: break-all;
+        text-align: center;
+    }
     
     .site-footer {
         background: #444;
