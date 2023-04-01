@@ -4,7 +4,7 @@
     }
     
     body {
-        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "MS P Gothic", sans-serif;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
         background: #f0f0f0;
         width: 100%;
     }
@@ -70,13 +70,12 @@
     }
     
     .blur {
-        filter: blur(0px);
+        filter: blur(5px);
     }
     
     .text {
         position: absolute;
-        top: 85%;
-        left: 20%;
+        top: 50%;
         width: 100%;
         text-align: center;
         color: #f0f0f0;
@@ -189,10 +188,6 @@
         flex-wrap: wrap;
     }
     
-    .sp {
-        display: none;
-    }
-    
     @media (min-width: 860px) {
         /* 横幅が830px以上の場合に適用するスタイル */
         .ham {
@@ -225,8 +220,7 @@
             width: auto;
         }
         .text {
-            font-size: 20px;
-            left: 0;
+            font-size: 30px;
         }
         .icon {
             margin: 20px;
