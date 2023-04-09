@@ -82,22 +82,23 @@
     }
     
     .content {
-        padding: 40px 10px;
+        color: #444;
+        padding: 20px 10px;
         line-height: 1.6;
         word-break: break-all;
     }
     
     .title {
-        margin: 5px;
+        margin: 0.5em;
         font-size: 25px;
-        border-left: solid 7px #ffab52;
-        box-shadow: 1px 1px 5px #444;
+        border-left: solid 5px #ffab52;
+        background-color: #f6e3cf;
         padding-left: 10px;
     }
     
     .bd_text {
         padding: 5px;
-        font-size: 18px;
+        font-size: 17px;
     }
     
     .site-footer {
