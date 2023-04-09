@@ -62,18 +62,17 @@
         overflow: hidden;
         display: flex;
         justify-content: center;
-        height: 90vh;
+        height: 70vh;
     }
     
     .sw img {
         height: 90vh;
-        width: 100%;
+        object-fit: cover;
     }
     
     .text {
         position: absolute;
         top: 85%;
-        left: 25%;
         width: 100%;
         text-align: center;
         color: #f0f0f0;
@@ -90,7 +89,7 @@
     
     .title {
         margin: 0.5em;
-        font-size: 25px;
+        font-size: 30px;
         border-left: solid 5px #ffab52;
         background-color: #f6e3cf;
         padding-left: 10px;
@@ -98,7 +97,7 @@
     
     .bd_text {
         padding: 5px;
-        font-size: 17px;
+        font-size: 20px;
     }
     
     .site-footer {
@@ -153,32 +152,12 @@
         }
         .text {
             font-size: 20px;
-            left: 0;
         }
-        .icon {
-            margin: 20px;
-            border-radius: 20px;
-            max-width: 135px;
-            width: 100%;
+        .title {
+            font-size: 25px;
         }
-        .icon img {
-            max-width: 135px;
-            max-height: 135px;
-        }
-        .icon p {
-            text-align: center;
-            font-size: 14px;
-        }
-        .infomation {
-            height: 9em;
-            margin: 15px;
-        }
-        .info {
-            height: 7.5em;
-            padding: 0 5px;
-        }
-        .sns {
-            width: 369px;
+        .bd_text {
+            font-size: 17px;
         }
         .footer__menu {
             margin-left: 0;
