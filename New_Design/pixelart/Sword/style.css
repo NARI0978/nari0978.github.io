@@ -71,18 +71,21 @@
     }
     
     .pix {
-        width: 300px;
-        height: 310px;
+        width: 250px;
+        height: 250px;
         padding: 10px;
-        margin: 30px 100px;
         word-break: break-all;
         text-align: center;
-        box-shadow: 0 0 4px 0 #303030;
+    }
+    
+    .pix p {
+        margin-top: 5px;
     }
     
     .pix img {
-        width: 270px;
-        height: 270px;
+        width: 200px;
+        height: 200px;
+        box-shadow: 3px 3px 7px 1px #bbb;
     }
     
     .site-footer {
@@ -119,15 +122,17 @@
             height: 45px;
             width: auto;
         }
-        .pix {
-            width: 160px;
-            height: 170px;
-            padding: 5px;
-            margin: 15px 5px;
+        .content {
+            padding: 10px;
         }
-        .pix img {
+        .pix {
             width: 130px;
             height: 130px;
+            padding: 5px;
+        }
+        .pix img {
+            width: 100px;
+            height: 100px;
         }
         .footer__menu {
             margin-left: 0;
