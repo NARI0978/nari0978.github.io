@@ -12,7 +12,7 @@
     .site-header {
         background: #f0f0f0a6;
         display: flex;
-        padding: 15px 15px;
+        padding: 10px;
         position: fixed;
         justify-content: space-between;
         transition: .5s;
@@ -82,7 +82,7 @@
     
     .content {
         color: #444;
-        padding: 20px 10px;
+        padding: 20px 5px;
         line-height: 1.6;
         word-break: break-all;
     }
@@ -96,7 +96,7 @@
     }
     
     .bd_text {
-        padding: 5px;
+        padding: 5px 20px;
         font-size: 20px;
     }
     
@@ -147,6 +147,7 @@
             justify-content: flex-start;
         }
         .site-logo img {
+            margin-top: 6px;
             height: 45px;
             width: auto;
         }
@@ -154,10 +155,10 @@
             font-size: 20px;
         }
         .title {
-            font-size: 25px;
+            font-size: 20px;
         }
         .bd_text {
-            font-size: 17px;
+            font-size: 15px;
         }
         .footer__menu {
             margin-left: 0;

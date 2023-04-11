@@ -12,7 +12,7 @@
     .site-header {
         background: #f0f0f0a6;
         display: flex;
-        padding: 15px 15px;
+        padding: 10px;
         position: fixed;
         justify-content: space-between;
         transition: .5s;
@@ -221,6 +221,7 @@
             justify-content: flex-start;
         }
         .site-logo img {
+            margin-top: 6px;
             height: 45px;
             width: auto;
         }
