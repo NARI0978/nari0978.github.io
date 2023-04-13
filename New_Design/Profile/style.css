@@ -99,6 +99,21 @@
         font-size: 20px;
     }
     
+    .flex1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .flex2 {
+        color: #444;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
     .site-footer {
         background: #444;
         padding: 20px;
