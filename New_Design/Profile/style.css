@@ -95,7 +95,7 @@
     }
     
     .bd_text {
-        padding: 5px 20px;
+        padding: 10px 20px;
         font-size: 20px;
     }
     
@@ -112,6 +112,7 @@
     }
     
     .flex1 a:hover {
+        transition: .5s;
         color: #686868;
     }
     
@@ -119,6 +120,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        vertical-align: middle;
     }
     
     .site-footer {
