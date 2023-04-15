@@ -81,8 +81,6 @@
     height: 100%;
     position: fixed;
     top: 0;
-    bottom: 0;
-    right: 100%;
     opacity: 0%;
     z-index: 101;
     background: #eee;
@@ -113,8 +111,8 @@
 /* アイコンがクリックされたらメニューを表示  透明度変化*/
 
 #ham-check:checked~.ham-content {
-    left: 0;
     opacity: 1;
+    transition: 0.5s;
 }
 
 .ham__menu a:link {
