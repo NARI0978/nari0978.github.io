@@ -1,0 +1,143 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+        background: #f0f0f0;
+        width: 100%;
+    }
+    
+    .site-header {
+        background: #f0f0f0a6;
+        display: flex;
+        padding: 15px 15px;
+        position: fixed;
+        justify-content: space-between;
+        transition: .5s;
+        width: 100%;
+        z-index: 99;
+        box-sizing: border-box;
+        align-items: center;
+    }
+    
+    .site-header.transform {
+        background: #f0f0f0f2;
+        padding: 10px 15px;
+    }
+    
+    .site-logo img {
+        height: 50px;
+        width: auto;
+    }
+    
+    .gnav__menu {
+        display: flex;
+    }
+    
+    .gnav__menu__item {
+        margin-left: 20px;
+    }
+    
+    .gnav__menu__item a {
+        color: #444;
+        text-decoration: none;
+        transition: 0.4s;
+    }
+    
+    .gnav__menu__item a:hover {
+        color: #686868;
+    }
+    
+    nav ul {
+        list-style: none;
+    }
+    
+    body.dontmove {
+        overflow: hidden;
+    }
+    
+    .title {
+        text-align: center;
+        padding-top: 92px;
+    }
+    
+    .content {
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .pix {
+        width: 250px;
+        height: 250px;
+        padding: 10px;
+        word-break: break-all;
+        text-align: center;
+    }
+    
+    .pix p {
+        margin-top: 5px;
+    }
+    
+    .pix img {
+        width: 200px;
+        height: 200px;
+        box-shadow: 3px 3px 7px 1px #bbb;
+    }
+    
+    .site-footer {
+        background: #444;
+        padding: 20px;
+    }
+    
+    .contact {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    @media (min-width: 960px) {
+        /* 横幅が830px以上の場合に適用するスタイル */
+        .ham {
+            display: none;
+        }
+        .sp {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 959px) {
+        /* 横幅が829px以下の場合に適用するスタイル */
+        .gnav {
+            display: none;
+        }
+        .site-header {
+            justify-content: flex-start;
+        }
+        .site-logo img {
+            height: 45px;
+            width: auto;
+        }
+        .content {
+            padding: 10px;
+        }
+        .pix {
+            width: 170px;
+            height: 170px;
+            padding: 5px;
+        }
+        .pix img {
+            width: 140px;
+            height: 140px;
+        }
+        .footer__menu {
+            margin-left: 0;
+            padding-top: 1em;
+            width: 100%;
+            flex-direction: column;
+        }
+    }
