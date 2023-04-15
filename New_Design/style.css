@@ -246,8 +246,9 @@
             margin: 15px;
         }
         .info {
-            height: 7.5em;
+            height: 10em;
             padding: 0 5px;
+            font-size: 15px;
         }
         .sns {
             width: 369px;
