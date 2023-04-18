@@ -9,8 +9,8 @@
 
 .ham-open {
     display: flex;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     right: 8px;
     top: 15px;
     justify-content: center;
@@ -20,6 +20,8 @@
     /*重なりを一番上*/
     cursor: pointer;
     transition: .5s;
+    border: solid 2px #444;
+    border-radius: 10px;
 }
 
 
@@ -136,4 +138,11 @@
 .ham__menu .now {
     border-left: solid 5px #ffab52;
     padding: 5px 15px;
+}
+
+@media (min-width: 860px) {
+    /* 横幅が830px以上の場合に適用するスタイル */
+    .ham {
+        display: none;
+    }
 }

@@ -10,20 +10,24 @@
     }
     
     .site-header {
-        background: #f0f0f0a6;
+        background: #f0f0f0cc;
         display: flex;
-        padding: 15px 15px;
-        position: fixed;
         justify-content: space-between;
-        transition: .5s;
+        position: fixed;
         width: 100%;
+        height: 80px;
+        padding: 10px;
         z-index: 99;
+        transition: .5s;
         box-sizing: border-box;
         align-items: center;
     }
     
+    .site-header.transform {
+        background: #f0f0f0f2;
+    }
+    
     .site-logo img {
-        margin-top: 8px;
         height: 50px;
         width: auto;
     }
@@ -54,34 +58,70 @@
         overflow: hidden;
     }
     
-    .title {
+    .sw {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        height: 70vh;
+    }
+    
+    .sw img {
+        height: 90vh;
+        object-fit: cover;
+    }
+    
+    .text {
+        position: absolute;
+        top: 85%;
+        width: 100%;
         text-align: center;
-        padding-top: 92px;
+        color: #f0f0f0;
+        text-shadow: 2px 1px 0px #444;
+        font-size: 40px;
     }
     
     .content {
-        display: flex;
-        align-items: stretch;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
-    
-    .pix {
-        width: 250px;
-        height: 250px;
-        padding: 10px;
+        color: #444;
+        padding: 20px 5px;
+        line-height: 1.6;
         word-break: break-all;
-        text-align: center;
     }
     
-    .pix p {
-        margin-top: 5px;
+    .title {
+        margin: 10px;
+        font-size: 30px;
+        border-left: solid 5px #6FBFBC;
+        background-color: #cbeeed;
+        padding-left: 10px;
     }
     
-    .pix img {
-        width: 200px;
-        height: 200px;
-        box-shadow: 3px 3px 7px 1px #bbb;
+    .bd_text {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+    
+    .flex1 {
+        color: #444;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .flex1 a {
+        color: #444;
+    }
+    
+    .flex1 a:hover {
+        transition: .5s;
+        color: #686868;
+    }
+    
+    .flex2 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        vertical-align: middle;
     }
     
     .site-footer {
@@ -96,18 +136,25 @@
         flex-wrap: wrap;
     }
     
-    @media (min-width: 960px) {
+    @media (min-width: 860px) {
         /* 横幅が830px以上の場合に適用するスタイル */
-        .ham {
-            display: none;
-        }
         .sp {
             display: none;
         }
     }
     
-    @media (max-width: 959px) {
+    @media (max-width: 859px) {
         /* 横幅が829px以下の場合に適用するスタイル */
+        .sw {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+        .sw img {
+            height: 50vh;
+            width: 10000%;
+        }
         .gnav {
             display: none;
         }
@@ -115,20 +162,18 @@
             justify-content: flex-start;
         }
         .site-logo img {
+            margin-top: 6px;
             height: 45px;
             width: auto;
         }
-        .content {
-            padding: 10px;
+        .text {
+            font-size: 20px;
         }
-        .pix {
-            width: 170px;
-            height: 170px;
-            padding: 5px;
+        .title {
+            font-size: 20px;
         }
-        .pix img {
-            width: 140px;
-            height: 140px;
+        .bd_text {
+            font-size: 15px;
         }
         .footer__menu {
             margin-left: 0;

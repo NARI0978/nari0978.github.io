@@ -28,6 +28,7 @@
     }
     
     .site-logo img {
+        margin-top: 8px;
         height: 50px;
         width: auto;
     }
@@ -67,10 +68,6 @@
     
     .sw img {
         height: 90vh;
-    }
-    
-    .blur {
-        filter: blur(0px);
     }
     
     .text {
@@ -216,7 +213,7 @@
             justify-content: flex-start;
         }
         .site-logo img {
-            height: 45px;
+            height: 36px;
             width: 317px;
         }
         .text {
