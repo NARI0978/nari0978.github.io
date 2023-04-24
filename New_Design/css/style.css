@@ -1,0 +1,104 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "MS P Gothic", sans-serif;
+        background: #f0f0f0;
+        width: 100%;
+    }
+    
+    .content {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        line-height: 1.6;
+        width: 100%;
+        word-break: break-all;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    .content2 {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .infomation,
+    .infotitle,
+    .info {
+        text-align: center;
+        color: #444;
+        font-size: 20px;
+    }
+    
+    .infomation {
+        margin: 10px;
+        box-shadow: 0 0 7px 0 #444;
+        border-radius: 10px;
+        width: 600px;
+        height: 24em;
+    }
+    
+    .infotitle {
+        font-weight: bold;
+        background: #444;
+        color: #f0f0f0;
+        box-shadow: 0 1px 0 0 #444;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    .info {
+        overflow: scroll;
+        height: 22.5em;
+    }
+    /*.sns {
+        margin: 10px;
+        width: 500px;
+        height: 480px;
+        box-shadow: 0 0 7px 0 #444;
+        border-radius: 10px;
+    }*/
+    
+    .site-footer {
+        background: #444;
+        padding: 20px;
+    }
+    
+    .contact {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    @media (min-width: 860px) {
+        /* 横幅が830px以上の場合に適用するスタイル */
+        .sp {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 859px) {
+        /* 横幅が829px以下の場合に適用するスタイル */
+        .infomation {
+            height: 9em;
+            margin: 15px;
+        }
+        .info {
+            height: 9.95em;
+            padding: 0 5px;
+            font-size: 15px;
+        }
+        .sns {
+            width: 369px;
+        }
+    }

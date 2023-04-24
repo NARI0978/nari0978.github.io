@@ -167,22 +167,17 @@
         background: #444;
         padding: 20px;
     }
-    
-    .ham-site-logo {
+    /*.ham-site-logo {
         padding-top: 40px;
         padding-left: 20px;
         transition: .5s;
-    }
+    }*/
     
     .contact {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
-    }
-    
-    .sp {
-        display: none;
     }
     
     @media (min-width: 860px) {
@@ -242,11 +237,5 @@
         }
         .sns {
             width: 369px;
-        }
-        .footer__menu {
-            margin-left: 0;
-            padding-top: 1em;
-            width: 100%;
-            flex-direction: column;
         }
     }

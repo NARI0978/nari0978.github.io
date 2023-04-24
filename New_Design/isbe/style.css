@@ -89,10 +89,15 @@
     
     .title {
         margin: 10px;
-        font-size: 30px;
-        border-left: solid 5px #3577C7;
-        background-color: #d0e5ff;
+        font-size: 25px;
+        border-left: solid 5px #ffab52;
+        background-color: #f6e3cf;
         padding-left: 10px;
+    }
+    
+    .title.caution {
+        border-left: solid 5px #c73535;
+        background-color: #ffd0d0;
     }
     
     .bd_text {
