@@ -1,0 +1,31 @@
+.link_n {
+    color: #3634ff;
+}
+
+.link_n:hover {
+    transition: .5s;
+    color: #9090ff;
+}
+
+.link_sp {
+    color: #444;
+}
+
+.link_sp:hover {
+    transition: .5s;
+    color: #686868;
+}
+
+.btn {
+    border: solid 2px #ffab52;
+    background-color: #f6e3cf;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #f6e3cf00;
+}
+
+.pad {
+    padding: 10px;
+}

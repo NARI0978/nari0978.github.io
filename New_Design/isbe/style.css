@@ -122,28 +122,11 @@
         border-bottom: solid 2px #ff3333;
     }
     
-    .flex1 {
-        color: #444;
+    .flex {
         display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
-    .flex1 a {
-        color: #444;
-    }
-    
-    .flex1 a:hover {
-        transition: .5s;
-        color: #686868;
-    }
-    
-    .flex2 {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        vertical-align: middle;
     }
     
     .site-footer {
@@ -189,7 +172,7 @@
             width: auto;
         }
         .top_title {
-            font-size: 25px;
+            font-size: 24px;
         }
         /*.text {
             font-size: 20px;
