@@ -22,9 +22,10 @@
         box-sizing: border-box;
         align-items: center;
     }
-    /*.site-header.transform {
+    
+    .site-header.transform {
         background: #f0f0f0f2;
-    }*/
+    }
     
     .site-logo img {
         height: 50px;
@@ -66,9 +67,21 @@
     .sw img {
         height: 90vh;
         object-fit: cover;
+    }*/
+    
+    .slider {
+        width: 1160px;
+        height: 515px;
+        border-radius: 10px;
     }
     
-    .text {
+    .top_title {
+        color: #444;
+        text-align: center;
+        padding-top: 86px;
+        font-size: 40px;
+    }
+    /*.text {
         position: absolute;
         top: 85%;
         width: 100%;
@@ -78,63 +91,17 @@
         font-size: 40px;
     }*/
     
-    .top_title {
-        color: #444;
-        text-align: center;
-        padding-top: 86px;
-        padding-bottom: 20px;
-        font-size: 40px;
-    }
-    
-    .slider {
-        width: 1160px;
-        height: 515px;
-        border-radius: 10px;
-    }
-    
     .content {
+        overflow: hidden;
         color: #444;
-        padding: 20px 5px;
+        padding: 10px 5px;
         line-height: 1.6;
         word-break: break-all;
     }
     
     .title {
-        margin: 10px;
-        font-size: 25px;
-        border-left: solid 5px #ffab52;
-        background-color: #f6e3cf;
-        padding-left: 10px;
-    }
-    
-    .bd_text {
-        padding: 10px 20px;
-        font-size: 20px;
-    }
-    
-    .flex1 {
-        color: #444;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-    }
-    
-    .flex1 a {
-        color: #444;
-    }
-    
-    .flex1 a:hover {
-        transition: .5s;
-        color: #686868;
-    }
-    
-    .flex2 {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        vertical-align: middle;
-        text-decoration: none;
+        text-align: center;
+        padding: 10px 0;
     }
     
     .site-footer {
@@ -179,9 +146,20 @@
             height: 45px;
             width: auto;
         }
+        .top_title {
+            font-size: 25px;
+        }
         /*.text {
             font-size: 20px;
+        }
+        .slider [class^="swiper-button-"]::after {
+            font-size: 30px;
         }*/
+        .slider {
+            width: 360px;
+            height: 160px;
+            border-radius: 5px;
+        }
         .title {
             font-size: 20px;
         }
