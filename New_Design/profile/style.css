@@ -179,9 +179,17 @@
             height: 45px;
             width: auto;
         }
+        .top_title {
+            font-size: 25px;
+        }
         /*.text {
             font-size: 20px;
         }*/
+        .slider {
+            width: 360px;
+            height: 160px;
+            border-radius: 5px;
+        }
         .title {
             font-size: 20px;
         }
