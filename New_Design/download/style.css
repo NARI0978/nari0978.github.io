@@ -70,8 +70,8 @@
     }*/
     
     .slider {
-        width: 1160px;
-        height: 515px;
+        width: 1000px;
+        height: 460px;
         border-radius: 10px;
     }
     
@@ -99,9 +99,19 @@
         word-break: break-all;
     }
     
+    .download {
+        text-align: center;
+        padding: 25px 0;
+    }
+    
     .title {
+        font-size: 30px;
         text-align: center;
         padding: 10px 0;
+    }
+    
+    .dl {
+        font-size: 25px;
     }
     
     .site-footer {
@@ -163,8 +173,8 @@
         .title {
             font-size: 20px;
         }
-        .bd_text {
-            font-size: 15px;
+        .dl {
+            font-size: 20px;
         }
         .footer__menu {
             margin-left: 0;
