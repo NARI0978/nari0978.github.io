@@ -118,13 +118,19 @@
             transform: scale(1.05);
         }
         
+        .ico_size {
+            width: 250px;
+            height: 250px;
+            box-shadow: 0 0 7px 0 #444;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
         .icon img {
             width: 250px;
             height: 250px;
-            display: flex;
-            justify-content: center;
-            box-shadow: 0 0 7px 0 #444;
-            border-radius: 20px;
         }
         
         .icon p {
@@ -246,9 +252,13 @@
                 max-width: 135px;
                 width: 100%;
             }
+            .ico_size {
+                width: 135px;
+                height: 135px;
+            }
             .icon img {
-                max-width: 135px;
-                max-height: 135px;
+                max-width: 100px;
+                max-height: 100px;
             }
             .icon p {
                 text-align: center;

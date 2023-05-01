@@ -24,13 +24,13 @@
     .title {
         color: #444;
     }
-    .icon img,
+    .ico_size,
     .info,
     .pix img {
         background: #f0f0f0;
     }
     .infomation,
-    .icon img {
+    .ico_size {
         box-shadow: 0 0 10px 0 #f0f0f0;
     }
     .pix img {
