@@ -1,0 +1,39 @@
+@media (prefers-color-scheme: dark) {
+    body,
+    .infotitle {
+        background-color: #444;
+    }
+    .site-header {
+        background-color: #444444cc;
+    }
+    .gnav__menu__item a {
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    .gnav__menu__item a:hover {
+        color: #bbb;
+    }
+    .text,
+    .icon,
+    .infotitle,
+    .gnav__menu__item a,
+    .top_title,
+    .content {
+        color: #f0f0f0;
+    }
+    .title {
+        color: #444;
+    }
+    .icon img,
+    .info,
+    .pix img {
+        background: #f0f0f0;
+    }
+    .infomation,
+    .icon img {
+        box-shadow: 0 0 10px 0 #f0f0f0;
+    }
+    .pix img {
+        box-shadow: 5px 5px #333;
+    }
+}

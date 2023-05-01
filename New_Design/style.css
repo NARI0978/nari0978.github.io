@@ -26,6 +26,7 @@
         .site-logo img {
             height: 50px;
             width: auto;
+            margin-top: 13px;
         }
         
         .gnav__menu {
@@ -80,8 +81,8 @@
         }
         
         .slider {
-            width: 1160px;
-            height: 515px;
+            width: 1000px;
+            height: 460px;
             border-radius: 10px;
         }
         
@@ -170,6 +171,8 @@
         .info {
             overflow: scroll;
             height: 22.5em;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
         /*.sns {
         margin: 10px;
@@ -231,7 +234,7 @@
                 justify-content: flex-start;
             }
             .site-logo img {
-                margin-top: 6px;
+                margin-top: 13px;
                 height: 45px;
                 width: 317px;
             }

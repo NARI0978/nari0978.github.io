@@ -87,8 +87,8 @@
     }
     
     .slider {
-        width: 1160px;
-        height: 515px;
+        width: 1000px;
+        height: 460px;
         border-radius: 10px;
     }
     
@@ -113,20 +113,10 @@
     }
     
     .flex1 {
-        color: #444;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
-    }
-    
-    .flex1 a {
-        color: #444;
-    }
-    
-    .flex1 a:hover {
-        transition: .5s;
-        color: #686868;
     }
     
     .flex2 {
@@ -175,7 +165,7 @@
             justify-content: flex-start;
         }
         .site-logo img {
-            margin-top: 6px;
+            margin-top: 13px;
             height: 45px;
             width: auto;
         }

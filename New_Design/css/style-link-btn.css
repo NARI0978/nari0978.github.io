@@ -33,3 +33,30 @@
 .pad {
     padding: 10px;
 }
+
+@media (prefers-color-scheme: dark) {
+    .link_n {
+        color: #b3b3fe;
+    }
+    .link_n:visited {
+        color: #b3b3fe;
+    }
+    .link_n:hover {
+        transition: .5s;
+        color: #7070ff;
+    }
+    .link_sp {
+        color: #f0f0f0;
+    }
+    .link_sp:hover {
+        transition: .5s;
+        color: #686868;
+    }
+    .link_sp2 {
+        color: #444;
+    }
+    .link_sp2:hover {
+        transition: .5s;
+        color: #686868;
+    }
+}

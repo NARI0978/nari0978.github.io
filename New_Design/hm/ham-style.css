@@ -146,3 +146,22 @@
         display: none;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    .ham-content {
+        background-color: #444;
+    }
+    .ham-open {
+        border: solid 2px #f0f0f0;
+    }
+    .ham__menu a:link,
+    .ham__menu a:visited {
+        color: #f0f0f0;
+        text-decoration: none;
+    }
+    .ham-open span,
+    .ham-open span:before,
+    .ham-open span:after {
+        background: #f0f0f0;
+    }
+}

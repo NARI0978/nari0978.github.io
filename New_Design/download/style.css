@@ -105,7 +105,7 @@
         padding: 25px 0;
     }
     
-    .title {
+    .dl_title {
         font-size: 30px;
         text-align: center;
         padding: 10px 0;
@@ -153,7 +153,7 @@
             justify-content: flex-start;
         }
         .site-logo img {
-            margin-top: 6px;
+            margin-top: 13px;
             height: 45px;
             width: auto;
         }
@@ -171,7 +171,7 @@
             height: 160px;
             border-radius: 5px;
         }
-        .title {
+        .dl_title {
             font-size: 20px;
         }
         .dl {
