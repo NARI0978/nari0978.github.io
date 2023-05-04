@@ -81,7 +81,7 @@
     }*/
     
     .top_pad {
-        padding-top: 85px;
+        padding-top: 45px;
     }
     
     .content {
@@ -254,12 +254,13 @@
             margin: 15px;
         }
         .info {
-            height: 7.5em;
+            height: 9.95em;
             padding: 0 5px;
+            font-size: 15px;
         }
-        .sns {
+        /*.sns {
             width: 369px;
-        }
+        }*/
         .footer__menu {
             margin-left: 0;
             padding-top: 1em;
