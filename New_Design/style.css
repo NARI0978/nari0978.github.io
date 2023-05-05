@@ -16,6 +16,7 @@
         position: fixed;
         width: 100%;
         height: 80px;
+        /*消す*/
         padding: 10px;
         z-index: 99;
         transition: .5s;
@@ -204,17 +205,15 @@
         align-items: center;
         flex-wrap: wrap;
     }
-    
-    @media (min-width: 860px) {
-        /* 横幅が830px以上の場合に適用するスタイル */
+    /*@media (min-width: 860px) {
+        /* 横幅が830px以上の場合に適用するスタイル
         .sp {
             display: none;
         }
-    }
-    
-    @media (max-width: 859px) {
+    }*/
+    /*@media (max-width: 859px) {
         /* 横幅が829px以下の場合に適用するスタイル */
-        /*.sw {
+    /*.sw {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -227,7 +226,7 @@
         .text {
             font-size: 20px;
             left: 0;
-        }*/
+        }*
         .slider {
             width: 360px;
             height: 160px;
@@ -276,4 +275,4 @@
         .sns {
             width: 369px;
         }
-    }
+    }*/

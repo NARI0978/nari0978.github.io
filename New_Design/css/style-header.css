@@ -42,18 +42,3 @@
     body.dontmove {
         overflow: hidden;
     }
-    
-    @media (max-width: 859px) {
-        /* 横幅が829px以下の場合に適用するスタイル */
-        .gnav {
-            display: none;
-        }
-        .site-header {
-            justify-content: flex-start;
-        }
-        .site-logo img {
-            margin-top: 6px;
-            height: 45px;
-            width: 317px;
-        }
-    }

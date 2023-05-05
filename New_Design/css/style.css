@@ -9,6 +9,52 @@
         width: 100%;
     }
     
+    .text {
+        color: #444;
+        text-align: center;
+        padding-top: 20px;
+    }
+    /*-profile-----------------------------------------------*/
+    
+    .top_title {
+        color: #444;
+        text-align: center;
+    }
+    
+    .a_content {
+        color: #444;
+        padding: 20px 5px;
+        line-height: 1.6;
+        word-break: break-all;
+    }
+    
+    .title {
+        margin: 10px;
+        border-left: solid 5px #ffab52;
+        background-color: #f6e3cf;
+        padding-left: 10px;
+    }
+    
+    .bd_text {
+        padding: 10px 20px;
+    }
+    
+    .flex1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .flex2 {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        vertical-align: middle;
+        text-decoration: none;
+    }
+    /*-------------------------------------------------------*/
+    
     .content {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -58,15 +104,9 @@
     
     .info {
         overflow: scroll;
-        height: 22.5em;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
-    /*.sns {
-        margin: 10px;
-        width: 500px;
-        height: 480px;
-        box-shadow: 0 0 7px 0 #444;
-        border-radius: 10px;
-    }*/
     
     .site-footer {
         background: #444;
@@ -78,27 +118,4 @@
         justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
-    }
-    
-    @media (min-width: 860px) {
-        /* 横幅が830px以上の場合に適用するスタイル */
-        .sp {
-            display: none;
-        }
-    }
-    
-    @media (max-width: 859px) {
-        /* 横幅が829px以下の場合に適用するスタイル */
-        .infomation {
-            height: 9em;
-            margin: 15px;
-        }
-        .info {
-            height: 9.95em;
-            padding: 0 5px;
-            font-size: 15px;
-        }
-        .sns {
-            width: 369px;
-        }
     }

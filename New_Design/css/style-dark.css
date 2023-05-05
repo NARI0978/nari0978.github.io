@@ -19,7 +19,8 @@
     .gnav__menu__item a,
     .sub_title,
     .top_title,
-    .content {
+    .content,
+    .a_content {
         color: #f0f0f0;
     }
     .title {
