@@ -123,10 +123,10 @@
         }
         /*information*/
         .infotitle {
-            font-size: 15px;
+            font-size: 18px;
         }
         .info {
-            font-size: 13px;
+            font-size: 15px;
             height: 12em;
             padding: 1px 5px;
         }
@@ -189,12 +189,16 @@
         .icon p {
             font-size: 14px;
         }
+        /*content2*/
+        .content2 {
+            margin-bottom: 50px;
+        }
         /*information*/
         .infotitle {
-            font-size: 15px;
+            font-size: 20px;
         }
         .info {
-            font-size: 13px;
+            font-size: 16px;
             height: 12em;
             padding: 1px 5px;
         }
