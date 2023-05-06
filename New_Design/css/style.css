@@ -14,7 +14,7 @@
         text-align: center;
         padding-top: 20px;
     }
-    /*-profile-----------------------------------------------*/
+    /*-all-----------------------------------------------*/
     
     .top_title {
         color: #444;
@@ -28,6 +28,15 @@
         word-break: break-all;
     }
     
+    .p_content {
+        color: #444;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
     .title {
         margin: 10px;
         border-left: solid 5px #ffab52;
@@ -37,6 +46,10 @@
     
     .bd_text {
         padding: 10px 20px;
+    }
+    
+    .line {
+        border-bottom: solid 2px #ff3333;
     }
     
     .flex1 {
@@ -53,7 +66,42 @@
         vertical-align: middle;
         text-decoration: none;
     }
+    
+    .flex {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .download {
+        text-align: center;
+        padding: 25px 0;
+    }
+    
+    .dl_title {
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .pix {
+        padding: 10px;
+        word-break: break-all;
+        text-align: center;
+    }
+    
+    .pix p {
+        margin-top: 5px;
+    }
+    
+    .pix img {
+        box-shadow: 5px 5px #ddd;
+    }
     /*-------------------------------------------------------*/
+    
+    .icon img {
+        border-radius: 10px;
+    }
     
     .content {
         padding-top: 20px;
