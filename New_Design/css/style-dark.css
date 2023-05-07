@@ -27,6 +27,7 @@
         color: #444;
     }
     .ico_size,
+    .ico_size.a,
     .info,
     .pix img {
         background: #f0f0f0;
