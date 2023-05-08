@@ -178,6 +178,13 @@
         .fa-brands.b {
             font-size: 90px;
         }
+        /*setting-shader*/
+        .bd_text.a img {
+            width: 325px;
+            height: 149px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
         /*-------------------------------------------------------*/
         /*icon*/
         .icon {
@@ -279,6 +286,13 @@
         }
         .fa-brands.b {
             font-size: 100px;
+        }
+        /*setting-shader*/
+        .bd_text.a img {
+            width: 375px;
+            height: 172px;
+            margin: 10px 0;
+            border-radius: 5px;
         }
         /*-------------------------------------------------------*/
         /*icon*/
