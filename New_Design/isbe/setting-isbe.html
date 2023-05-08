@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Impressive Shadow Shaderの紹介・ダウンロードページです。">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+    <link rel="icon" href="isbe.png?v=2" />
+    <link rel="stylesheet" type="text/css" href="../hm/ham-style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-header.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-link-btn.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-dark.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/4d2ac0652c.js" crossorigin="anonymous"></script>
+    <title>Impressive Shadow Shader</title>
+</head>
+
+<body>
+    <!--ハンバーガーメニュー始まり-->
+    <div class="ham">
+        <input type="checkbox" id="ham-check" class="ham-hidden" value="Click" onclick="isChecked()">
+        <!--表示・非表示コントロールチェックボックス-->
+        <label for="ham-check" class="ham-open"><span></span></label>
+        <!--ハンバーガーアイコン設定。forで上の"ham-check"との関連付け-->
+        <nav class="ham-content">
+            <!--メニュー。自由に追加可能-->
+            <ul class="ham__menu">
+                <li><a href="../index.html" style="text-decoration:none">Home</a></li>
+                <li><a href="../profile/profile.html" style="text-decoration:none">Profile</a></li>
+                <li class="now"><a href="../isbe/isbe.html" style="text-decoration:none">Impressive Shadow Shader</a></li>
+                <li><a href="../esbe-1g/esbe-1g.html" style="text-decoration:none">ESBE-1G</a></li>
+                <li><a href="../download/download.html" style="text-decoration:none">Download</a></li>
+                <li><a href="../pixelart/pixelart.html" style="text-decoration:none">PixelArt</a></li>
+                <li><a href="../contact/contact.html" style="text-decoration:none">Contact</a></li>
+                <!--<li><a href="device/device.html" style="color: #8c8c8c;">ページ閲覧推奨端末</a></li>-->
+                <li><a href="../../index.html" style="color: #8c8c8c;">旧HOMEPAGEへ</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!--ハンバーガーメニュー終わり-->
+    <!--ヘッダー始まり-->
+    <header class="site-header">
+        <h1 class="site-logo">
+            <a href="../index.html" style="text-decoration:none"><img src="../photo/tlogo.webp" alt="NARI HP"></a>
+        </h1>
+        <nav class="gnav">
+            <ul class="gnav__menu">
+                <li class="gnav__menu__item"><a href="../profile/profile.html" style="text-decoration:none">Profile</a></li>
+                <li class="gnav__menu__item"><a href="../isbe/isbe.html" style="text-decoration:none">ISBE</a></li>
+                <li class="gnav__menu__item"><a href="../esbe-1g/esbe-1g.html" style="text-decoration:none">ESBE-1G</a></li>
+                <li class="gnav__menu__item"><a href="../download/download.html" style="text-decoration:none">Download</a></li>
+                <li class="gnav__menu__item"><a href="../pixelart/pixelart.html" style="text-decoration:none">PixelArt</a></li>
+                <li class="gnav__menu__item"><a href="../contact/contact.html" style="text-decoration:none">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--ヘッダー終わり-->
+    <!--<div class="sw">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="display: flex; justify-content: center;"><img src="" alt="ISBE1">
+                    <span class="text">Impressive Shadow Shader</span></div>
+                <div class="swiper-slide" style="display: flex; justify-content: center;"><img src="" alt="ISBE2"></div>
+                <div class="swiper-slide" style="display: flex; justify-content: center;"><img src="" alt="ISBE3"></div>
+            </div>
+        </div>
+    </div>-->
+    <h1 class="top_title">雲の描画の変更手順</h1>
+
+    <div class="a_content">
+        <p class="title">ISBEでは雲の描画変更が可能です！</p>
+        <div class="bd_text a">雲の描写が"Normal Cloud"（Minecraft BE標準）と"Realistic Cloud"（ISBEオリジナル）の二種類で変更可能になっています。変更手順は下の動画をご覧ください。
+            <div class="set_img"><img src="../photo/isbe/setting.GIF " width="100% " alt="setting-cloud "></div>
+        </div>
+        <p class="title ">変更後の描画</p>
+        <div class="bd_text a ">"Realistic Cloud"（ISBEオリジナル）
+            <div class="set_img"><img src="../photo/isbe/realistic.webp " width="100% " alt="setting-cloud "></div>
+            "Normal Cloud"（Minecraft BE標準）
+            <div class="set_img"><img src="../photo/isbe/normal.webp" width="100%" alt="setting-cloud"></div>
+            <div class="set_btn "><a class="dl btn pad link_sp link_sp2 " href="../isbe/isbe.html">ISBE紹介ページへ</a></div>
+        </div>
+    </div>
+
+    <footer class="site-footer ">
+        <div class="flex ">
+            <a href="https://twitter.com/nari_0978 " aria-label="Twitter " style="color: #c8c8c8; "><i class=" fa-brands fa-2x fa-twitter "></i></a>
+            <a href="https://www.instagram.com/nari_0978/ " aria-label="instagram " style="color: #c8c8c8;text-decoration:none "><i class="fa-brands fa-2x fa-instagram "></i></a>
+            <p style="color: #c8c8c8; ">©︎2020〜 <a href="https://github.com/NARI0978 " style="color: #c8c8c8;text-decoration:none ">NARI0978</a></p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js "></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js "></script>
+    <script src="../js/style.js "></script>
+    <script>
+        let mySwiper = new Swiper('.swiper', {
+            loop: true,
+            effect: 'fade',
+            speed: 1000,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false
+            },
+        });
+    </script>
+</body>
+
+</html>

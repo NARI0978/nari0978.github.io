@@ -19,7 +19,7 @@
         /*top_title*/
         .top_title {
             padding-top: 65px;
-            padding-bottom: 10px;
+            padding-bottom: 5px;
             font-size: 20px;
         }
         /*title*/
@@ -68,6 +68,13 @@
         }
         .fa-brands.b {
             font-size: 80px;
+        }
+        /*setting-shader*/
+        .bd_text.a img {
+            width: 270px;
+            height: 124px;
+            margin: 10px 0;
+            border-radius: 5px;
         }
         /*------------------------------------------------------------------*/
         /*icon*/
@@ -386,6 +393,13 @@
             width: 40px;
             height: 40px;
         }
+        /*download*/
+        .dl_title {
+            font-size: 26px;
+        }
+        .dl {
+            font-size: 22px;
+        }
         /*pixelart*/
         .p_content {
             margin-bottom: 30px;
@@ -416,6 +430,13 @@
         }
         .fa-brands.b {
             font-size: 110px;
+        }
+        /*setting-shader*/
+        .bd_text.a img {
+            width: 540px;
+            height: 248px;
+            margin: 10px 0;
+            border-radius: 5px;
         }
         /*-------------------------------------------------------*/
         /*icon*/
@@ -484,6 +505,13 @@
             width: 50px;
             height: 50px;
         }
+        /*download*/
+        .dl_title {
+            font-size: 28px;
+        }
+        .dl {
+            font-size: 24px;
+        }
         /*pixelart*/
         .p_content {
             margin-bottom: 40px;
@@ -515,6 +543,13 @@
         }
         .fa-brands.b {
             font-size: 120px;
+        }
+        /*setting-shader*/
+        .bd_text.a img {
+            width: 675px;
+            height: 310px;
+            margin: 10px 0;
+            border-radius: 5px;
         }
         /*-------------------------------------------------------*/
         /*icon*/
@@ -586,9 +621,9 @@
         /*-all------------------------------------------------*/
         /*top_title*/
         .top_title {
-            padding-top: 125px;
+            padding-top: 95px;
             padding-bottom: 10px;
-            font-size: 50px;
+            font-size: 40px;
         }
         /*title*/
         .title {
@@ -608,6 +643,16 @@
         .mi {
             width: 70px;
             height: 70px;
+        }
+        /*download*/
+        .download {
+            padding: 40px 0;
+        }
+        .dl_title {
+            font-size: 30px;
+        }
+        .dl {
+            font-size: 26px;
         }
         /*pixelart*/
         .p_content {
@@ -640,6 +685,13 @@
         .fa-brands.b {
             font-size: 140px;
         }
+        /*setting-shader*/
+        .bd_text.a img {
+            width: 945px;
+            height: 434px;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
         /*-------------------------------------------------------*/
         /*site-header*/
         .site-header {
@@ -666,7 +718,6 @@
         .icon.c {
             margin: 15px;
         }
-        /**/
         .ico_size {
             width: 230px;
             height: 230px;
@@ -746,7 +797,16 @@
             width: 100px;
             height: 100px;
         }
-        /*pixelart*/
+        /*download*/
+        .download {
+            padding: 60px 0;
+        }
+        .dl_title {
+            font-size: 60px;
+        }
+        .dl {
+            font-size: 50px;
+        }
         /*pixelart*/
         .p_content {
             margin-bottom: 80px;
@@ -781,6 +841,19 @@
         }
         .fa-brands.b {
             font-size: 230px;
+        }
+        /*setting-shader*/
+        .bd_text.a img {
+            width: 1755px;
+            height: 806px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+        .btn {
+            border-radius: 15px;
+        }
+        .pad {
+            padding: 20px;
         }
         /*-------------------------------------------------------*/
         /*site-header*/

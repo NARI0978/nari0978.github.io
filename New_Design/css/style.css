@@ -23,7 +23,7 @@
     
     .a_content {
         color: #444;
-        padding: 20px 5px;
+        padding: 5px;
         line-height: 1.6;
         word-break: break-all;
     }
@@ -74,14 +74,15 @@
         flex-wrap: wrap;
     }
     
-    .download {
+    .download,
+    .set_btn {
         text-align: center;
-        padding: 25px 0;
+        padding: 20px 0;
     }
     
     .dl_title {
         text-align: center;
-        padding: 10px 0;
+        padding: 5px 0;
     }
     
     .pix {
@@ -96,6 +97,10 @@
     
     .pix img {
         box-shadow: 5px 5px #ddd;
+    }
+    
+    .set_img {
+        text-align: center;
     }
     /*-------------------------------------------------------*/
     
