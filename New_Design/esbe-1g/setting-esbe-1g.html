@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="description" content="Impressive Shadow Shaderの紹介・ダウンロードページです。">
+    <meta name="description" content="ESBEutilカスタマイズ方法ページです。">
     <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
     <link rel="shortcut icon" href="esbe-1g.png?v=2" />
     <link rel="stylesheet" type="text/css" href="../hm/ham-style.css">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style-responsive.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/4d2ac0652c.js" crossorigin="anonymous"></script>
-    <title>ESBE-1G</title>
+    <title>ESBEutilカスタマイズ方法</title>
 </head>
 
 <body>
@@ -68,32 +68,21 @@
             </div>
         </div>
     </div>-->
-    <h1 class="top_title">ESBE-1G</h1>
-    <div class="sw2">
-        <div class="swiper slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="../photo/esbe-1g/top1.webp" width="100%" alt="ESBE-1Gtop1"></div>
-                <div class="swiper-slide"><img src="../photo/esbe-1g/top2.webp" width="100%" alt="ESBE-1Gtop2"></div>
-                <div class="swiper-slide"><img src="../photo/esbe-1g/top3.webp" width="100%" alt="ESBE-1Gtop3"></div>
-                <div class="swiper-slide"><img src="../photo/esbe-1g/top4.webp" width="100%" alt="ESBE-1Gtop4"></div>
-                <div class="swiper-slide"><img src="../photo/esbe-1g/top5.webp" width="100%" alt="ESBE-1Gtop5"></div>
-                <div class="swiper-slide"><img src="../photo/esbe-1g/top6.webp" width="100%" alt="ESBE-1Gtop6"></div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
+    <h1 class="top_title">ESBE-1Gカスタマイズ方法</h1>
     <div class="a_content">
-        <p class="title">ESBE-1Gとは？</p>
-        <p class="bd_text">ESBE-1Gは<a class="link_n" href="https://mcbeeringi.github.io">エリンギさん</a>が開発していましたが、 ESBE 2Gに開発を移行し、その当時ESBE-1Gの愛用者だった私が後継開発しています。 <br>松明の光が常時変わることや、容易にカスタムできる点などESBE-1Gでしか体験できないことがありますのでぜひお試しください！</p>
-        <p class="title">ESBE-1Gの特徴</p>
-        <p class="bd_text">明るすぎない軽量な描写<br>潰れないテクスチャ<br>綺麗な雲やオーロラ、夕焼け...<br>揺らめく葉,水面反射!!<br>自分の好みにカスタマイズ可能
-            <!--詳しくは<a class="link_n" href="">こちら</a>--></p>
-        <p class="title">Change Log</p>
-        <p class="bd_text">2020/12/9 <br>ESBE-1G v17.7.1<br>HLSLのサポート終了<br>統合版(Windows)で動作しなくなりました</p>
-        <p class="title caution">使用する際の注意事項</p>
-        <p class="bd_text">v1.18.30以降のバージョンでは、新レンダリングシステムであるレンダードラゴン導入に伴い、<br class="sp"><strong class="line">Android・iOSでシェーダーが使用不可となりました。<br>次回アップデート予定は今のところありません。</strong></p>
-        <p class="title">ダウンロード</p>
-        <p class="bd_text flex"><a class="btn pad link_sp link_sp2" href="https://github.com/NARI0978/ESBE-1G/releases/download/v17.1.1/ESBE-1G_v17.1.1.mcpack">ESBE-1G v17.1.1</a><a class="pad link_sp" href="https://github.com/NARI0978/ESBE-1G/releases">過去バージョン一覧</a></p>
+        <p class="title">幅広くカスタマイズ可能！</p>
+        <p class="bd_text">"ESBEutil"ファイルでは色調や特定の効果のON.OFF、効果の強さなど 様々な設定を変更することで<br>ESBEを自分の好きなようにカスタマイズすることができます。</p>
+        <p class="title">編集などの注意点</p>
+        <p class="bd_text">自分の変更したESBEutilファイルを共有したい場合、 ESBEutilのみ抜き出して再配布することが可能です。<br>このファイルを弄ったことによるトラブルは自己責任でお願いします。いざ動かなくなった時は再インポート(｀･ω･´)。</p>
+        <p class="title">ESBEutilの場所</p>
+        <p class="bd_text">スマホ版とWin10で使うファイルが異なるため2箇所にあります。 <br>スマホ版のみもしくはWin10のみの描写を変えたい場合は、片方のファイルを変更するだけで十分です。<br><strong class="line">スマホ版 ESBE>shaders>glsl>ESBEutil.h </strong><br><strong class="line">Win10 ESBE>shaders>hlsl>ESBEutil.fxh</strong><br>なお、システムの都合上ESBEutil.fxhの一部の設定項目はterrain.fsh.hlslに移動しています。</p>
+        <p class="title">ESBEutilの編集方法</p>
+        <p class="bd_text">ESBEutilを開くと <strong class="line_y">#define EXAMPLE//例 </strong>みたいなやつが沢山あります。<br>後ろに付いている説明書きなどを手掛かりにすればどんなやつなのか分かるはずです。<br><strong class="line_y">無効化したいときは手前に半角スラッシュを2個入れて //#define EXAMPLE//例 </strong>のようにしてください<br>#define EXAMPLE
+            <strong class="line_y">12.3</strong>//例 のように数字がついているものの場合、<strong class="line">もともと小数点がついているものには必ず小数点をつけてください。
+            (ついていなかったら絶対につけないでください。(動かなくなります。））</strong><br><strong class="line_y">#define EXAMPLE vec3(0.7,0.5,0.3)//例</strong> のようにvec3やfloat3がついているものは大抵RGBの値です。<br><strong class="line">小数点を忘れずに。</strong> ESBE.hやterrain.fsh.hlslには float blur = 0.05;
+            の様に変数を宣言しているものがあります。
+            <br>これらは無効化できません。
+        </p>
     </div>
 
     <footer class="site-footer">

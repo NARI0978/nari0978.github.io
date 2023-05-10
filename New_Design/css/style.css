@@ -52,6 +52,10 @@
         border-bottom: solid 2px #ff3333;
     }
     
+    .line_y {
+        border-bottom: solid 2px #e2d92a;
+    }
+    
     .flex1 {
         display: flex;
         flex-wrap: wrap;
