@@ -77,8 +77,8 @@
         <p class="title">ESBEutilの場所</p>
         <p class="bd_text">スマホ版とWin10で使うファイルが異なるため2箇所にあります。 <br>スマホ版のみもしくはWin10のみの描写を変えたい場合は、片方のファイルを変更するだけで十分です。<br><strong class="line">スマホ版 ESBE>shaders>glsl>ESBEutil.h </strong><br><strong class="line">Win10 ESBE>shaders>hlsl>ESBEutil.fxh</strong><br>なお、システムの都合上ESBEutil.fxhの一部の設定項目はterrain.fsh.hlslに移動しています。</p>
         <p class="title">ESBEutilの編集方法</p>
-        <p class="bd_text">ESBEutilを開くと <strong class="line_y">#define EXAMPLE//例 </strong>みたいなやつが沢山あります。<br>後ろに付いている説明書きなどを手掛かりにすればどんなやつなのか分かるはずです。<br><strong class="line_y">無効化したいときは手前に半角スラッシュを2個入れて //#define EXAMPLE//例 </strong>のようにしてください<br>#define EXAMPLE
-            <strong class="line_y">12.3</strong>//例 のように数字がついているものの場合、<strong class="line">もともと小数点がついているものには必ず小数点をつけてください。
+        <p class="bd_text">ESBEutilを開くと <strong class="line_y">#define EXAMPLE//例 </strong>みたいなやつが沢山あります。<br>後ろに付いている説明書きなどを手掛かりにすればどんなやつなのか分かるはずです。<br><strong class="line_y">無効化したいときは手前に半角スラッシュを2個入れて //#define EXAMPLE//例 </strong>のようにしてください<br>#define EXAMPLE<strong class="line_y">12.3</strong>//例
+            のように数字がついているものの場合、<strong class="line">もともと小数点がついているものには必ず小数点をつけてください。
             (ついていなかったら絶対につけないでください。(動かなくなります。））</strong><br><strong class="line_y">#define EXAMPLE vec3(0.7,0.5,0.3)//例</strong> のようにvec3やfloat3がついているものは大抵RGBの値です。<br><strong class="line">小数点を忘れずに。</strong> ESBE.hやterrain.fsh.hlslには float blur = 0.05;
             の様に変数を宣言しているものがあります。
             <br>これらは無効化できません。
