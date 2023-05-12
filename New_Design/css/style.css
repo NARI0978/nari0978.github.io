@@ -2,32 +2,33 @@
         margin: 0;
         padding: 0;
     }
-    
+
     body {
         font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "MS P Gothic", sans-serif;
         background: #f0f0f0;
         width: 100%;
     }
-    
+
     .text {
         color: #444;
         text-align: center;
         padding-top: 20px;
     }
+
     /*-all-----------------------------------------------*/
-    
+
     .top_title {
         color: #444;
         text-align: center;
     }
-    
+
     .a_content {
         color: #444;
         padding: 5px;
         line-height: 1.6;
         word-break: break-all;
     }
-    
+
     .p_content {
         color: #444;
         margin-bottom: 20px;
@@ -36,33 +37,33 @@
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
-    
+
     .title {
         margin: 10px;
         border-left: solid 5px #ffab52;
         background-color: #f6e3cf;
         padding-left: 10px;
     }
-    
+
     .bd_text {
         padding: 10px 20px;
     }
-    
+
     .line {
         border-bottom: solid 2px #ff3333;
     }
-    
+
     .line_y {
         border-bottom: solid 2px #e2d92a;
     }
-    
+
     .flex1 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
     }
-    
+
     .flex2 {
         display: flex;
         align-items: center;
@@ -70,48 +71,49 @@
         vertical-align: middle;
         text-decoration: none;
     }
-    
+
     .flex {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
     }
-    
+
     .download,
     .set_btn {
         text-align: center;
         padding: 20px 0;
     }
-    
+
     .dl_title {
         text-align: center;
         padding: 5px 0;
     }
-    
+
     .pix {
         padding: 10px;
         word-break: break-all;
         text-align: center;
     }
-    
+
     .pix p {
         margin-top: 5px;
     }
-    
+
     .pix img {
         box-shadow: 5px 5px #ddd;
     }
-    
+
     .set_img {
         text-align: center;
     }
+
     /*-------------------------------------------------------*/
-    
+
     .icon img {
         border-radius: 10px;
     }
-    
+
     .content {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -123,7 +125,7 @@
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
-    
+
     .content2 {
         margin-bottom: 20px;
         display: flex;
@@ -131,7 +133,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    
+
     .infomation,
     .infotitle,
     .info {
@@ -139,7 +141,7 @@
         color: #444;
         font-size: 20px;
     }
-    
+
     .infomation {
         margin: 10px;
         box-shadow: 0 0 7px 0 #444;
@@ -147,7 +149,7 @@
         width: 600px;
         height: 24em;
     }
-    
+
     .infotitle {
         font-weight: bold;
         background: #444;
@@ -158,18 +160,56 @@
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
-    
+
     .info {
         overflow: scroll;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
-    
+
+    /*---------------------------------------------------------*/
+
+    .information {
+        margin: 10px;
+        color: #f0f0f0;
+    }
+
+    .info_title {
+        text-align: center;
+        margin-bottom: 5px;
+        position: relative;
+    }
+
+    .info_title::before {
+        position: absolute;
+        border-radius: 2px;
+        top: 100%;
+        right: 50%;
+        transform: translateX(50%);
+        content: '';
+    }
+
+    .info_big {
+        padding: 5px;
+        overflow: scroll;
+    }
+
+    .info_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+
+    /*---------------------------------------------------------*/
+
     .site-footer {
         background: #444;
         padding: 20px;
     }
-    
+
     .contact {
         display: flex;
         justify-content: space-evenly;
