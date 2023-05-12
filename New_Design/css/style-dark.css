@@ -42,9 +42,12 @@
         box-shadow: 5px 5px #222;
     }
     .info_title::before {
-        border: solid #f0f0f0;
+        border: 1px solid #f0f0f0;
     }
     .info_content{
         border-bottom: 1px solid #f0f0f0;
     }
+
+    @media (min-width: 1441px) and (max-width: 2560px) {}
+
 }
