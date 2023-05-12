@@ -15,7 +15,9 @@
     }
     .text,
     .icon,
-    .infotitle,
+    /*.infotitle,*/
+    .info_title,
+    .info_content,
     .gnav__menu__item a,
     .sub_title,
     .top_title,
@@ -38,5 +40,11 @@
     }
     .pix img {
         box-shadow: 5px 5px #222;
+    }
+    .info_title::before {
+        border: solid #f0f0f0;
+    }
+    .info_content{
+        border-bottom: 1px solid #f0f0f0;
     }
 }

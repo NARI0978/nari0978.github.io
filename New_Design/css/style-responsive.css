@@ -471,13 +471,11 @@
         }
 
         .info_title::before {
-            border: 1px solid #f0f0f0;
             width: 30px;
         }
 
         .info_big {
-            height: 13.25em;
-            /*15.25*/
+            height: 14em;
         }
 
         .info_date {
@@ -628,7 +626,6 @@
         }
 
         .info_title::before {
-            border: 1px solid #f0f0f0;
             width: 30px;
         }
 
@@ -794,12 +791,11 @@
         }
 
         .info_title::before {
-            border: 2px solid #f0f0f0;
             width: 40px;
         }
 
         .info_big {
-            height: 23em;
+            height: 24.5em;
         }
 
         .info_date {
@@ -1040,12 +1036,11 @@
         }
 
         .info_title::before {
-            border: 2px solid #f0f0f0;
             width: 40px;
         }
 
         .info_big {
-            height: 20.2em;
+            height: 21.2em;
         }
 
         .info_date {
@@ -1272,12 +1267,11 @@
         }
 
         .info_title::before {
-            border: 3px solid #f0f0f0;
             width: 80px;
         }
 
         .info_big {
-            height: 39.5em;
+            height: 41em;
         }
 
         .info_date {
