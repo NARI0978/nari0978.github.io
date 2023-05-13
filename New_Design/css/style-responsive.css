@@ -455,10 +455,7 @@
             margin: 15px;
         }
 
-        /*sp 改行 
-    .sp {
-            display: none;
-        }*/
+        
         /*site-footer*/
         .site-footer {
             font-size: 15px;
@@ -484,7 +481,7 @@
         }
 
         .info_text {
-            font-size: 17px;
+            font-size: 16px;
         }
     }
 
@@ -630,8 +627,7 @@
         }
 
         .info_big {
-            height: 15.25em;
-            /*15.25*/
+            height: 14.5em;
         }
 
         .info_date {
@@ -795,7 +791,7 @@
         }
 
         .info_big {
-            height: 24.5em;
+            height: 22em;
         }
 
         .info_date {
@@ -1028,7 +1024,7 @@
 
         /*New info*/
         .information {
-            width: 1200px;
+            width: 800px;
         }
 
         .info_title {
@@ -1040,7 +1036,7 @@
         }
 
         .info_big {
-            height: 21.2em;
+            height: 19.4em;
         }
 
         .info_date {
@@ -1285,6 +1281,12 @@
     }
 
     @media (min-width: 1025px) and (max-width: 2560px) {}
+
+    @media (min-width: 426px) and (max-width: 2560px) {
+        .sp{
+            display: none;
+        }
+    }
 
     @media (min-width: 769px) and (max-width: 2560px) {
         .ham {
