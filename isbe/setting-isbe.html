@@ -4,18 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="description" content="様々な配布物をダウンロードできるページです。">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="shortcut icon" href="download.png" />
+    <meta name="description" content="ISBEでの雲の描画変更についての説明ページです。">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+    <link rel="icon" href="isbe.png?v=2" />
     <link rel="stylesheet" type="text/css" href="../hm/ham-style.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/style-header.css">
     <link rel="stylesheet" type="text/css" href="../css/style-link-btn.css">
     <link rel="stylesheet" type="text/css" href="../css/style-dark.css">
     <link rel="stylesheet" type="text/css" href="../css/style-responsive.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <script src="https://kit.fontawesome.com/4d2ac0652c.js" crossorigin="anonymous"></script>
-    <title>Download</title>
+    <title>Impressive Shadow Shader</title>
 </head>
 
 <body>
@@ -30,9 +30,9 @@
             <ul class="ham__menu">
                 <li><a href="../index.html" style="text-decoration:none">Home</a></li>
                 <li><a href="../profile/profile.html" style="text-decoration:none">Profile</a></li>
-                <li><a href="../isbe/isbe.html" style="text-decoration:none">Impressive Shadow Shader</a></li>
+                <li class="now"><a href="../isbe/isbe.html" style="text-decoration:none">Impressive Shadow Shader</a></li>
                 <li><a href="../esbe-1g/esbe-1g.html" style="text-decoration:none">ESBE-1G</a></li>
-                <li class="now"><a href="../download/download.html" style="text-decoration:none">Download</a></li>
+                <li><a href="../download/download.html" style="text-decoration:none">Download</a></li>
                 <li><a href="../pixelart/pixelart.html" style="text-decoration:none">PixelArt</a></li>
                 <li><a href="../contact/contact.html" style="text-decoration:none">Contact</a></li>
             </ul>
@@ -52,8 +52,8 @@
         </h1>
         <nav class="gnav">
             <ul class="gnav__menu">
-                <li class="gnav__menu__item"><a href="../index.html" style="text-decoration:none">Profile</a></li>
-                <li class="gnav__menu__item"><a href="../profile/profile.html" style="text-decoration:none">ISBE</a></li>
+                <li class="gnav__menu__item"><a href="../profile/profile.html" style="text-decoration:none">Profile</a></li>
+                <li class="gnav__menu__item"><a href="../isbe/isbe.html" style="text-decoration:none">ISBE</a></li>
                 <li class="gnav__menu__item"><a href="../esbe-1g/esbe-1g.html" style="text-decoration:none">ESBE-1G</a></li>
                 <li class="gnav__menu__item"><a href="../download/download.html" style="text-decoration:none">Download</a></li>
                 <li class="gnav__menu__item"><a href="../pixelart/pixelart.html" style="text-decoration:none">PixelArt</a></li>
@@ -62,63 +62,24 @@
         </nav>
     </header>
     <!--ヘッダー終わり-->
-    <h1 class="top_title">Download</h1>
+    <h1 class="top_title">雲の描画の変更手順</h1>
     <div class="a_content">
-        <h3 class="dl_title">Impressive Shadow Shader</h3>
-        <div class="sw2">
-            <div class="swiper slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../photo/isbe/top1.webp" width="100%" alt="ISBEtop1"></div>
-                    <div class="swiper-slide"><img src="../photo/isbe/top2.webp" width="100%" alt="ISBEtop2"></div>
-                    <div class="swiper-slide"><img src="../photo/isbe/top3.webp" width="100%" alt="ISBEtop3"></div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
+        <p class="title">ISBEでは雲の描画変更が可能です！</p>
+        <div class="bd_text a">雲の描写が"Normal Cloud"（Minecraft BE標準）と"Realistic Cloud"（ISBEオリジナル）の二種類で変更可能になっています。変更手順は下の動画をご覧ください。
+            <div class="set_img"><img src="../photo/isbe/setting.GIF" width="100% " alt="setting-cloud "></div>
         </div>
-        <div class="download"><a class="dl btn pad link_sp link_sp2" href="https://github.com/NARI0978/Impressive-Shadow-Shader-BE/releases/download/v1.6.6/ISBE_v1.6.6.mcpack">Download</a></div>
-        <h3 class="dl_title">ESBE-1G</h3>
-        <div class="sw2">
-            <div class="swiper slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../photo/esbe-1g/top1.webp" width="100%" alt="ESBE-1Gtop1"></div>
-                    <div class="swiper-slide"><img src="../photo/esbe-1g/top2.webp" width="100%" alt="ESBE-1Gtop2"></div>
-                    <div class="swiper-slide"><img src="../photo/esbe-1g/top3.webp" width="100%" alt="ESBE-1Gtop3"></div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
+        <p class="title ">変更後の描画</p>
+        <div class="bd_text a">"Realistic Cloud"（ISBEオリジナル）
+            <div class="set_img"><img src="../photo/isbe/realistic.webp" width="100% " alt="setting-cloud "></div>
+            "Normal Cloud"（Minecraft BE標準）
+            <div class="set_img"><img src="../photo/isbe/normal.webp" width="100%" alt="setting-cloud"></div>
+            <div class="set_btn"><a class="dl btn pad link_sp link_sp2" href="../isbe/isbe.html">ISBE紹介ページへ</a></div>
         </div>
-        <div class="download"><a class="dl btn pad link_sp link_sp2" href="https://github.com/NARI0978/ESBE-1G/releases/download/v17.1.1/ESBE-1G_v17.1.1.mcpack">Download</a></div>
-        <h3 class="dl_title">Change Music Resourse Pack</h3>
-        <div class="sw2">
-            <div class="swiper slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../photo/download/cmr.webp" width="100%" alt="Change Music Resourse Pack"></div>
-                </div>
-            </div>
-        </div>
-        <div class="download"><a class="dl btn pad link_sp link_sp2" href="https://github.com/NARI0978/Tools/releases/download/ChangeMusic/Change_Music_v1.0.mcpack">Download</a></div>
-        <h3 class="dl_title">Grass Shadow Texture Pack</h3>
-        <div class="sw2">
-            <div class="swiper slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../photo/download/gst.webp" width="100%" alt="Grass Shadow Texture Pack"></div>
-                </div>
-            </div>
-        </div>
-        <div class="download"><a class="dl btn pad link_sp link_sp2" href="https://github.com/NARI0978/Tools/releases/download/GrassShadow/Grass.Shadow.Texture.pack.mcpack">Download</a></div>
-        <h3 class="dl_title">Nether X-ray Resourse Pack</h3>
-        <div class="sw2">
-            <div class="swiper slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../photo/download/nxr.webp" width="100%" alt="Nether X-ray Resourse Pack"></div>
-                </div>
-            </div>
-        </div>
-        <div class="download"><a class="dl btn pad link_sp link_sp2" href="https://github.com/NARI0978/Tools/releases/download/NetherXray/Nether_X_ray.mcpack">Download</a></div>
     </div>
-    <footer class="site-footer">
-        <div class="contact ">
-            <a href="https://twitter.com/nari_0978" aria-label="Twitter" style="color: #c8c8c8;"><i class=" fa-brands fa-2x fa-twitter"></i></a>
+
+    <footer class="site-footer ">
+        <div class="flex ">
+            <a href="https://twitter.com/nari_0978" aria-label="Twitter" style="color: #c8c8c8;"><i class="fa-brands fa-2x fa-twitter"></i></a>
             <a href="https://www.instagram.com/nari_0978/" aria-label="instagram" style="color: #c8c8c8;text-decoration:none;"><i class="fa-brands fa-2x fa-instagram"></i></a>
             <p style="color: #c8c8c8;">©︎2020〜 <a href="https://github.com/NARI0978" style="color: #c8c8c8;text-decoration:none;">NARI0978</a></p>
         </div>
