@@ -1,3 +1,4 @@
+@media (min-width: 0px) and (max-width: 768px) {
     .site-header {
         background: #f0f0f0cc;
         display: flex;
@@ -42,3 +43,60 @@
     body.dontmove {
         overflow: hidden;
     }
+}
+
+@media (min-width: 769px) {
+    .site-header {
+        background: #f0f0f0cc;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        transition: .5s;
+        position: sticky;
+        top: 30px;
+        margin-left: 15px;
+    }
+
+    .gnav__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .gnav__menu__item {
+        margin: 10px 0;
+        padding: 5px 20px;
+    }
+
+    .gnav__menu .now {
+        border-left: solid 5px #ffab52;
+        padding: 5px 15px;
+    }
+
+    .gnav__menu__item a {
+        color: #444;
+        text-decoration: none;
+        transition: 0.5s;
+        font-size: 26px;
+    }/**/
+    
+    .gnav__menu__item a:hover {
+        color: #686868;
+    }/**/
+    
+    nav ul {
+        list-style: none;
+    }/**/
+
+    .test{
+        width:70%;
+    }
+    .test_fle{
+        display: flex;
+    }
+
+    article{
+        width:30%;
+    }
+}

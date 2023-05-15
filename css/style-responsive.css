@@ -620,22 +620,26 @@
 
         /*top_pad*/
         .top_pad {
-            padding-top: 85px;
+            padding-top: 112px;
         }
 
         /*slider*/
         .slider {
-            width: 850px;
-            height: 360px;
+            width: 650px;
+            height: 285px;
             border-radius: 5px;
         }
 
         /*-all------------------------------------------------*/
         /*top_title*/
         .top_title {
-            padding-top: 85px;
+            padding-top: 50px;
             padding-bottom: 10px;
             font-size: 35px;
+        }
+
+        .gnav__menu__item a {
+            font-size: 20px;
         }
 
         .a_content {
@@ -785,10 +789,6 @@
             margin-top: 13px;
         }
 
-        .gnav__menu__item a {
-            font-size: 15px;
-        }
-
         /*text*/
         .text {
             font-size: 25px;
@@ -823,15 +823,15 @@
 
         /*slider*/
         .slider {
-            width: 1150px;
-            height: 500px;
+            width: 900px;
+            height: 395px;
             border-radius: 15px;
         }
 
         /*-all------------------------------------------------*/
         /*top_title*/
         .top_title {
-            padding-top: 95px;
+            padding-top: 50px;
             padding-bottom: 10px;
             font-size: 40px;
         }
@@ -918,8 +918,8 @@
 
         /*setting-shader*/
         .bd_text.a img {
-            width: 945px;
-            height: 434px;
+            width: 900px;
+            height: 395px;
             margin: 10px 0;
             border-radius: 10px;
         }
@@ -932,12 +932,12 @@
         }
 
         .gnav__menu__item a {
-            font-size: 18px;
+            font-size: 26px;
         }
 
         /*top_pad*/
         .top_pad {
-            padding-top: 95px;
+            padding-top: 120px;
         }
 
         /*text*/
@@ -1036,15 +1036,15 @@
 
         /*slider*/
         .slider {
-            width: 2300px;
-            height: 1000px;
+            width: 1600px;
+            height: 715px;
             border-radius: 15px;
         }
 
         /*-profile,isbe,esbe------------------------------------------------*/
         /*top_title*/
         .top_title {
-            padding-top: 205px;
+            padding-top: 60px;
             padding-bottom: 10px;
             font-size: 80px;
         }
@@ -1159,12 +1159,12 @@
         }
 
         .gnav__menu__item a {
-            font-size: 35px;
+            font-size: 50px;
         }
 
         /*top_pad*/
         .top_pad {
-            padding-top: 205px;
+            padding-top: 190px;
         }
 
         /*text*/
