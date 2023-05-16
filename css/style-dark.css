@@ -23,7 +23,9 @@
     .top_title,
     .content,
     .a_content,
-    .pix p {
+    .pix p,
+    .contact,
+    .contact a {
         color: #f0f0f0;
     }
     .title {
