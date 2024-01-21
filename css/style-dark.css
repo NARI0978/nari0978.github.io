@@ -35,11 +35,11 @@
     .ico_size.a,
     .info,
     .pix img {
-        background: #f0f0f0;
+        background: #555;
     }
     .infomation,
     .ico_size {
-        box-shadow: 0 0 10px 0 #f0f0f0;
+        box-shadow: 0 0 10px 0 #222;
     }
     .pix img {
         box-shadow: 5px 5px #222;
