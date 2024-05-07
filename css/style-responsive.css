@@ -285,12 +285,12 @@
 
         /*title*/
         .title {
-            font-size: 20px;
+            font-size: 18px;
         }
 
         /*bd_text*/
         .bd_text {
-            font-size: 15px;
+            font-size: 14px;
         }
 
         .fa-brands {
@@ -439,7 +439,7 @@
 
         /*New info*/
         .info_title {
-            font-size: 16px;
+            font-size: 18px;
         }
 
         .info_title::before {
@@ -456,7 +456,7 @@
         }
 
         .info_text {
-            font-size: 12px;
+            font-size: 14px;
         }
     }
 
