@@ -4,7 +4,7 @@
 .slider {
   clip-path: inset(0px 0px 5% 0px round 10px);
   max-width: 980px;
-  max-height: 420px;
+  max-height: 400px;
 }
 
 .slider img {
@@ -17,8 +17,24 @@
   bottom: 10% !important;
 }
 
+
+@media (max-width: 768px) {
+  .slider {
+    max-height: 300px;
+  }
+}
+
 @media (max-width: 425px) {
-    .sw2 {
-        margin: 0 10px;
-      } 
+  .sw2 {
+    margin: 0 10px;
+  }
+  .slider {
+    max-height: 165px;
+  }
+}
+
+@media (max-width: 375px) {
+  .slider {
+    max-height: 145px;
+  }
 }
