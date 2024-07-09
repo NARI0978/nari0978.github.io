@@ -123,6 +123,10 @@
         .contact {
             font-size: 10px;
         }
+
+        .creations_title, .item-title {
+            font-size: 1.0em;
+        }
     }
 
     @media (min-width: 321px) and (max-width: 375px) {
@@ -253,6 +257,10 @@
 
         .contact {
             font-size: 10px;
+        }
+
+        .creations_title {
+            font-size: 1.2em;
         }
     }
 
@@ -389,6 +397,9 @@
 
         .contact {
             font-size: 12px;
+        }
+        .creations_title {
+            font-size: 1.3em;
         }
     }
 
@@ -611,6 +622,9 @@
         .info_text {
             font-size: 17px;
         }
+        .creations_title {
+            font-size: 1.6em;
+        }
     }
 
     @media (min-width: 0px) and (max-width: 768px) {
@@ -642,7 +656,7 @@
         }
 
         .gnav__menu__item a {
-            font-size: 14px;
+            font-size: 18px;
         }
 
         .a_content {

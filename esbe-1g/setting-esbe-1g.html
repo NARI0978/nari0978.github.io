@@ -1,117 +1,112 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="description" content="ESBEutilカスタマイズ方法ページです。">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="ESBEutilカスタマイズ方法ページです。" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png?v=2" />
     <link rel="shortcut icon" href="esbe-1g.png?v=2" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/style-ham.css">
-    <link rel="stylesheet" type="text/css" href="../css/style-header.css">
-    <link rel="stylesheet" type="text/css" href="../css/style-link-btn.css">
-    <link rel="stylesheet" type="text/css" href="../css/style-dark.css">
-    <link rel="stylesheet" type="text/css" href="../css/style-responsive.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style-ham.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style-header.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style-link-btn.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style-dark.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style-responsive.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/4d2ac0652c.js" crossorigin="anonymous"></script>
     <title>ESBEutilカスタマイズ方法</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--ハンバーガーメニュー始まり-->
     <div class="ham">
-        <input type="checkbox" id="ham-check" class="ham-hidden" value="Click" onclick="isChecked()">
-        <!--表示・非表示コントロールチェックボックス-->
-        <label for="ham-check" class="ham-open"><span></span></label>
-        <!--ハンバーガーアイコン設定。forで上の"ham-check"との関連付け-->
-        <nav class="ham-content">
-            <!--メニュー。自由に追加可能-->
-            <ul class="ham__menu">
-                <li><a href="../index.html" style="text-decoration:none">Home</a></li>
-                <li><a href="../profile/profile.html" style="text-decoration:none">Profile</a></li>
-                <li><a href="../isbe/isbe.html" style="text-decoration:none">Impressive Shadow Shader</a></li>
-                <li class="now"><a href="../esbe-1g/esbe-1g.html" style="text-decoration:none">ESBE-1G</a></li>
-                <li><a href="../download/download.html" style="text-decoration:none">Download</a></li>
-                <li><a href="../pixelart/pixelart.html" style="text-decoration:none">PixelArt</a></li>
-                <li><a href="../contact/contact.html" style="text-decoration:none">Contact</a></li>
-            </ul>
-            <nav class="ham__sns">
-                <a href="https://misskey.io/@nari0978" class="link_sp" aria-label="Misskey.io"><img src="../photo/profile/mi.webp" class="mi d" style="border-radius: 5px;" alt="Misskey.io"></a>
-                <a href="https://twitter.com/nari_0978" class="link_sp" aria-label="Twitter"><i class="fa-brands d fa-square-twitter"></i></a>
-                <a href="https://www.instagram.com/nari_0978/ " class="link_sp" aria-label="instagram"><i class="fa-brands d fa-square-instagram"></i></a>
-                <a href="https://github.com/NARI0978 " class="link_sp" aria-label="GitHub"><i class="fa-brands d fa-square-github"></i></a>
-            </nav>
+      <input type="checkbox" id="ham-check" class="ham-hidden" value="Click" onclick="isChecked()" />
+      <!--表示・非表示コントロールチェックボックス-->
+      <label for="ham-check" class="ham-open"><span></span></label>
+      <!--ハンバーガーアイコン設定。forで上の"ham-check"との関連付け-->
+      <nav class="ham-content">
+        <!--メニュー。自由に追加可能-->
+        <ul class="ham__menu">
+          <li><a href="../index.html" style="text-decoration: none">Home</a></li>
+          <li><a href="../profile/profile.html" style="text-decoration: none">Profile</a></li>
+          <li><a href="../creations/creations.html" style="text-decoration: none">Creations</a></li>
+          <li><a href="../isbe/isbe.html" style="text-decoration: none">Impressive Shadow Shader</a></li>
+          <li class="now"><a href="../esbe-1g/esbe-1g.html" style="text-decoration: none">ESBE-1G</a></li>
+          <li><a href="../download/download.html" style="text-decoration: none">Download</a></li>
+          <li><a href="../pixelart/pixelart.html" style="text-decoration: none">PixelArt</a></li>
+          <li><a href="../contact/contact.html" style="text-decoration: none">Contact</a></li>
+        </ul>
+        <nav class="ham__sns">
+          <a href="https://misskey.io/@nari0978" class="link_sp" aria-label="Misskey.io"><img src="../photo/profile/mi.webp" class="mi d" style="border-radius: 5px" alt="Misskey.io" /></a>
+          <a href="https://twitter.com/nari_0978" class="link_sp" aria-label="Twitter"><i class="fa-brands d fa-square-twitter"></i></a>
+          <a href="https://www.instagram.com/nari_0978/ " class="link_sp" aria-label="instagram"><i class="fa-brands d fa-square-instagram"></i></a>
+          <a href="https://github.com/NARI0978 " class="link_sp" aria-label="GitHub"><i class="fa-brands d fa-square-github"></i></a>
         </nav>
+      </nav>
     </div>
     <!--ハンバーガーメニュー終わり-->
     <div class="test_fle">
-        <!--ヘッダー始まり-->
-<article>
-    <header class="site-header">
-        <h1 class="site-logo">
-            <a href="../index.html" style="text-decoration:none"><img src="../photo/tlogo.webp" alt="NARI HP"></a>
-        </h1>
-        <nav class="gnav">
+      <!--ヘッダー始まり-->
+      <article>
+        <header class="site-header">
+          <h1 class="site-logo">
+            <a href="../index.html" style="text-decoration: none"><img src="../photo/tlogo.webp" alt="NARI HP" /></a>
+          </h1>
+          <nav class="gnav">
             <ul class="gnav__menu">
-                <li class="gnav__menu__item"><a href="../index.html" style="text-decoration:none">Home</a></li>
-                <li class="gnav__menu__item"><a href="profile.html" style="text-decoration:none">Profile</a></li>
-                <li class="gnav__menu__item"><a href="../isbe/isbe.html" style="text-decoration:none">ISBE</a></li>
-                <li class="gnav__menu__item now"><a href="../esbe-1g/esbe-1g.html" style="text-decoration:none">ESBE-1G</a></li>
-                <li class="gnav__menu__item"><a href="../download/download.html" style="text-decoration:none">Download</a></li>
-                <li class="gnav__menu__item"><a href="../pixelart/pixelart.html" style="text-decoration:none">PixelArt</a></li>
-                <li class="gnav__menu__item"><a href="../contact/contact.html" style="text-decoration:none">Contact</a></li>
+              <li class="gnav__menu__item"><a href="../index.html" style="text-decoration: none">Home</a></li>
+              <li class="gnav__menu__item"><a href="profile.html" style="text-decoration: none">Profile</a></li>
+              <li><a href="creation.html" style="text-decoration: none">Creations</a></li>
+              <li class="gnav__menu__item"><a href="../isbe/isbe.html" style="text-decoration: none">ISBE</a></li>
+              <li class="gnav__menu__item now"><a href="../esbe-1g/esbe-1g.html" style="text-decoration: none">ESBE-1G</a></li>
+              <li class="gnav__menu__item"><a href="../download/download.html" style="text-decoration: none">Download</a></li>
+              <li class="gnav__menu__item"><a href="../pixelart/pixelart.html" style="text-decoration: none">PixelArt</a></li>
+              <li class="gnav__menu__item"><a href="../contact/contact.html" style="text-decoration: none">Contact</a></li>
             </ul>
-        </nav>
-    </header>
-</article>
-<!--ヘッダー終わり-->
-    <div class="test">
-    <h1 class="top_title">ESBE-1Gカスタマイズ方法</h1>
-    <div class="a_content">
-        <p class="title">幅広くカスタマイズ可能！</p>
-        <p class="bd_text">"ESBEutil"ファイルでは色調や特定の効果のON.OFF、効果の強さなど 様々な設定を変更することで<br>ESBEを自分の好きなようにカスタマイズすることができます。</p>
-        <p class="title">編集などの注意点</p>
-        <p class="bd_text">自分の変更したESBEutilファイルを共有したい場合、 ESBEutilのみ抜き出して再配布することが可能です。<br>このファイルを弄ったことによるトラブルは自己責任でお願いします。いざ動かなくなった時は再インポート(｀･ω･´)。</p>
-        <p class="title">ESBEutilの場所</p>
-        <p class="bd_text">スマホ版とWin10で使うファイルが異なるため2箇所にあります。 <br>スマホ版のみもしくはWin10のみの描写を変えたい場合は、片方のファイルを変更するだけで十分です。<br><strong class="line">スマホ版 ESBE>shaders>glsl>ESBEutil.h </strong><br><strong class="line">Win10 ESBE>shaders>hlsl>ESBEutil.fxh</strong><br>なお、システムの都合上ESBEutil.fxhの一部の設定項目はterrain.fsh.hlslに移動しています。</p>
-        <p class="title">ESBEutilの編集方法</p>
-        <p class="bd_text">ESBEutilを開くと <strong class="line_y">#define EXAMPLE//例 </strong>みたいなやつが沢山あります。<br>後ろに付いている説明書きなどを手掛かりにすればどんなやつなのか分かるはずです。<br><strong class="line_y">無効化したいときは手前に半角スラッシュを2個入れて //#define EXAMPLE//例 </strong>のようにしてください<br>#define EXAMPLE<strong class="line_y">12.3</strong>//例
-            のように数字がついているものの場合、<strong class="line">もともと小数点がついているものには必ず小数点をつけてください。
-            (ついていなかったら絶対につけないでください。(動かなくなります。））</strong><br><strong class="line_y">#define EXAMPLE vec3(0.7,0.5,0.3)//例</strong> のようにvec3やfloat3がついているものは大抵RGBの値です。<br><strong class="line">小数点を忘れずに。</strong> ESBE.hやterrain.fsh.hlslには float blur = 0.05;
-            の様に変数を宣言しているものがあります。
-            <br>これらは無効化できません。
-        </p>
-    </div>
+          </nav>
+        </header>
+      </article>
+      <!--ヘッダー終わり-->
+      <div class="test">
+        <h1 class="top_title">ESBE-1Gカスタマイズ方法</h1>
+        <div class="a_content">
+          <p class="title">幅広くカスタマイズ可能！</p>
+          <p class="bd_text">"ESBEutil"ファイルでは色調や特定の効果のON.OFF、効果の強さなど 様々な設定を変更することで<br />ESBEを自分の好きなようにカスタマイズすることができます。</p>
+          <p class="title">編集などの注意点</p>
+          <p class="bd_text">自分の変更したESBEutilファイルを共有したい場合、 ESBEutilのみ抜き出して再配布することが可能です。<br />このファイルを弄ったことによるトラブルは自己責任でお願いします。いざ動かなくなった時は再インポート(｀･ω･´)。</p>
+          <p class="title">ESBEutilの場所</p>
+          <p class="bd_text">スマホ版とWin10で使うファイルが異なるため2箇所にあります。 <br />スマホ版のみもしくはWin10のみの描写を変えたい場合は、片方のファイルを変更するだけで十分です。<br /><strong class="line">スマホ版 ESBE>shaders>glsl>ESBEutil.h </strong><br /><strong class="line">Win10 ESBE>shaders>hlsl>ESBEutil.fxh</strong><br />なお、システムの都合上ESBEutil.fxhの一部の設定項目はterrain.fsh.hlslに移動しています。</p>
+          <p class="title">ESBEutilの編集方法</p>
+          <p class="bd_text">ESBEutilを開くと <strong class="line_y">#define EXAMPLE//例 </strong>みたいなやつが沢山あります。<br />後ろに付いている説明書きなどを手掛かりにすればどんなやつなのか分かるはずです。<br /><strong class="line_y">無効化したいときは手前に半角スラッシュを2個入れて //#define EXAMPLE//例 </strong>のようにしてください<br />#define EXAMPLE<strong class="line_y">12.3</strong>//例 のように数字がついているものの場合、<strong class="line">もともと小数点がついているものには必ず小数点をつけてください。 (ついていなかったら絶対につけないでください。(動かなくなります。））</strong><br /><strong class="line_y">#define EXAMPLE vec3(0.7,0.5,0.3)//例</strong> のようにvec3やfloat3がついているものは大抵RGBの値です。<br /><strong class="line">小数点を忘れずに。</strong> ESBE.hやterrain.fsh.hlslには float blur = 0.05; の様に変数を宣言しているものがあります。 <br />これらは無効化できません。</p>
+        </div>
 
-    <footer class="site-footer">
-        <div class="contact">
-            <a href="https://twitter.com/nari_0978" aria-label="Twitter"><i class=" fa-brands fa-2x fa-twitter"></i></a>
+        <footer class="site-footer">
+          <div class="contact">
+            <a href="https://twitter.com/nari_0978" aria-label="Twitter"><i class="fa-brands fa-2x fa-twitter"></i></a>
             <a href="https://www.instagram.com/nari_0978/" aria-label="instagram"><i class="fa-brands fa-2x fa-instagram"></i></a>
             <p>©︎2020〜 <a href="https://github.com/NARI0978">NARI0978</a></p>
-        </div>
-    </footer>
-</div>
-</div>
+          </div>
+        </footer>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="../js/style.js"></script>
     <script>
-        let mySwiper = new Swiper('.swiper', {
-            loop: true,
-            effect: 'fade',
-            speed: 1000,
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false
-            },
-        });
+      let mySwiper = new Swiper(".swiper", {
+        loop: true,
+        effect: "fade",
+        speed: 1000,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
     </script>
-</body>
-
+  </body>
 </html>

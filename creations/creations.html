@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!DOCTYPE html>
+  <html lang="ja" dir="ltr">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+      <meta name="description" content="" />
+      <!--GSC-->
+      <meta name="google-site-verification" content="7zSZAQBhWoIN6uxbG0-j-1nhKYB1W0PWbyBvdWSK1MQ" />
+      <link rel="canonical" href="https://nari0978.github.io/" />
+      <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+      <link rel="shortcut icon" href="top.png" />
+      <link rel="stylesheet" type="text/css" href="../css/style.css" />
+      <link rel="stylesheet" type="text/css" href="styles.css" />
+      <link rel="stylesheet" type="text/css" href="../css/style-ham.css" />
+      <link rel="stylesheet" type="text/css" href="../css/style-header.css" />
+      <link rel="stylesheet" type="text/css" href="../css/style-dark.css" />
+      <link rel="stylesheet" type="text/css" href="../css/style-responsive.css" />
+      <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+      <script src="https://kit.fontawesome.com/4d2ac0652c.js" crossorigin="anonymous"></script>
+      <title></title>
+    </head>
+    <body>
+      <!--ハンバーガーメニュー始まり-->
+      <div class="ham">
+        <input type="checkbox" id="ham-check" class="ham-hidden" value="Click" onclick="isChecked()" />
+        <!--表示・非表示コントロールチェックボックス-->
+        <label for="ham-check" class="ham-open"><span></span></label>
+        <!--ハンバーガーアイコン設定。forで上の"ham-check"との関連付け-->
+        <nav class="ham-content">
+          <!--メニュー。自由に追加可能-->
+          <ul class="ham__menu">
+            <li><a href="../index.html" style="text-decoration: none">Home</a></li>
+            <li><a href="../profile/profile.html" style="text-decoration: none">Profile</a></li>
+            <li  class="now"><a href="creations.html" style="text-decoration: none">Creations</a></li>
+            <li><a href="../isbe/isbe.html" style="text-decoration: none">Impressive Shadow Shader</a></li>
+            <li><a href="../esbe-1g/esbe-1g.html" style="text-decoration: none">ESBE-1G</a></li>
+            <li><a href="../download/download.html" style="text-decoration: none">Download</a></li>
+            <li><a href="../pixelart/pixelart.html" style="text-decoration: none">PixelArt</a></li>
+            <li><a href="../contact/contact.html" style="text-decoration: none">Contact</a></li>
+            <!--<li><a href="demo/demo.html" style="color: #8c8c8c;">demo</a></li>-->
+          </ul>
+          <nav class="ham__sns">
+            <a href="https://misskey.io/@nari0978" class="link_sp" aria-label="Misskey.io"><img src="../photo/profile/misskey.svg" class="mi d" style="border-radius: 5px" alt="Misskey.io" /></a>
+            <a href="https://twitter.com/nari_0978" class="link_sp" aria-label="Twitter"><i class="fa-brands d fa-square-twitter"></i></a>
+            <a href="https://www.instagram.com/nari_0978/ " class="link_sp" aria-label="instagram"><i class="fa-brands d fa-square-instagram"></i></a>
+            <a href="https://github.com/NARI0978 " class="link_sp" aria-label="GitHub"><i class="fa-brands d fa-square-github"></i></a>
+          </nav>
+        </nav>
+      </div>
+      <!--ハンバーガーメニュー終わり-->
+      <!--ヘッダー始まり-->
+      <article>
+        <header class="site-header">
+          <h1 class="site-logo">
+            <a href="../index.html" style="text-decoration: none"><img src="../photo/tlogo.webp" alt="NARI HP" /></a>
+          </h1>
+          <nav class="gnav">
+            <ul class="gnav__menu">
+              <li class="gnav__menu__item">
+                <a href="../index.html" style="text-decoration: none">Home</a>
+              </li>
+              <li class="gnav__menu__item">
+                <a href="../profile/profile.html" style="text-decoration: none">Profile</a>
+              </li>
+              <li class="gnav__menu__item now">
+                <a href="creations.html" style="text-decoration: none">Creations</a>
+              </li>
+              <li class="gnav__menu__item">
+                <a href="../isbe/isbe.html" style="text-decoration: none">ISBE</a>
+              </li>
+              <li class="gnav__menu__item">
+                <a href="../esbe-1g/esbe-1g.html" style="text-decoration: none">ESBE-1G</a>
+              </li>
+              <li class="gnav__menu__item">
+                <a href="../download/download.html" style="text-decoration: none">Download</a>
+              </li>
+              <li class="gnav__menu__item">
+                <a href="../pixelart/pixelart.html" style="text-decoration: none">PixelArt</a>
+              </li>
+              <li class="gnav__menu__item">
+                <a href="../contact/contact.html" style="text-decoration: none">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </article>
+      <!--ヘッダー終わり-->
+      <div class="test">
+        <h1 class="top_title">Creations</h1>
+        <p class="creations_title">Minecraft Bedrock Edition Shader</p>
+        <div class="creations">
+          <div class="item">
+            <a href="project1.html">
+              <img src="../photo/isbe/top1.webp" alt="Project 1 Thumbnail" />
+              <div class="item-title">Impressive Shadow Shader</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="project2.html">
+              <img src="../photo/esbe-1g/top2.webp" alt="Project 2 Thumbnail" />
+              <div class="item-title">ESBE-1G</div>
+            </a>
+          </div>
+          <!--<div class="item">
+            <a href="project3.html">
+              <img src="project3_thumbnail.jpg" alt="Project 3 Thumbnail" />
+              <div class="item-title">Project 3</div>
+            </a>
+          </div>-->
+          <!-- Add more items as needed -->
+        </div>
+        <!--<p class="creations_title">Other</p>
+        <div class="creations">
+          <div class="item">
+            <a href="project1.html">
+              <img src="../photo/isbe/top1.webp" alt="Project 1" />
+              <div class="item-title">Impressive Shadow Shader</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="project2.html">
+              <img src="../photo/esbe-1g/top2.webp" alt="Project 2" />
+              <div class="item-title">ESBE-1G</div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="project3.html">
+              <img src="project3_thumbnail.jpg" alt="Project 3" />
+              <div class="item-title">Project 3</div>
+            </a>
+          </div>
+           Add more items as needed
+        </div>-->
+      </div>
+    </body>
+  </html>
+</html>

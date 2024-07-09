@@ -25,7 +25,9 @@
     .a_content,
     .pix p,
     .contact,
-    .contact a {
+    .contact a,
+    .creations_title,
+    .item-title {
         color: #f0f0f0;
     }
     .title {
@@ -34,11 +36,13 @@
     .ico_size,
     .ico_size.a,
     .info,
-    .pix img {
+    .pix img,
+    .item-title {
         background: #555;
     }
     .infomation,
-    .ico_size {
+    .ico_size,
+    .item {
         box-shadow: 0 0 10px 0 #222;
     }
     .pix img {
