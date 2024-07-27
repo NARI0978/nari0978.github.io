@@ -117,6 +117,16 @@
         border-radius: 17px;
     }
 
+    .theme-image {
+        display: none;
+    }
+
+    @media (prefers-color-scheme: light) {
+        .theme-image.light {
+            display: block;
+        }
+    }
+
     .content {
         padding:20px 0;
         line-height: 1.6;

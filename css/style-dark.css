@@ -55,6 +55,10 @@
         border-bottom: 1px solid #f0f0f0;
     }
 
+    .theme-image.dark {
+        display: block;
+    }
+
     @media (min-width: 1441px) and (max-width: 2560px) {}
 
 }
