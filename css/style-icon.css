@@ -10,7 +10,8 @@
 }
 
 .ico_size {
-    box-shadow: 0 0 7px 0 #444;
+    border: solid 2px #ddd;
+    box-shadow: 0 0 10px #0000001a;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -19,4 +20,12 @@
 
 .icon p {
     padding-top: 15px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .ico_size {
+        border: solid 2px #444;
+        box-shadow: 0 0 10px #0000001f;
+    }
+
 }
