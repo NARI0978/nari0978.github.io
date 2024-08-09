@@ -40,8 +40,7 @@
     .item-title {
         background: #555;
     }
-    .infomation,
-    .item {
+    .infomation {
         box-shadow: 0 0 10px 0 #222;
     }
     .pix img {
