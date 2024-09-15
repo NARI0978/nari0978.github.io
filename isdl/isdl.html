@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressive Shadow Deferred Lighting</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+      :root {
+        --text-color: #121212;
+        --bg-color: /*#ff9200*/ #f8f8f8;
+        --header-bg-color: #f8f8f8bb;
+        --ham-bg-color: #f8f8f8;
+        --sky-blue-1: #37a5ff;
+        --sky-blue-2: #a5dcff;
+        --swiper-bg-color: #f8f8f880;
+        --acc-bg-color: #eee;
+        --box-shadow-color: #0000001a;
+        --border-color: #fff;
+        --a-hover: #6d6d6d;
+      }
+
+      .dark-mode {
+        --text-color: #f8f8f8;
+        --bg-color: /*#cc7400*/ #1c1c1e;
+        --header-bg-color: #1c1c1ebb;
+        --ham-bg-color: #1c1c1e;
+        --sky-blue-1: #37a5ff;
+        --sky-blue-2: #a5dcff;
+        --swiper-bg-color: #1c1c1e70;
+        --acc-bg-color: #333;
+        --box-shadow-color: #0000005a;
+        --border-color: #000;
+        --a-hover: #7c7c7c;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "MS P Gothic", sans-serif;
+        background-color: var(--bg-color);
+        transition: background 0.6s;
+        width: 100%;
+      }
+
+      header {
+        width: 100%;
+        background: var(--header-bg-color);
+        padding: 18px;
+        transition: background 0.6s;
+        position: fixed;
+        z-index: 20;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        margin: 0;
+        color: var(--text-color);
+        transition: color 0.6s;
+        font-size: 20px;
+      }
+
+      h1 a {
+        color: var(--text-color);
+        text-decoration: none;
+      }
+
+      /*----*/
+
+      button {
+        position: fixed;
+        right: 66px;
+        top: 8.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 24px;
+        color: var(--text-color);
+        border: none;
+        background-color: #00000000;
+        cursor: pointer;
+        transition: color 0.6s;
+        margin: 0 auto;
+      }
+
+      /*----*/
+
+      .ham-hidden {
+        display: none;
+      }
+
+      .ham-open {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        right: 18px;
+        top: 8.5px;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 20;
+        border: solid 2px var(--text-color);
+        transition: border 0.6s;
+        transition: 0.5s;
+        border-radius: 6px;
+      }
+
+      .ham-open span,
+      .ham-open span:before,
+      .ham-open span:after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 30px;
+        border-radius: 3px;
+        background: var(--text-color);
+        transition: background 0.6s;
+        transition: 0.5s;
+        position: absolute;
+      }
+
+      .ham-open span:before {
+        bottom: 10px;
+      }
+
+      .ham-open span:after {
+        top: 10px;
+      }
+
+      #ham-check:checked ~ .ham-open span {
+        background: #ffffff00;
+      }
+
+      #ham-check:checked ~ .ham-open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      #ham-check:checked ~ .ham-open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+      }
+
+      .ham-content {
+        width: 100%;
+        height: 100%;
+        margin-top: 60px;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        opacity: 0;
+        z-index: 100;
+        background: var(--ham-bg-color);
+        overflow-y: auto;
+        transition: background 0.6s;
+        transition: 0.5s;
+      }
+
+      .ham-content ul {
+        list-style: none;
+      }
+
+      .ham-content ul li {
+        font-size: 18px;
+        padding: 10px 3.5px;
+      }
+
+      .ham-content ul li a {
+        text-decoration: none;
+        display: block;
+        color: var(--text-color);
+        transition: color 0.6s;
+      }
+
+      #ham-check:checked ~ .ham-content {
+        left: 0;
+        opacity: 1;
+        transition: 0.5s;
+      }
+
+      .ham-menu {
+        padding: 0 20px;
+      }
+
+      .now {
+        border-left: 3px solid var(--sky-blue-1);
+        padding-left: 8px;
+      }
+
+      /*----*/
+
+      .main-content {
+        width: 80%;
+        max-width: 425px;
+        margin: 0 auto;
+        padding-top: 61px;
+      }
+
+      .title {
+        font-size: 22px;
+        background: linear-gradient(to bottom, var(--sky-blue-1), var(--sky-blue-2));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .l {
+        text-align: left;
+      }
+
+      .r {
+        text-align: right;
+        padding-bottom: 10px;
+      }
+
+      .long {
+        display: none;
+      }
+
+      /*----*/
+
+      .top_screenshot img {
+        width: 100%;
+        border-radius: 6px;
+        vertical-align: middle;
+        margin-bottom: 10px;
+      }
+
+      /*----*/
+
+      .description {
+        font-size: 16px;
+        color: var(--text-color);
+      }
+
+      /*.h1_title {
+      			position: relative;
+      				color: var(--text-color);
+      				background: var(--sky-blue-2);
+      				border-left: 6px solid var(--sky-blue-1);
+      				border-right: 6px solid var(--sky-blue-1);
+      				transform: skewX(150deg);
+      		}
+
+      		.h1_title span {
+      				display: block;
+      				transform: skewX(-150deg);
+      			padding-left: 15px;
+      		}*/
+
+      .description p {
+        padding-top: 6px;
+        color: var(--text-color);
+        transition: color 0.6s;
+      }
+
+      /*----*/
+
+      .contents {
+        padding: 10px 0;
+      }
+
+      /*----*/
+
+      .slide {
+        padding: 10px 0;
+      }
+
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        font-size: 16px;
+        color: var(--sky-blue-1);
+        font-weight: bold;
+        /*background: var(--swiper-bg-color);*/
+        padding: 5px;
+        transition: background-color 0.6s, color 0.6s;
+      }
+
+      .swiper-slide img {
+        vertical-align: middle;
+        border-radius: 6px;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        width: 0px;
+        height: 205px;
+      }
+
+      .swiper-pagination-bullet {
+        background-color: var(--sky-blue-1);
+        transition: background-color 0.6s;
+      }
+
+      /*----*/
+
+      .update_history {
+        font-size: 16px;
+        padding-top: 12px;
+        color: var(--text-color);
+        transition: color 0.6s;
+      }
+
+      .update_acc {
+        margin: 12px 10px;
+        background: var(--bg-color);
+        border-radius: 5px;
+        box-shadow: 0 0 10px var(--box-shadow-color);
+        transition: background 0.6s, box-shadow 0.6s;
+      }
+
+      .update_acc input {
+        display: none;
+      }
+
+      .update_acc label {
+        display: block;
+        padding: 16px;
+        padding-right: 35px;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-weight: bold;
+        cursor: pointer;
+        border: 1px solid var(--border-color);
+        user-select: none;
+        position: relative;
+        font-size: 14px;
+        transition: color 0.6s, background 0.6s, border 0.6s;
+      }
+
+      .update_acc label::after {
+        content: "+";
+        position: absolute;
+        right: 15px;
+        font-size: 1.2em;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+      }
+
+      .update_acc input:checked + label::after {
+        content: "-";
+      }
+
+      .update_acc .content {
+        max-height: 0;
+        overflow: hidden;
+        background-color: var(--bg-color);
+        font-size: 0.85em;
+        border-left: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        transition: max-height 0.3s ease, background 0.6s, border-left 0.6s, border-right 0.6s, border-bottom 0.6s;
+      }
+
+      .update_acc input:checked ~ .content {
+        max-height: 300px; /* 必要に応じて調整 */
+      }
+
+      .update_acc .content li {
+        padding: 0 15px;
+        padding-bottom: 10px;
+        margin: 0;
+      }
+
+      .update_acc .content .top {
+        padding-top: 10px;
+        margin: 0;
+      }
+
+      .other_update {
+        text-align: center;
+        padding-bottom: 10px;
+      }
+
+      .other_update a {
+        color: var(--text-color);
+        transition: color 0.6s;
+      }
+
+      .other_update a:hover {
+        color: var(--a-hover);
+        transition: color 0.6s;
+      }
+
+      /*----*/
+
+      .button {
+        display: block;
+        padding: 12px 20px;
+        margin: 12px 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--sky-blue-1);
+        border: 2px solid var(--sky-blue-1);
+        background-color: transparent;
+        box-shadow: 0 0 10px var(--box-shadow-color);
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .button:hover {
+        background-color: var(--sky-blue-1);
+        color: var(--bg-color);
+      }
+
+      /**----------**/
+
+      .cc {
+        display: flex;
+        justify-content: center;
+        color: var(--text-color);
+        font-size: 14px;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        transition: color 0.6s;
+      }
+
+      .cc a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.6s;
+      }
+
+      .icon-l {
+        padding: 0 10px;
+      }
+
+      .cc-icon {
+        font-size: 20px;
+        vertical-align: sub;
+      }
+
+      /**----------**/
+
+      @media (min-width: 425px) {
+        .br {
+          display: none;
+        }
+      }
+
+      @media (min-width: 768px) {
+        h1 {
+          font-size: 26px;
+        }
+
+        button {
+          top: 15.5px;
+          font-size: 26px;
+        }
+
+        .ham-open {
+          top: 15.5px;
+        }
+
+        .ham-content {
+          margin-top: 74.9px;
+        }
+
+        .ham-content ul li {
+          font-size: 18px;
+        }
+
+        .main-content {
+          width: 80%;
+          max-width: 560px;
+          padding-top: 76px;
+        }
+
+        .title {
+          font-size: 28px;
+          padding: 0 10px;
+        }
+
+        .r {
+          padding-bottom: 12px;
+        }
+
+        .br {
+          display: none;
+        }
+
+        .description {
+          font-size: 16px;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+          font-size: 24px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          width: 0px;
+          height: 262px;
+        }
+
+        .swiper-pagination-bullet {
+          width: 11px;
+          height: 11px;
+        }
+
+        .update_acc label::after {
+          font-size: 16px;
+        }
+      }
+
+      /**----------**/
+
+      @media (min-width: 1024px) {
+        h1 {
+          font-size: 26px;
+        }
+
+        .main-content {
+          width: 80%;
+          max-width: 730px;
+          padding-top: 76px;
+        }
+
+        .title {
+          font-size: 32px;
+          padding: 0;
+          padding-bottom: 16px;
+          text-align: center;
+        }
+
+        .l,
+        .r {
+          display: none;
+        }
+
+        .long {
+          display: block;
+          letter-spacing: 1.8px;
+        }
+
+        .description {
+          font-size: 18px;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+          font-size: 28px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          height: 340px;
+        }
+
+        .update_acc label {
+          font-size: 16px;
+        }
+
+        .update_acc label::after {
+          font-size: 16px;
+        }
+      }
+
+      /**----------**/
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href="../index.html">NARI Home Page</a></h1>
+      <button id="toggle-button"><i class="ri-moon-clear-line"></i></button>
+      <div class="ham">
+        <input type="checkbox" id="ham-check" class="ham-hidden" value="Click" />
+        <label for="ham-check" class="ham-open"><span></span></label>
+
+        <nav class="ham-content">
+          <ul class="ham-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../profile/profile.html">Profile</a></li>
+            <li><a href="../creations/creations.html">Creations</a></li>
+            <li><a href="isdl.html" class="now">Impressive Shadow Deferred Lighting</a></li>
+            <li><a href="../isbe/isbe.html">Impressive Shadow Shader</a></li>
+            <li><a href="../esbe-1g/esbe-1g.html">ESBE-1G</a></li>
+            <li><a href="../download/download.html">Download</a></li>
+            <li><a href="../pixelart/pixelart.html">PixelArt</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <h1 class="title l">Impressive Shadow</h1>
+      <h1 class="title r">Deferred Lighting</h1>
+      <h1 class="title long">Impressive Shadow Deferred Lighting</h1>
+      <div class="top_screenshot">
+        <img src="../photo/isdl/i.png" />
+      </div>
+
+      <div class="description contents">
+        <h1>特徴 -Features-</h1>
+        <p>Impressive Shadow Deferred Lightingは、Minecraft Previewで動作します。<br />リアルな影描写や、太陽と月の水面反射、カスタマイズされた光源色など、Minecraft BEをより美しくする様々な特徴を持っています。</p>
+      </div>
+      <div class="screenshots contents">
+        <h1>スクリーンショット <br class="br" />-ScreenShots-</h1>
+        <div class="slide">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="../photo/isdl/d.png" width="100%" alt="" /></div>
+              <div class="swiper-slide"><img src="../photo/isdl/e.png" width="100%" alt="" /></div>
+              <div class="swiper-slide"><img src="../photo/isdl/f.png" width="100%" alt="" /></div>
+              <div class="swiper-slide"><img src="../photo/isdl/g.png" width="100%" alt="" /></div>
+              <div class="swiper-slide"><img src="../photo/isdl/h.png" width="100%" alt="" /></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+      <div class="update_history contents">
+        <h1>更新履歴 -Update History-</h1>
+        <div class="update_acc">
+          <div>
+            <input type="checkbox" id="section2" />
+            <label for="section2">Impressive Shadow Deferred Lighting Pre v0.035</label>
+            <div class="content">
+              <li class="top">Impressive Shadow Deferred Rendering から Impressive Shadow Deferred Lightingに名称変更しました。</li>
+              <li>太陽と月の時間定義を修正しました</li>
+              <li>よりスムーズで、綺麗に空の色が変わるようになりました</li>
+              <li>光源密集時に高いところから光源を見るとできていた三角の影（バグだと思われる）を修正しました（不都合があれば前仕様に戻します）</li>
+              <li>水面の描写を実装しました</li>
+              <li>全体的な世界の明るさ表現を改善しました</li>
+              <li>銅ブロックに凹凸、反射効果を実装しました</li>
+            </div>
+          </div>
+          <div>
+            <input type="checkbox" id="section1" />
+            <label for="section1">Impressive Shadow Deferred Rendering Pre v0.03</label>
+            <div class="content">
+              <li class="top">鉱石に凹凸を追加しました（銅鉱石以外）</li>
+              <li>鉱石を暗闇で光るようにしました</li>
+              <li>空の色と世界の明るさを再調整しました</li>
+            </div>
+          </div>
+        </div>
+        <div class="other_update">
+          <a href="https://github.com/NARI0978/Impressive-Shadow-Deferred-Lighting/tags">他のリリースはこちら</a>
+        </div>
+      </div>
+      <div class="download contents">
+        <h1>ダウンロード -Download-</h1>
+        <a href="" class="button">Impressive Shadow Deferred Lighting <br class="br" />(Latest Ver.)</a>
+      </div>
+      <footer>
+        <div class="cc contents">
+          <p>©︎2024〜NARI0978</p>
+          <a href="https://twitter.com/nari_0978" aria-label="Twitter" class="icon-l"><i class="ri-twitter-fill cc-icon"></i></a>
+          <a href="https://github.com/NARI0978" aria-label="GitHub"><i class="ri-github-fill cc-icon"></i></a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const toggleButton = document.getElementById("toggle-button");
+      const bodyElement = document.body;
+
+      // デバイスのモードに応じて初期モードを設定
+      if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        bodyElement.classList.add("dark-mode");
+        toggleButton.innerHTML = '<i class="ri-sun-line"></i>';
+      } else {
+        bodyElement.classList.remove("dark-mode");
+        toggleButton.innerHTML = '<i class="ri-moon-clear-line"></i>';
+      }
+
+      // ボタンをクリックしてモードを手動で切り替える
+      toggleButton.addEventListener("click", () => {
+        bodyElement.classList.toggle("dark-mode");
+        if (bodyElement.classList.contains("dark-mode")) {
+          toggleButton.innerHTML = '<i class="ri-sun-line"></i>';
+        } else {
+          toggleButton.innerHTML = '<i class="ri-moon-clear-line"></i>';
+        }
+      });
+
+      // デバイスのモードが変わったときに自動的に変更
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+        if (event.matches) {
+          bodyElement.classList.add("dark-mode");
+          toggleButton.innerHTML = '<i class="ri-sun-line"></i>';
+        } else {
+          bodyElement.classList.remove("dark-mode");
+          toggleButton.innerHTML = '<i class="ri-moon-clear-line"></i>';
+        }
+      });
+
+      /*----*/
+
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        effect: "fade",
+        speed: 1000,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+  <!--Some of the design candidates for this site were created by Chat GPT. Thanks, ChatGPT.
+
+
+####################################################################################################
+####################################################################################################
+####################################################################################################
+####################################################################################################
+##################################################++++++++++++*#####################################
+##################################################++++++++++++*#####################################
+##################################################++++++++++++*#####################################
+##################################################++++++++++++*******###############################
+#####################################*************======++++++=:::::-###############################
+#####################################*************======++++++=:::::-###############################
+#####################################*************======++++++=:::::-###############################
+###############################*******************++++++======-:::::-###############################
+###############################-:::::=************%%%%%%-.....::::::-###############################
+###############################-:::::=************%%%%%%-.....::::::-###############################
+###############################-:::::=************%%%%%%-.....::::::-###############################
+###############################-:::::-=====+******######-.....::::::=###############################
+###############################-:::::::::::-************-.....:-----=###############################
+###############################-:::::::::::-************-.....:-----=###############################
+###############################-:::::::::::-************-.....:-----=###############################
+###############################+=====-:::::-======******-:::::=++++++###############################
+#####################################+::::::::::::++++++=-----+#####################################
+#####################################+::::::::::::++++++=-----+#####################################
+#####################################+::::::::::::++++++=-----+#####################################
+#####################################*+++++++++++++++++++++++++******###############################
+##################################################******######*++++++###############################
+##################################################******######*++++++###############################
+##################################################******######*++++++###############################
+################################%%%%%#******%%%%%%*************#####################################
+###############################%%%%%%*+++++*%%%%%%******++++++*%%%%%%###############################
+###############################%%%%%%*+++++*%%%%%%******++++++*%%%%%%###############################
+###############################%%%%%%*+++++*%%%%%%******++++++*%%%%%%###############################
+#########################%%%%%%#############******++++++*############%%%%%%#########################
+#########################%%%%%%#############++++++++++++#############%%%%%%#########################
+#########################%%%%%%#############++++++++++++#############%%%%%%#########################
+#########################%%%%%%#############++++++++++++#############%%%%%%#########################
+#########################%%%%%%%%%%%%#############++++++*######%%%%%%%%%%%%#########################
+#########################%%%%%%%%%%%%#############++++++*######%%%%%%%%%%%%#########################
+#########################%%%%%%%%%%%%#############++++++*######%%%%%%%%%%%%#########################
+#########################%%%%%%%%%%%%#############++++++*######%%%%%%%%%%%%#########################
+#########################%%%%%%#*****#%%%%%%%%%%%%%%%%%%%%%%%%#*****#%%%%%%#########################
+#########################%%%%%%******#%%%%%%%%%%%%%%%%%%%%%%%%#******%%%%%%#########################
+#########################%%%%%%******#%%%%%%%%%%%%%%%%%%%%%%%%#******%%%%%%#########################
+#########################%%%%%%******#%%%%%%%%%%%%%%%%%%%%%%%%#******%%%%%%#########################
+#########################%%%%%%**************************************%%%%%%#########################
+#########################%%%%%%**************************************%%%%%%#########################
+#########################%%%%%%**************************************%%%%%%#########################
+#########################%%%%%%#************************************#%%%%%%#########################
+#########################%%%%%%######**************************######%%%%%%#########################
+#########################%%%%%%######**************************######%%%%%%#########################
+#########################%%%%%%######**************************######%%%%%%#########################
+#########################%%%%%%#######************************#######%%%%%%#########################
+###############################%%%%%%######**************######%%%%%%###############################
+###############################%%%%%%######**************######%%%%%%###############################
+###############################%%%%%%######**************######%%%%%%###############################
+################################%%%%%##########################%%%%%################################
+######################################%%%%%%%%%%%%%%%%%%%%%%%%######################################
+######################################%%%%%%%%%%%%%%%%%%%%%%%%######################################
+######################################%%%%%%%%%%%%%%%%%%%%%%%%######################################
+######################################%%%%%%%%%%%%%%%%%%%%%%%%######################################
+####################################################################################################
+####################################################################################################
+####################################################################################################
+####################################################################################################
+
+
+--></html>
