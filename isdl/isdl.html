@@ -55,6 +55,12 @@
         position: fixed;
         z-index: 20;
         box-sizing: border-box;
+        display: flex;
+        align-items: center;
+      }
+
+      header img {
+        width: 40px;
       }
 
       h1 {
@@ -62,6 +68,7 @@
         color: var(--text-color);
         transition: color 0.6s;
         font-size: 20px;
+        padding-left: 5px;
       }
 
       h1 a {
@@ -75,7 +82,7 @@
       button {
         position: fixed;
         right: 66px;
-        top: 8.5px;
+        top: 16.5px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -100,7 +107,7 @@
         width: 40px;
         height: 40px;
         right: 18px;
-        top: 8.5px;
+        top: 16.5px;
         justify-content: center;
         align-items: center;
         position: fixed;
@@ -199,7 +206,7 @@
         width: 80%;
         max-width: 425px;
         margin: 0 auto;
-        padding-top: 61px;
+        padding-top: 77px;
       }
 
       .title {
@@ -475,7 +482,7 @@
         .main-content {
           width: 80%;
           max-width: 560px;
-          padding-top: 76px;
+          padding-top: 77px;
         }
 
         .title {
@@ -526,7 +533,7 @@
         .main-content {
           width: 80%;
           max-width: 730px;
-          padding-top: 76px;
+          padding-top: 77px;
         }
 
         .title {
@@ -574,6 +581,7 @@
   </head>
   <body>
     <header>
+      <img src="top.webp" />
       <h1><a href="../index.html">NARI Home Page</a></h1>
       <button id="toggle-button"><i class="ri-moon-clear-line"></i></button>
       <div class="ham">
