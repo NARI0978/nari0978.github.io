@@ -66,13 +66,13 @@
         color: var(--text-color);
         transition: color 0.6s;
         font-size: 20px;
-        padding-left: 5px;
       }
 
       h1 a {
         color: var(--text-color);
         text-decoration: none;
         transition: color 0.6s;
+        vertical-align: middle;
       }
 
       /*----*/
@@ -480,8 +480,12 @@
 
       @media (min-width: 768px) {
         h1 {
-          font-size: 26px;
+          font-size: 22px;
         }
+
+        h1 a {
+        vertical-align: bottom;
+      }
 
         button {
           top: 9.5px;
@@ -557,11 +561,13 @@
         }
 
         button {
+          top: 11.5px;
           right: 10px;
         }
 
         .gnav {
           display: block;
+          padding-top: 4px;
         }
 
         .gnav_memu_link a {
