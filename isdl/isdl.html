@@ -50,13 +50,11 @@
       header {
         width: 100%;
         background: var(--header-bg-color);
-        padding: 18px;
+        padding: 12px 18px;
         transition: background 0.6s;
         position: fixed;
         z-index: 20;
         box-sizing: border-box;
-        display: flex;
-        align-items: center;
       }
 
       header img {
@@ -82,7 +80,7 @@
       button {
         position: fixed;
         right: 66px;
-        top: 16.5px;
+        top: 14.5px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -98,6 +96,29 @@
 
       /*----*/
 
+      header img {
+        padding-right: 5px;
+        vertical-align: bottom;
+      }
+
+      .gnav {
+        display: none;
+      }
+
+      .gnav_menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .gnav_memu_link {
+        list-style: none;
+        padding-right: 10px;
+      }
+
+      /*----*/
+
       .ham-hidden {
         display: none;
       }
@@ -107,7 +128,7 @@
         width: 40px;
         height: 40px;
         right: 18px;
-        top: 16.5px;
+        top: 14.5px;
         justify-content: center;
         align-items: center;
         position: fixed;
@@ -206,7 +227,7 @@
         width: 80%;
         max-width: 425px;
         margin: 0 auto;
-        padding-top: 77px;
+        padding-top: 65px;
       }
 
       .title {
@@ -463,26 +484,19 @@
         }
 
         button {
-          top: 15.5px;
+          top: 9.5px;
+          right: 66px;
           font-size: 26px;
         }
 
         .ham-open {
-          top: 15.5px;
-        }
-
-        .ham-content {
-          margin-top: 74.9px;
-        }
-
-        .ham-content ul li {
-          font-size: 18px;
+          top: 10px;
         }
 
         .main-content {
           width: 80%;
           max-width: 560px;
-          padding-top: 77px;
+          padding-top: 65px;
         }
 
         .title {
@@ -530,10 +544,49 @@
           font-size: 26px;
         }
 
+        /*----*/
+
+        header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .ham-open {
+          display: none;
+        }
+
+        button {
+          right: 10px;
+        }
+
+        .gnav {
+          display: block;
+        }
+
+        .gnav_memu_link a {
+          text-decoration: none;
+          font-size: 17px;
+          color: var(--text-color);
+          transition: color 0.6s;
+        }
+
+        .gnav_memu_link a:hover {
+          color: var(--a-hover);
+          transition: color 0.6s;
+        }
+
+        .now_ {
+          border-bottom: 3px solid var(--sky-blue-1);
+          padding-bottom: 4px;
+        }
+
+        /*----*/
+
         .main-content {
           width: 80%;
           max-width: 730px;
-          padding-top: 77px;
+          padding-top: 65px;
         }
 
         .title {
@@ -581,13 +634,26 @@
   </head>
   <body>
     <header>
-      <img src="../photo/top.webp" />
-      <h1><a href="../index.html">NARI Home Page</a></h1>
+      <h1>
+        <a href="../index.html"><img src="../photo/top.webp" />NARI Home Page</a>
+      </h1>
       <button id="toggle-button"><i class="ri-moon-clear-line"></i></button>
+      <nav class="gnav">
+        <ul class="gnav_menu">
+          <li class="gnav_memu_link"><a href="../index.html">Home</a></li>
+          <li class="gnav_memu_link"><a href="../profile/profile.html">Profile</a></li>
+          <li class="gnav_memu_link"><a href="../creations/creations.html">Creations</a></li>
+          <li class="gnav_memu_link"><a href="isdl.html" class="now_">ISDL</a></li>
+          <li class="gnav_memu_link"><a href="../isbe/isbe.html">ISBE</a></li>
+          <li class="gnav_memu_link"><a href="../esbe-1g/esbe-1g.html">ESBE-1G</a></li>
+          <li class="gnav_memu_link"><a href="../download/download.html">Download</a></li>
+          <li class="gnav_memu_link"><a href="../pixelart/pixelart.html">PixelArt</a></li>
+          <li class="gnav_memu_link"><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+      </nav>
       <div class="ham">
         <input type="checkbox" id="ham-check" class="ham-hidden" value="Click" />
         <label for="ham-check" class="ham-open"><span></span></label>
-
         <nav class="ham-content">
           <ul class="ham-menu">
             <li><a href="../index.html">Home</a></li>
