@@ -19,6 +19,7 @@
         --box-shadow-color: #0000001a;
         --border-color: #fff;
         --a-hover: #6d6d6d;
+        --warning: #ff0000;
       }
 
       .dark-mode {
@@ -418,6 +419,10 @@
         transition: color 0.6s;
       }
 
+      .warning {
+        color: var(--warning);
+      }
+
       /*----*/
 
       .button {
@@ -712,7 +717,8 @@
             <input type="checkbox" id="section2" />
             <label for="section2">Impressive Shadow Deferred Lighting Pre v0.035</label>
             <div class="content">
-              <li class="top">Impressive Shadow Deferred Rendering から Impressive Shadow Deferred Lightingに名称変更しました。</li>
+              <li class="top warning">Minecraft Preview v1.21.40.21まで動作します (最新バージョンでは動作不可)</li>
+              <li>Impressive Shadow Deferred Rendering から Impressive Shadow Deferred Lightingに名称変更しました。</li>
               <li>太陽と月の時間定義を修正しました</li>
               <li>よりスムーズで、綺麗に空の色が変わるようになりました</li>
               <li>光源密集時に高いところから光源を見るとできていた三角の影（バグだと思われる）を修正しました（不都合があれば前仕様に戻します）</li>
