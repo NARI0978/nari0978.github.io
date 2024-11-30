@@ -1,184 +1,706 @@
 <!DOCTYPE html>
 <html lang="ja" dir="ltr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="NARI Home PageではMinecraft BEで使えるシェーダーの紹介やダウンロード、今まで描いたドット絵などをチェックできます。" />
     <!--GSC-->
     <meta name="google-site-verification" content="7zSZAQBhWoIN6uxbG0-j-1nhKYB1W0PWbyBvdWSK1MQ" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="shortcut icon" href="top.png" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/style-ham.css" />
-    <link rel="stylesheet" type="text/css" href="css/style-header.css" />
-    <link rel="stylesheet" type="text/css" href="css/style-icon.css" />
-    <link rel="stylesheet" type="text/css" href="css/style-link-btn.css" />
-    <link rel="stylesheet" type="text/css" href="css/style-dark.css" />
-    <link rel="stylesheet" type="text/css" href="css/style-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="css/style-slider.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <script src="https://kit.fontawesome.com/4d2ac0652c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>NARI Home Page</title>
+    <style>
+      :root {
+        --text-color: #121212;
+        --bg-color: #f8f8f8;
+        --header-bg-color: #f8f8f8bb;
+        --ham-bg-color: #f8f8f8;
+        --box-shadow-color: #0000001a;
+        --border-color: #fff;
+        --a-hover: #6d6d6d;
+        --site-color: #ffab52;
+        --sky-blue: #37a5ff;
+      }
+
+      .dark-mode {
+        --text-color: #f8f8f8;
+        --bg-color: #1c1c1e;
+        --header-bg-color: #1c1c1ebb;
+        --ham-bg-color: #1c1c1e;
+        --box-shadow-color: #0000005a;
+        --border-color: #000;
+        --a-hover: #7c7c7c;
+        --site-color: #ffb565;
+        --sky-blue: #a5dcff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "MS P Gothic", sans-serif;
+        background-color: var(--bg-color);
+        transition: background 0.6s;
+        width: 100%;
+      }
+
+      header {
+        width: 100%;
+        background: var(--header-bg-color);
+        padding: 12px 18px;
+        transition: background 0.6s;
+        position: fixed;
+        z-index: 20;
+        box-sizing: border-box;
+      }
+
+      header img {
+        width: 40px;
+      }
+
+      h1 {
+        margin: 0;
+        color: var(--text-color);
+        transition: color 0.6s;
+        font-size: 20px;
+        padding-left: 5px;
+      }
+
+      h1 a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.6s;
+      }
+
+      /*----*/
+
+      button {
+        position: fixed;
+        right: 66px;
+        top: 14.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 24px;
+        color: var(--text-color);
+        border: none;
+        background-color: #00000000;
+        cursor: pointer;
+        transition: color 0.6s;
+        margin: 0 auto;
+      }
+
+      /*----*/
+
+      header img {
+        padding-right: 5px;
+        vertical-align: bottom;
+      }
+
+      .gnav {
+        display: none;
+      }
+
+      .gnav_menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .gnav_memu_link {
+        list-style: none;
+        padding-right: 12px;
+      }
+
+      /*----*/
+
+      .ham-hidden {
+        display: none;
+      }
+
+      .ham-open {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        right: 18px;
+        top: 14.5px;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 20;
+        border: solid 2px var(--text-color);
+        transition: border 0.6s;
+        transition: 0.5s;
+        border-radius: 6px;
+      }
+
+      .ham-open span,
+      .ham-open span:before,
+      .ham-open span:after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 30px;
+        border-radius: 3px;
+        background: var(--text-color);
+        transition: background 0.6s;
+        transition: 0.5s;
+        position: absolute;
+      }
+
+      .ham-open span:before {
+        bottom: 10px;
+      }
+
+      .ham-open span:after {
+        top: 10px;
+      }
+
+      #ham-check:checked ~ .ham-open span {
+        background: #ffffff00;
+      }
+
+      #ham-check:checked ~ .ham-open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      #ham-check:checked ~ .ham-open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+      }
+
+      .ham-content {
+        width: 100%;
+        height: 100%;
+        margin-top: 60px;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        opacity: 0;
+        z-index: 100;
+        background: var(--ham-bg-color);
+        overflow-y: auto;
+        transition: background 0.6s;
+        transition: 0.5s;
+      }
+
+      .ham-content ul {
+        list-style: none;
+      }
+
+      .ham-content ul li {
+        font-size: 18px;
+        padding: 10px 3.5px;
+      }
+
+      .ham-content ul li a {
+        text-decoration: none;
+        display: block;
+        color: var(--text-color);
+        transition: color 0.6s;
+      }
+
+      #ham-check:checked ~ .ham-content {
+        left: 0;
+        opacity: 1;
+        transition: 0.5s;
+      }
+
+      .ham-menu {
+        padding: 0 20px;
+      }
+
+      .now {
+        border-left: 3px solid var(--site-color);
+        padding-left: 8px;
+      }
+
+      /*----*/
+
+      .main-content {
+        width: 80%;
+        max-width: 425px;
+        margin: 0 auto;
+        padding-top: 74px;
+      }
+
+      /*----*/
+
+      .slide {
+        padding: 10px 0;
+      }
+
+      .swiper-slide img {
+        vertical-align: middle;
+        border-radius: 6px;
+      }
+
+      .swiper-pagination-bullet {
+        background-color: var(--site-color);
+        transition: background-color 0.6s;
+      }
+
+      /*----*/
+
+      .contents {
+        padding: 10px 0;
+      }
+
+      /*----*/
+
+      .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      /*----*/
+
+      .description {
+        font-size: 16px;
+        color: var(--text-color);
+        text-align: center;
+        transition: color 0.6s;
+      }
+
+      /*----*/
+
+      .icon {
+        color: var(--text-color);
+        text-align: center;
+        font-size: 16px;
+        transition: color 0.6s;
+        transition: all 0.3s ease 0s;
+        padding: 10px 0px;
+      }
+
+      .icon:hover {
+        transform: scale(1.04);
+      }
+
+      .ico_size {
+        border: solid 2px var(--border-color);
+        box-shadow: 0 0 10px var(--box-shadow-color);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 110px;
+        height: 110px;
+        padding: 5px;
+        transition: border 0.6s, box-shadow 0.6s;
+      }
+
+      .ico_size.special {
+        border: solid 2px var(--sky-blue);
+      }
+
+      .ico_size.special2 {
+        border: solid 2px var(--site-color);
+      }
+
+      .icon img {
+        width: 100%;
+      }
+
+      .icon .long_name {
+        font-size: 12px;
+      }
+
+      .icon p {
+        font-size: 14px;
+        padding-top: 15px;
+      }
+
+      /*----*/
+
+      .cc {
+        display: flex;
+        justify-content: center;
+        color: var(--text-color);
+        font-size: 14px;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        transition: color 0.6s;
+      }
+
+      .cc a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.6s;
+      }
+
+      .icon-l {
+        padding: 0 10px;
+      }
+
+      .cc-icon {
+        font-size: 20px;
+        vertical-align: sub;
+      }
+
+      /**----------**/
+
+      /*.theme-image {
+        display: none;
+      }
+
+      .theme-image.light-mode {
+        display: block;
+      }
+
+      .theme-image.dark-mode {
+        display: block;
+      }*/
+
+      /**----------**/
+
+      @media (min-width: 425px) {
+        .description {
+          font-size: 18px;
+        }
+
+        .ico_size {
+          border-radius: 20px;
+          width: 100px;
+          height: 100px;
+          padding: 10px;
+        }
+
+        .icon {
+          padding: 10px 5px;
+        }
+
+        .icon p {
+          font-size: 14px;
+          padding-top: 15px;
+        }
+
+        .icon .long_name {
+          font-size: 12px;
+        }
+      }
+
+      /**----------**/
+
+      @media (min-width: 450px) {
+        .br {
+          display: none;
+        }
+      }
+
+      @media (min-width: 768px) {
+        h1 {
+          font-size: 22px;
+        }
+
+        button {
+          top: 9.5px;
+          right: 66px;
+          font-size: 26px;
+        }
+
+        .ham-open {
+          top: 10px;
+        }
+
+        .main-content {
+          width: 80%;
+          max-width: 560px;
+        }
+
+        .description {
+          font-size: 20px;
+        }
+
+        .ico_size {
+          border-radius: 20px;
+          width: 110px;
+          height: 110px;
+          padding: 10px;
+        }
+
+        .icon {
+          padding: 10px 5px;
+        }
+      }
+
+      /**----------**/
+
+      @media (min-width: 1024px) {
+        .site_name {
+          font-size: 24px;
+        }
+
+        h1 {
+          font-size: 26px;
+        }
+
+        /*----*/
+
+        header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .ham-open {
+          display: none;
+        }
+
+        button {
+          top: 10.5px;
+          right: 10px;
+        }
+
+        .gnav {
+          display: block;
+          padding-top: 4px;
+        }
+
+        .gnav_memu_link a {
+          text-decoration: none;
+          font-size: 17px;
+          color: var(--text-color);
+          transition: color 0.6s;
+        }
+
+        .gnav_memu_link a:hover {
+          color: var(--a-hover);
+          transition: color 0.6s;
+        }
+
+        .now_ {
+          border-bottom: 2px solid var(--site-color);
+          padding-bottom: 4px;
+        }
+
+        /*----*/
+
+        .main-content {
+          width: 80%;
+          max-width: 730px;
+        }
+
+        .description {
+          font-size: 24px;
+        }
+
+        .ico_size {
+          border-radius: 30px;
+          width: 140px;
+          height: 140px;
+          padding: 10px;
+        }
+
+        .icon {
+          padding: 10px;
+        }
+
+        .icon p {
+          font-size: 18px;
+          padding-top: 15px;
+        }
+
+        .icon .long_name {
+          font-size: 16px;
+        }
+      }
+
+      /**----------**/
+    </style>
   </head>
   <body>
-    <!--ハンバーガーメニュー始まり-->
-    <div class="ham">
-      <input type="checkbox" id="ham-check" class="ham-hidden" value="Click" onclick="isChecked()" />
-      <!--表示・非表示コントロールチェックボックス-->
-      <label for="ham-check" class="ham-open"><span></span></label>
-      <!--ハンバーガーアイコン設定。forで上の"ham-check"との関連付け-->
-      <nav class="ham-content">
-        <!--メニュー。自由に追加可能-->
-        <ul class="ham__menu">
-          <li class="now"><a href="index.html" style="text-decoration: none">Home</a></li>
-          <li><a href="profile/profile.html" style="text-decoration: none">Profile</a></li>
-          <li><a href="creations/creations.html" style="text-decoration: none">Creations</a></li>
-          <li><a href="isdl/isdl.html">Impressive Shadow Deferred Lighting</a></li>
-          <li><a href="isbe/isbe.html" style="text-decoration: none">Impressive Shadow Shader</a></li>
-          <li><a href="esbe-1g/esbe-1g.html" style="text-decoration: none">ESBE-1G</a></li>
-          <li><a href="download/download.html" style="text-decoration: none">Download</a></li>
-          <li><a href="pixelart/pixelart.html" style="text-decoration: none">PixelArt</a></li>
-          <li><a href="contact/contact.html" style="text-decoration: none">Contact</a></li>
-          <!--<li><a href="demo/demo.html" style="color: #8c8c8c;">demo</a></li>-->
+    <header>
+      <h1 class="site_name">
+        <a href="index.html"><img src="photo/top.webp" />NARI Home Page</a>
+      </h1>
+      <button id="toggle-button"><i class="ri-moon-clear-line"></i></button>
+      <nav class="gnav">
+        <ul class="gnav_menu">
+          <li class="gnav_memu_link"><a href="index.html" class="now_">Home</a></li>
+          <li class="gnav_memu_link"><a href="profile/profile.html">Profile</a></li>
+          <li class="gnav_memu_link"><a href="creations/creations.html">Creations</a></li>
+          <li class="gnav_memu_link"><a href="isdl/isdl.html">ISDL</a></li>
+          <li class="gnav_memu_link"><a href="isbe/isbe.html">ISBE</a></li>
+          <li class="gnav_memu_link"><a href="esbe-1g/esbe-1g.html">ESBE-1G</a></li>
+          <li class="gnav_memu_link"><a href="download/download.html">Download</a></li>
+          <li class="gnav_memu_link"><a href="pixelart/pixelart.html">PixelArt</a></li>
+          <li class="gnav_memu_link"><a href="contact/contact.html">Contact</a></li>
         </ul>
-        <nav class="ham__sns">
-          <a href="https://misskey.io/@nari0978" class="link_sp" aria-label="Misskey.io"><img src="photo/profile/misskey.svg" class="mi d" style="border-radius: 5px" alt="Misskey.io" /></a>
-          <a href="https://twitter.com/nari_0978" class="link_sp" aria-label="Twitter"><i class="fa-brands d fa-square-twitter"></i></a>
-          <a href="https://www.instagram.com/nari_0978/ " class="link_sp" aria-label="instagram"><i class="fa-brands d fa-square-instagram"></i></a>
-          <a href="https://github.com/NARI0978 " class="link_sp" aria-label="GitHub"><i class="fa-brands d fa-square-github"></i></a>
-        </nav>
       </nav>
-    </div>
-    <!--ハンバーガーメニュー終わり-->
-    <div class="test_fle">
-      <!--ヘッダー始まり-->
-      <article>
-        <header class="site-header">
-          <h1 class="site-logo">
-            <a href="index.html" style="text-decoration: none"><img src="photo/tlogo.webp" alt="NARI HP" /></a>
-          </h1>
-          <nav class="gnav">
-            <ul class="gnav__menu">
-              <li class="gnav__menu__item now"><a href="index.html" style="text-decoration: none">Home</a></li>
-              <li class="gnav__menu__item"><a href="profile/profile.html" style="text-decoration: none">Profile</a></li>
-              <li class="gnav__menu__item"><a href="creations/creations.html" style="text-decoration: none">Creations</a></li>
-              <li class="gnav__menu__item"><a href="isdl/isdl.html" style="text-decoration: none">ISDL</a></li>
-              <li class="gnav__menu__item"><a href="isbe/isbe.html" style="text-decoration: none">ISBE</a></li>
-              <li class="gnav__menu__item"><a href="esbe-1g/esbe-1g.html" style="text-decoration: none">ESBE-1G</a></li>
-              <li class="gnav__menu__item"><a href="download/download.html" style="text-decoration: none">Download</a></li>
-              <li class="gnav__menu__item"><a href="pixelart/pixelart.html" style="text-decoration: none">PixelArt</a></li>
-              <li class="gnav__menu__item"><a href="contact/contact.html" style="text-decoration: none">Contact</a></li>
-            </ul>
-          </nav>
-        </header>
-      </article>
-      <!--ヘッダー終わり-->
-      <div class="test">
-        <!--<h1 class="top_pad"></h1>-->
-        <div class="sw2">
-          <div class="swiper slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="photo/top1.webp" width="100%" alt="top1" /></div>
-              <div class="swiper-slide"><img src="photo/top2.webp" width="100%" alt="top2" /></div>
-              <div class="swiper-slide"><img src="photo/top3.webp" width="100%" alt="top3" /></div>
-              <div class="swiper-slide"><img src="photo/top4.webp" width="100%" alt="top4" /></div>
-              <div class="swiper-slide"><img src="photo/top5.webp" width="100%" alt="top5" /></div>
-              <div class="swiper-slide"><img src="photo/top6.webp" width="100%" alt="top6" /></div>
-            </div>
-            <div class="swiper-pagination"></div>
+      <div class="ham">
+        <input type="checkbox" id="ham-check" class="ham-hidden" value="Click" />
+        <label for="ham-check" class="ham-open"><span></span></label>
+        <nav class="ham-content">
+          <ul class="ham-menu">
+            <li><a href="index.html" class="now">Home</a></li>
+            <li><a href="profile/profile.html">Profile</a></li>
+            <li><a href="creations/creations.html">Creations</a></li>
+            <li><a href="isdl/isdl.html">Impressive Shadow Deferred Lighting</a></li>
+            <li><a href="isbe/isbe.html">Impressive Shadow Shader</a></li>
+            <li><a href="esbe-1g/esbe-1g.html">ESBE-1G</a></li>
+            <li><a href="download/download.html">Download</a></li>
+            <li><a href="pixelart/pixelart.html">PixelArt</a></li>
+            <li><a href="contact/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="main-content">
+      <div class="slide">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="photo/isdl/i.webp" width="100%" alt="ISDL1" /></div>
+            <div class="swiper-slide"><img src="photo/isdl/e.webp" width="100%" alt="ISDL2" /></div>
+            <div class="swiper-slide"><img src="photo/isbe/top3.webp" width="100%" alt="ISBE1" /></div>
+            <div class="swiper-slide"><img src="photo/isbe/top6.webp" width="100%" alt="ISBE2" /></div>
           </div>
+          <div class="swiper-pagination"></div>
         </div>
-        <h4 class="text">NARIの創作物紹介やダウンロード、<br />描いてきたドット絵を見られるサイトです</h4>
-        <div class="content">
-          <a class="icon" href="profile/profile.html" style="text-decoration: none">
-            <div class="ico_size"><img src="photo/profile.webp" alt="Profile" /></div>
-            <p>Profile</p>
-          </a>
-          <a class="icon" href="isbe/isbe.html" style="text-decoration: none">
-            <div class="ico_size"><img src="photo/isbe.webp" alt="ISBE" /></div>
-            <p>Impressive Shadow <br />Shader</p>
-          </a>
-          <a class="icon" href="esbe-1g/esbe-1g.html" style="text-decoration: none">
-            <div class="ico_size"><img src="photo/esbe-1g.webp" alt="ESBE-1G" /></div>
-            <p>ESBE-1G</p>
-          </a>
-          <a class="icon" href="download/download.html" style="text-decoration: none">
-            <div class="ico_size"><img src="photo/download.webp" alt="Download" /></div>
-            <p>Download</p>
-          </a>
-          <a class="icon" href="pixelart/pixelart.html" style="text-decoration: none">
-            <div class="ico_size"><img src="photo/pixelart.webp" alt="PixelArt" /></div>
-            <p>PixelArt</p>
-          </a>
-          <a class="icon" href="contact/contact.html" style="text-decoration: none">
-            <div class="ico_size">
-              <img src="photo/contact-light.webp" alt="Contact" class="theme-image light"/>
-              <img src="photo/contact-dark.webp" alt="Contact" class="theme-image dark"/>
-            </div>
-            <p>Contact</p>
-          </a>
-        </div>
-        <div class="content2">
-          <div class="information">
-            <p class="info_title">ページ最新情報</p>
-            <div class="info_big">
-              <div class="info_content">
-                <p class="info_date">2024.1.21</p>
-                <p class="info_text">ダークモード時のアイコンを修正</p>
-              </div>
-              <div class="info_content">
-                <p class="info_date">2023.5.14</p>
-                <p class="info_text">新デザインHP公開</p>
-              </div>
-              <div class="info_content">
-                <p class="info_date">2023.5.12</p>
-                <p class="info_text">ここのデザイン変更</p>
-              </div>
-              <div class="info_content">
-                <p class="info_date">2023.4.30</p>
-                <p class="info_text"><a class="link_n" href="download/download.html">Download</a>ページ追加。</p>
-              </div>
-              <div class="info_content">
-                <p class="info_date">2023.4.28</p>
-                <p class="info_text">たくさんのデザイン変更と<a class="link_n" href="isbe/isbe.html">ISBE</a>, <br class="sp" /><a class="link_n" href="esbe-1g/esbe-1g.html">ESBE-1G</a>紹介ページの追加</p>
-              </div>
-              <div class="info_content">
-                <p class="info_date">2023.2.21</p>
-                <p class="info_text">ホーム画像の文字表示を変更。</p>
-              </div>
-              <div class="info_content">
-                <p class="info_date">2023.2.20</p>
-                <p class="info_text">ハンバーガーメニューのリンクを押しやすく。</p>
-              </div>
-              <div class="info_content">
-                <p class="info_date">2023.2.19</p>
-                <p class="info_text">ハンバーガーメニューのデザイン変更。</p>
-              </div>
-              <div class="info_content">
-                <p class="info_date">2023.1.21</p>
-                <p class="info_text">だいぶ完成形に近づいた。</p>
-              </div>
-              <!--<div class="info_content">
-                    <p class="info_date">2023.01.01</p>
-                    <p class="info_text">hptest</p>
-                </div>-->
-            </div>
+      </div>
+      <div class="description contents">
+        <h4>創作物の紹介やダウンロード<br />描いたドット絵をご覧いただけます</h4>
+      </div>
+      <div class="menu contents">
+        <a class="icon" href="isdl/isdl.html" style="text-decoration: none">
+          <div class="ico_size special"><img src="photo/isdl.webp" alt="Impressive Shadow Deferred Lighting" /></div>
+          <p class="long_name">Impressive Shadow <br />Deferred Lighting</p>
+        </a>
+        <a class="icon" href="creations/creations.html" style="text-decoration: none">
+          <div class="ico_size special2"><img src="photo/creations.webp" alt="Creations" /></div>
+          <p>Creations</p>
+        </a>
+        <a class="icon" href="profile/profile.html" style="text-decoration: none">
+          <div class="ico_size"><img src="photo/profile.webp" alt="Profile" /></div>
+          <p>Profile</p>
+        </a>
+        <a class="icon" href="isbe/isbe.html" style="text-decoration: none">
+          <div class="ico_size"><img src="photo/isbe.webp" alt="Impressive Shadow Shader" /></div>
+          <p class="long_name">Impressive Shadow <br />Shader</p>
+        </a>
+        <a class="icon" href="esbe-1g/esbe-1g.html" style="text-decoration: none">
+          <div class="ico_size"><img src="photo/esbe-1g.webp" alt="ESBE-1G" /></div>
+          <p>ESBE-1G</p>
+        </a>
+        <a class="icon" href="download/download.html" style="text-decoration: none">
+          <div class="ico_size"><img src="photo/download.webp" alt="Download" /></div>
+          <p>Download</p>
+        </a>
+        <a class="icon" href="pixelart/pixelart.html" style="text-decoration: none">
+          <div class="ico_size"><img src="photo/pixelart.webp" alt="PixelArt" /></div>
+          <p>PixelArt</p>
+        </a>
+        <a class="icon" href="contact/contact.html" style="text-decoration: none">
+          <div class="ico_size">
+            <img src="photo/contact.png" alt="Contact" />
+            <!--<img src="img/contact.png" alt="Contact" class="theme-image light-mode" />
+            <img src="img/contact-dark.webp" alt="Contact" class="theme-image" />-->
           </div>
-        </div>
-        <footer class="site-footer">
-          <div class="contact">
-            <a href="https://twitter.com/nari_0978" aria-label="Twitter"><i class="fa-brands fa-2x fa-twitter"></i></a>
-            <a href="https://www.instagram.com/nari_0978/" aria-label="instagram"><i class="fa-brands fa-2x fa-instagram"></i></a>
-            <p>©︎2020〜 <a href="https://github.com/NARI0978">NARI0978</a></p>
-          </div>
-        </footer>
+          <p>Contact</p>
+        </a>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js "></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js "></script>
-    <script src="js/style.js "></script>
+    <footer>
+      <div class="cc contents">
+        <p>©︎2024〜NARI0978</p>
+        <a href="https://twitter.com/nari0978" aria-label="Twitter" class="icon-l"><i class="ri-twitter-fill cc-icon"></i></a>
+        <a href="https://github.com/NARI0978" aria-label="GitHub"><i class="ri-github-fill cc-icon"></i></a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      let mySwiper = new Swiper(".swiper", {
+      const toggleButton = document.getElementById("toggle-button");
+      const bodyElement = document.body;
+      const themeImageElements = document.querySelectorAll(".theme-image"); // 複数のテーマ画像要素を取得
+      const themeImageElement0 = themeImageElements[0]; // 1番目のテーマ画像要素を取得
+      const themeImageElement1 = themeImageElements[1]; // 2番目のテーマ画像要素を取得
+
+      // デバイスのモードに応じて初期モードを設定
+      if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        bodyElement.classList.add("dark-mode");
+
+        // 個別のテーマ画像要素に 'dark-mode' を追加
+        if (themeImageElement0) {
+          themeImageElement0.classList.remove("light-mode");
+        }
+        if (themeImageElement1) {
+          themeImageElement1.classList.add("dark-mode");
+        }
+        toggleButton.innerHTML = '<i class="ri-sun-line"></i>';
+      } else {
+        bodyElement.classList.remove("dark-mode");
+        // 個別のテーマ画像要素から 'dark-mode' を削除
+        if (themeImageElement0) {
+          themeImageElement0.classList.add("light-mode");
+        }
+        if (themeImageElement1) {
+          themeImageElement1.classList.remove("dark-mode");
+        }
+        toggleButton.innerHTML = '<i class="ri-moon-clear-line"></i>';
+      }
+
+      // ボタンをクリックしてモードを手動で切り替える
+      toggleButton.addEventListener("click", () => {
+        bodyElement.classList.toggle("dark-mode");
+
+        // 個別のテーマ画像要素の 'dark-mode' を切り替え
+        if (themeImageElement0) {
+          themeImageElement0.classList.toggle("light-mode");
+        }
+        if (themeImageElement1) {
+          themeImageElement1.classList.toggle("dark-mode");
+        }
+
+        if (bodyElement.classList.contains("dark-mode")) {
+          toggleButton.innerHTML = '<i class="ri-sun-line"></i>';
+        } else {
+          toggleButton.innerHTML = '<i class="ri-moon-clear-line"></i>';
+        }
+      });
+
+      // デバイスのモードが変わったときに自動的に変更
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+        if (event.matches) {
+          bodyElement.classList.add("dark-mode");
+
+          // 個別のテーマ画像要素に 'dark-mode' を追加
+          if (themeImageElement0) {
+            themeImageElement0.classList.remove("light-mode");
+          }
+          if (themeImageElement1) {
+            themeImageElement1.classList.add("dark-mode");
+          }
+
+          toggleButton.innerHTML = '<i class="ri-sun-line"></i>';
+        } else {
+          bodyElement.classList.remove("dark-mode");
+
+          // 個別のテーマ画像要素から 'dark-mode' を削除
+          if (themeImageElement0) {
+            themeImageElement0.classList.add("light-mode");
+          }
+          if (themeImageElement1) {
+            themeImageElement1.classList.remove("dark-mode");
+          }
+
+          toggleButton.innerHTML = '<i class="ri-moon-clear-line"></i>';
+        }
+      });
+
+      /*----*/
+
+      const swiper = new Swiper(".swiper", {
         loop: true,
         effect: "fade",
         speed: 1000,
@@ -194,4 +716,5 @@
       });
     </script>
   </body>
+  <!--Some of the design candidates for this site were created by Chat GPT. Thanks, ChatGPT.-->
 </html>
