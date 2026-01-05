@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="自己紹介ページです" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="shortcut icon" href="profile.png" />
+    <title>Profile -自己紹介-</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+      :root {
+        --text-color: #121212;
+        --bg-color: /*#ff9200*/ #f8f8f8;
+        --header-bg-color: #f8f8f8bb;
+        --ham-bg-color: #f8f8f8;
+        --box-shadow-color: #0000001a;
+        --border-color: #fff;
+        --a-hover: #6d6d6d;
+        --site-color: #ffab52;
+        --link-color: #1a0dab;
+      }
+
+      .dark-mode {
+        --text-color: #f8f8f8;
+        --bg-color: /*#cc7400*/ #1c1c1e;
+        --header-bg-color: #1c1c1ebb;
+        --ham-bg-color: #1c1c1e;
+        --box-shadow-color: #0000005a;
+        --border-color: #000;
+        --a-hover: #7c7c7c;
+        --link-color: #99c3ff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "Osaka", "MS P Gothic", sans-serif;
+        background-color: var(--bg-color);
+        transition: background 0.6s;
+        width: 100%;
+      }
+
+      header {
+        width: 100%;
+        background: var(--header-bg-color);
+        padding: 12px 18px;
+        transition: background 0.6s;
+        position: fixed;
+        z-index: 20;
+        box-sizing: border-box;
+      }
+
+      header img {
+        width: 40px;
+      }
+
+      h1 {
+        margin: 0;
+        color: var(--text-color);
+        transition: color 0.6s;
+        font-size: 20px;
+        padding-left: 5px;
+      }
+
+      h1 a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.6s;
+      }
+
+      /*----*/
+
+      button {
+        position: fixed;
+        right: 66px;
+        top: 14.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 24px;
+        color: var(--text-color);
+        border: none;
+        background-color: #00000000;
+        cursor: pointer;
+        transition: color 0.6s;
+        margin: 0 auto;
+      }
+
+      /*----*/
+
+      header img {
+        padding-right: 5px;
+        vertical-align: bottom;
+      }
+
+      .gnav {
+        display: none;
+      }
+
+      .gnav_menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .gnav_memu_link {
+        list-style: none;
+        padding-right: 12px;
+      }
+
+      /*----*/
+
+      .ham-hidden {
+        display: none;
+      }
+
+      .ham-open {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        right: 18px;
+        top: 14.5px;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 20;
+        border: solid 2px var(--text-color);
+        transition: border 0.6s;
+        transition: 0.5s;
+        border-radius: 6px;
+      }
+
+      .ham-open span,
+      .ham-open span:before,
+      .ham-open span:after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 30px;
+        border-radius: 3px;
+        background: var(--text-color);
+        transition: background 0.6s;
+        transition: 0.5s;
+        position: absolute;
+      }
+
+      .ham-open span:before {
+        bottom: 10px;
+      }
+
+      .ham-open span:after {
+        top: 10px;
+      }
+
+      #ham-check:checked ~ .ham-open span {
+        background: #ffffff00;
+      }
+
+      #ham-check:checked ~ .ham-open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      #ham-check:checked ~ .ham-open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+      }
+
+      .ham-content {
+        width: 100%;
+        height: 100%;
+        margin-top: 60px;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        opacity: 0;
+        z-index: 100;
+        background: var(--ham-bg-color);
+        overflow-y: auto;
+        transition: background 0.6s;
+        transition: 0.5s;
+      }
+
+      .ham-content ul {
+        list-style: none;
+      }
+
+      .ham-content ul li {
+        font-size: 18px;
+        padding: 10px 3.5px;
+      }
+
+      .ham-content ul li a {
+        text-decoration: none;
+        display: block;
+        color: var(--text-color);
+        transition: color 0.6s;
+      }
+
+      #ham-check:checked ~ .ham-content {
+        left: 0;
+        opacity: 1;
+        transition: 0.5s;
+      }
+
+      .ham-menu {
+        padding: 0 20px;
+      }
+
+      .now {
+        border-left: 3px solid var(--site-color);
+        padding-left: 8px;
+      }
+
+      /*----*/
+
+      .main-content {
+        width: 80%;
+        max-width: 425px;
+        margin: 0 auto;
+        padding-top: 74px;
+      }
+
+      .title {
+        font-size: 22px;
+        color: var(--text-color);
+        text-align: center;
+        position: relative;
+      }
+      .title::before {
+        position: absolute;
+        border: 1px solid var(--site-color);
+        border-radius: 2px;
+        width: 60px;
+        top: 100%;
+        right: 50%;
+        transform: translateX(50%);
+        content: "";
+      }
+
+      /*----*/
+
+      .slide {
+        padding: 20px 0 10px 0;
+      }
+
+      .swiper-slide img {
+        vertical-align: middle;
+        border-radius: 6px;
+      }
+
+      .swiper-pagination-bullet {
+        background-color: var(--site-color);
+        transition: background-color 0.6s;
+      }
+
+      /*----*/
+
+      .contents {
+        padding-top: 16px;
+      }
+
+      /**----------**/
+
+      .contents h1 {
+        color: var(--text-color);
+        border-left: solid 3px var(--site-color);
+        line-height: 1.6;
+        padding-left: 8px;
+      }
+
+      .contents p {
+        color: var(--text-color);
+        line-height: 1.6;
+        font-size: 16px;
+        transition: color 0.6s;
+        padding: 5px 10px 20px 10px;
+      }
+
+      .contents a {
+        color: var(--link-color);
+        transition: color 0.6s;
+      }
+
+      /*-----------**/
+
+      .cc {
+        display: flex;
+        justify-content: center;
+        color: var(--text-color);
+        font-size: 14px;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        transition: color 0.6s;
+      }
+
+      .cc a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.6s;
+      }
+
+      .icon-l {
+        padding: 0 10px;
+      }
+
+      .cc-icon {
+        font-size: 20px;
+        vertical-align: sub;
+      }
+
+      /**----------**/
+
+      /**----------**/
+
+      @media (min-width: 450px) {
+        .br {
+          display: none;
+        }
+      }
+
+      @media (min-width: 768px) {
+        h1 {
+          font-size: 22px;
+        }
+
+        button {
+          top: 9.5px;
+          right: 66px;
+          font-size: 26px;
+        }
+
+        .ham-open {
+          top: 10px;
+        }
+
+        .main-content {
+          width: 80%;
+          max-width: 560px;
+        }
+
+        .title {
+          font-size: 28px;
+          padding: 0 10px;
+        }
+
+        .contents p {
+          font-size: 18px;
+        }
+      }
+
+      /**----------**/
+
+      @media (min-width: 1024px) {
+        .site_name {
+          font-size: 24px;
+        }
+
+        h1 {
+          font-size: 26px;
+        }
+
+        /*----*/
+
+        header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .ham-open {
+          display: none;
+        }
+
+        button {
+          top: 10.5px;
+          right: 10px;
+        }
+
+        .gnav {
+          display: block;
+          padding-top: 4px;
+        }
+
+        .gnav_memu_link a {
+          text-decoration: none;
+          font-size: 17px;
+          color: var(--text-color);
+          transition: color 0.6s;
+        }
+
+        .gnav_memu_link a:hover {
+          color: var(--a-hover);
+          transition: color 0.6s;
+        }
+
+        .now_ {
+          border-bottom: 2px solid var(--site-color);
+          padding-bottom: 4px;
+        }
+
+        /*----*/
+
+        .main-content {
+          width: 80%;
+          max-width: 730px;
+        }
+
+        .title {
+          font-size: 30px;
+          padding: 0;
+          text-align: center;
+        }
+      }
+
+      /**----------**/
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="site_name">
+        <a href="../index.html"><img src="../photo/top.webp" />NARI Home Page</a>
+      </h1>
+      <button id="toggle-button"><i class="ri-moon-clear-line"></i></button>
+      <nav class="gnav">
+        <ul class="gnav_menu">
+          <li class="gnav_memu_link"><a href="../index.html">Home</a></li>
+          <li class="gnav_memu_link"><a href="profile.html" class="now_">Profile</a></li>
+          <li class="gnav_memu_link"><a href="../creations/creations.html">Creations</a></li>
+          <li class="gnav_memu_link"><a href="../isdl/isdl.html">ISDL</a></li>
+          <li class="gnav_memu_link"><a href="../isbe/isbe.html">ISBE</a></li>
+          <li class="gnav_memu_link"><a href="../esbe-1g/esbe-1g.html">ESBE-1G</a></li>
+          <li class="gnav_memu_link"><a href="../download/download.html">Download</a></li>
+          <li class="gnav_memu_link"><a href="../pixelart/pixelart.html">PixelArt</a></li>
+          <li class="gnav_memu_link"><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="ham">
+        <input type="checkbox" id="ham-check" class="ham-hidden" value="Click" />
+        <label for="ham-check" class="ham-open"><span></span></label>
+        <nav class="ham-content">
+          <ul class="ham-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="profile.html" class="now">Profile</a></li>
+            <li><a href="../creations/creations.html">Creations</a></li>
+            <li><a href="../isdl/isdl.html">Impressive Shadow Deferred Lighting</a></li>
+            <li><a href="../isbe/isbe.html">Impressive Shadow Shader</a></li>
+            <li><a href="../esbe-1g/esbe-1g.html">ESBE-1G</a></li>
+            <li><a href="../download/download.html">Download</a></li>
+            <li><a href="../pixelart/pixelart.html">PixelArt</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="main-content">
+      <h1 class="title">Profile</h1>
+      <div class="slide">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../photo/isdl/a.webp" width="100%" alt="ISDL1" /></div>
+            <div class="swiper-slide"><img src="../photo/isdl/f.webp" width="100%" alt="ISDL2" /></div>
+            <div class="swiper-slide"><img src="../photo/isbe/top3.webp" width="100%" alt="ISBE1" /></div>
+            <div class="swiper-slide"><img src="../photo/isbe/top6.webp" width="100%" alt="ISBE2" /></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+      <div class="contents">
+        <h1>NARIについて</h1>
+        <p>
+          NARI（なり）/ このHPの編集者。東北のとある山の中出身。<br />
+          MinecraftでのShader作成でプログラミングに興味を持ち、Impressive Shadow Shader（ISBE）を開発しました。<br />
+          現在は、Impressive Shadow Deferred Lighting（ISDL）の開発を行っています。<br />
+          また、このウェブサイトを通じて、自身の作品を公開しています。<br />
+        </p>
+        <h1>これまでの成果</h1>
+        <p>
+          MinecraftでのShader（影をつけるリソースパック）の作成。<br />
+          ・<a class="link_n" href="../isbe/isbe.html" aria-label="ISBE">Impressive Shadow Shader</a>の新規開発<br />
+          ・<a class="link_n" href="../esbe-1g/esbe-1g.html" aria-label="ESBE-1G">ESBE-1G</a>の後継開発<br />
+          その他Minecraftの便利リソースパックとアドオン作成<br />Minecraft Community Serverの運営（終了済)
+        </p>
+        <h1>趣味・好きなこと</h1>
+        <p>
+          ・写真撮影（主に景色や花の撮影）<br />
+          ・サイト更新<br />
+          ・ドット絵を描く<br />
+          ・ゲーム（Minecraft、原神、ブルーアーカイブなど様々なもの）
+        </p>
+        <h1>本人コメント</h1>
+        <p>
+          NARI HomePageを訪れていただきありがとうございます。<br />
+          個人的に”訪れやすく・見やすい”をモットーにこのHPを作成しています。<br />
+          このほかにもメニューから紹介や今まで描いた<a class="link_n" href="../pixelart/pixelart.html" aria-label="PixelArt">ドット絵</a>なども見れるのでぜひそちらもチェックしてみてください。
+        </p>
+      </div>
+    </div>
+    <footer>
+      <div class="cc contents">
+        <p>©︎2024〜NARI0978</p>
+        <a href="https://twitter.com/nari0978" aria-label="Twitter" class="icon-l"><i class="ri-twitter-fill cc-icon"></i></a>
+        <a href="https://github.com/NARI0978" aria-label="GitHub"><i class="ri-github-fill cc-icon"></i></a>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const toggleButton = document.getElementById("toggle-button");
+      const bodyElement = document.body;
+      const themeImageElements = document.querySelectorAll(".theme-image"); // 複数のテーマ画像要素を取得
+      const themeImageElement0 = themeImageElements[0]; // 1番目のテーマ画像要素を取得
+      const themeImageElement1 = themeImageElements[1]; // 2番目のテーマ画像要素を取得
+
+      // デバイスのモードに応じて初期モードを設定
+      if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        bodyElement.classList.add("dark-mode");
+        toggleButton.innerHTML = '<i class="ri-sun-line"></i>';
+      } else {
+        bodyElement.classList.remove("dark-mode");
+        toggleButton.innerHTML = '<i class="ri-moon-clear-line"></i>';
+      }
+
+      // ボタンをクリックしてモードを手動で切り替える
+      toggleButton.addEventListener("click", () => {
+        bodyElement.classList.toggle("dark-mode");
+        if (bodyElement.classList.contains("dark-mode")) {
+          toggleButton.innerHTML = '<i class="ri-sun-line"></i>';
+        } else {
+          toggleButton.innerHTML = '<i class="ri-moon-clear-line"></i>';
+        }
+      });
+
+      // デバイスのモードが変わったときに自動的に変更
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+        if (event.matches) {
+          bodyElement.classList.add("dark-mode");
+          toggleButton.innerHTML = '<i class="ri-sun-line"></i>';
+        } else {
+          bodyElement.classList.remove("dark-mode");
+          toggleButton.innerHTML = '<i class="ri-moon-clear-line"></i>';
+        }
+      });
+
+      /*----*/
+
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        effect: "fade",
+        speed: 1000,
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+  <!--Some of the design candidates for this site were created by Chat GPT. Thanks, ChatGPT.-->
+</html>
